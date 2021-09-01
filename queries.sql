@@ -1,4 +1,5 @@
 select
+    aw.name,
     ac.year as Year,
     ac.name as Category,
     w.name as Name,
@@ -12,11 +13,11 @@ inner join
 inner join
     work_award_category wac on wac.work_id = w.id
 inner join
-    award_category ac on ac.id = wac.award_category_id = ac.id
+    award_category ac on ac.id = wac.award_category_id
 inner join
     award aw on aw.id = ac.award_id
-where
-    aw.name = 'Hugo Award'
 order by
     ac.year,
-    wac.status;
+    wac.status,
+    a.last_name,
+    a.first_name;
