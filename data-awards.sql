@@ -33,30 +33,4 @@ insert into award_category (award_id, name, sort_order, year) values (1, 'Best N
 insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 1973);
 insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 1974);
 
-insert into author (first_name, last_name) values ('Fred', 'Bester');
-insert into author (first_name, last_name) values ('Mark', 'Clifton');
-insert into author (first_name, last_name) values ('Frank', 'Riley');
-
-insert into work (name, type) values ('The Demolished Man', 'Novel');
-insert into work (name, type) values ('They''d Rather Be Right', 'Novel');
-
-insert into work_author (work_id, author_id) values (
-    (select id from work where name = 'The Demolished Man'),
-    (select id from author where first_name = 'Fred' and last_name = 'Bester'));
-insert into work_author (work_id, author_id) values (
-    (select id from work where name = 'They''d Rather Be Right'),
-    (select id from author where first_name = 'Mark' and last_name = 'Clifton'));
-insert into work_author (work_id, author_id) values (
-    (select id from work where name = 'They''d Rather Be Right'),
-    (select id from author where first_name = 'Frank' and last_name = 'Riley'));
-
-insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'The Demolished Man'),
-   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1953),
-   1
-);
-insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'They''d Rather Be Right'),
-   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1955),
-   1
-);
+insert into award_category (award_id, name, sort_order, year) values (4, 'Best Novel', 1, 2013);
