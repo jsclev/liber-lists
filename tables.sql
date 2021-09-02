@@ -20,7 +20,8 @@ CREATE TABLE work (
 
 CREATE TABLE award (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL
+    name TEXT NOT NULL,
+    genre TEXT NOT NULL
 );
 
 CREATE TABLE award_category (
