@@ -796,7 +796,7 @@ insert into author (first_name, last_name) values ('Shauna S.', 'Roberts');
 insert into author (first_name, last_name) values ('Stephen', 'Robinett');
 insert into author (first_name, last_name) values ('Frank M.', 'Robinson');
 insert into author (first_name, last_name) values ('Jeanne', 'Robinson');
-insert into author (first_name, last_name) values ('Kim Stanley', 'Robinson');
+insert into author (first_name, middle_name, last_name) values ('Kim', 'Stanley', 'Robinson');
 insert into author (first_name, last_name) values ('Spider', 'Robinson');
 insert into author (first_name, last_name) values ('Justina', 'Robson');
 insert into author (first_name, last_name) values ('Esther', 'Rochon');
