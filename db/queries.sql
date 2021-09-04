@@ -28,6 +28,7 @@ select
     ac.year as Year,
     ac.name as Category,
     w.name as Name,
+    w.id as WorkId,
     a.first_name || ' ' || a.last_name as Author
 from
     award aw
@@ -48,3 +49,9 @@ order by
     ac.year,
     wac.status,
     w.name;
+
+select * from work_author where work_id = 147;
+
+select * from work_author order by work_id;
+
+select * from work where name = 'The Demolished Man';

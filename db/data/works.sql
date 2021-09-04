@@ -170,6 +170,7 @@ insert into work (name, type) values ('The Dosadi Experiment', 'Novel');
 insert into work (name, type) values ('Down and Out in the Magic Kingdom', 'Novel');
 insert into work (name, type) values ('Down to a Sunless Sea', 'Novel');
 insert into work (name, type) values ('Downbelow Station', 'Novel');
+insert into work (name, type) values ('Double Star', 'Novel');
 insert into work (name, type) values ('The Dragon Masters', 'Novel');
 insert into work (name, type) values ('The Dragon Never Sleeps', 'Novel');
 insert into work (name, type) values ('Dragonriders of Pern', 'Novel');
