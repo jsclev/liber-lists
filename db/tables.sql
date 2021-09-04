@@ -21,7 +21,8 @@ CREATE TABLE work (
 CREATE TABLE award (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    genre TEXT NOT NULL
+    genre TEXT NOT NULL,
+    UNIQUE(name)
 );
 
 CREATE TABLE award_category (
@@ -35,12 +36,14 @@ CREATE TABLE award_category (
 CREATE TABLE work_author (
     id INTEGER PRIMARY KEY,
     work_id INTEGER NOT NULL,
-    author_id INTEGER NOT NULL
+    author_id INTEGER NOT NULL,
+    UNIQUE(work_id, author_id)
 );
 
 CREATE TABLE work_award_category (
     id INTEGER PRIMARY KEY,
     work_id INTEGER NOT NULL,
     award_category_id INTEGER NOT NULL,
-    status INTEGER NOT NULL
+    status INTEGER NOT NULL,
+    UNIQUE(work_id, award_category_id)
 );

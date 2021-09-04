@@ -143,7 +143,7 @@ insert into author (first_name, last_name) values ('Tobias S.', 'Buckell');
 insert into author (first_name, last_name) values ('Algis', 'Budrys');
 insert into author (first_name, last_name) values ('Vitaly', 'Bugrov');
 insert into author (first_name, last_name) values ('Lela E.', 'Buis');
-insert into author (first_name, last_name) values ('Lois McMaster', 'Bujold');
+insert into author (first_name, middle_name, last_name) values ('Lois', 'McMaster', 'Bujold');
 insert into author (first_name, last_name) values ('Mikhail', 'Bulgakov');
 insert into author (first_name, last_name) values ('Faddey', 'Bulgarin');
 insert into author (first_name, last_name) values ('Kenneth', 'Bulmer');
