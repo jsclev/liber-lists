@@ -15,7 +15,8 @@ CREATE TABLE author (
 CREATE TABLE work (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
-    type TEXT NOT NULL
+    type TEXT NOT NULL,
+    product_link TEXT
 );
 
 CREATE TABLE award (

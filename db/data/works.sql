@@ -1,9 +1,11 @@
+-- Numbers
 insert into work (name, type) values ('334', 'Novel');
 insert into work (name, type) values ('1Q84', 'Novel');
 insert into work (name, type) values ('1632 series', 'Novel');
 insert into work (name, type) values ('2312', 'Novel');
 insert into work (name, type) values ('20,000 Leagues Under the Sea', 'Novel');
 
+-- A
 insert into work (name, type) values ('A Beautifully Foolish Endeavor', 'Novel');
 insert into work (name, type) values ('Absolution Gap', 'Novel');
 insert into work (name, type) values ('Accelerando', 'Novel');
@@ -48,6 +50,7 @@ insert into work (name, type) values ('At the Goings Down of the Suns', 'Novel')
 insert into work (name, type) values ('Atlas Shrugged', 'Novel');
 insert into work (name, type) values ('The Atrocity Exhibition', 'Novel');
 
+-- B
 insert into work (name, type) values ('Babel-17', 'Novel');
 insert into work (name, type) values ('Barrayar', 'Novel');
 insert into work (name, type) values ('Battle Angel Alita', 'Novel');
@@ -85,6 +88,7 @@ insert into work (name, type) values ('The Bull''s Hour', 'Novel');
 insert into work (name, type) values ('The Butterfly Kid', 'Novel');
 insert into work (name, type) values ('By the Light of the Green Star', 'Novel');
 
+-- C
 insert into work (name, type) values ('The Calcutta Chromosome', 'Novel');
 insert into work (name, type) values ('Calling B for Butterfly', 'Novel');
 insert into work (name, type) values ('Camp Concentration', 'Novel');
@@ -141,6 +145,7 @@ insert into work (name, type) values ('Cuckoo''s Egg', 'Novel');
 insert into work (name, type) values ('The Currents of Space', 'Novel');
 insert into work (name, type) values ('Cyteen', 'Novel');
 
+-- D
 insert into work (name, type) values ('Daemon', 'Novel');
 insert into work (name, type) values ('The Dancers of Noyo', 'Novel');
 insert into work (name, type) values ('Dancing Jack', 'Novel');
@@ -189,6 +194,7 @@ insert into work (name, type) values ('Duende Meadow', 'Novel');
 insert into work (name, type) values ('Dune', 'Novel');
 insert into work (name, type) values ('Dying Inside', 'Novel');
 
+-- E
 insert into work (name, type) values ('Earth Abides', 'Novel');
 insert into work (name, type) values ('Earth Child', 'Novel');
 insert into work (name, type) values ('Earth in Twilight', 'Novel');
@@ -217,6 +223,7 @@ insert into work (name, type) values ('Exit Pursued by a Bee', 'Novel');
 insert into work (name, type) values ('Expedition Venus', 'Novel');
 insert into work (name, type) values ('The Eye of the Heron', 'Novel');
 
+-- F
 insert into work (name, type) values ('The Facts in the Case of M. Valdemar', 'Novel');
 insert into work (name, type) values ('Fahrenheit 451', 'Novel');
 insert into work (name, type) values ('A Fall of Moondust', 'Novel');
@@ -251,6 +258,7 @@ insert into work (name, type) values ('Frankenstein', 'Novel');
 insert into work (name, type) values ('Free Live Free', 'Novel');
 insert into work (name, type) values ('Friday', 'Novel');
 
+-- G
 insert into work (name, type) values ('Galactic Derelict', 'Novel');
 insert into work (name, type) values ('Galactic Effectuator', 'Novel');
 insert into work (name, type) values ('Galaxies Like Grains of Sand', 'Novel');
@@ -276,6 +284,7 @@ insert into work (name, type) values ('Gridlinked', 'Novel');
 insert into work (name, type) values ('The Gripping Hand', 'Novel');
 insert into work (name, type) values ('Gulf', 'Novel');
 
+-- H
 insert into work (name, type) values ('Halo', 'Novel');
 insert into work (name, type) values ('Halting State', 'Novel');
 insert into work (name, type) values ('The Hammer of Darkness', 'Novel');
@@ -302,6 +311,7 @@ insert into work (name, type) values ('The Hunger games', 'Novel');
 insert into work (name, type) values ('The Hydrogen Sonata', 'Novel');
 insert into work (name, type) values ('Hyperion', 'Novel');
 
+-- I
 insert into work (name, type) values ('I Am Legend', 'Novel');
 insert into work (name, type) values ('I, Robot', 'Novel');
 insert into work (name, type) values ('Idlewild', 'Novel');
@@ -328,12 +338,12 @@ insert into work (name, type) values ('The Island of Doctor Moreau', 'Novel');
 insert into work (name, type) values ('Islands in the Sky', 'Novel');
 insert into work (name, type) values ('Isle of the Dead', 'Novel');
 
+-- J
 insert into work (name, type) values ('J.', 'Novel');
 insert into work (name, type) values ('Jandar of Callisto', 'Novel');
 insert into work (name, type) values ('The Jedi Academy Trilogy', 'Novel');
 insert into work (name, type) values ('Jennifer Government', 'Novel');
 insert into work (name, type) values ('Jonathan Strange & Mr Norrell', 'Novel');
-
 insert into work (name, type) values ('A Journey in Other Worlds', 'Novel');
 insert into work (name, type) values ('Journey to the Center of the Earth', 'Novel');
 insert into work (name, type) values ('Journey to Jupiter', 'Novel');
@@ -341,6 +351,7 @@ insert into work (name, type) values ('Journey to Mars', 'Novel');
 insert into work (name, type) values ('Journey to Venus', 'Novel');
 insert into work (name, type) values ('Jurassic Park', 'Novel');
 
+-- K
 insert into work (name, type) values ('Kaleidoscope Century', 'Novel');
 insert into work (name, type) values ('Kalimantaan', 'Novel');
 insert into work (name, type) values ('Killobyte', 'Novel');
@@ -349,6 +360,7 @@ insert into work (name, type) values ('King of Morning, Queen of Day', 'Novel');
 insert into work (name, type) values ('King Rat', 'Novel');
 insert into work (name, type) values ('Knight of Delusions', 'Novel');
 
+-- L
 insert into work (name, type) values ('The Languages of Pao', 'Novel');
 insert into work (name, type) values ('Lankar of Callisto', 'Novel');
 insert into work (name, type) values ('Last and First Men', 'Novel');
@@ -370,6 +382,7 @@ insert into work (name, type) values ('The Lost Planet', 'Novel');
 insert into work (name, type) values ('The Lost World', 'Novel');
 insert into work (name, type) values ('Lovelock', 'Novel');
 
+-- M
 insert into work (name, type) values ('Macroscope', 'Novel');
 insert into work (name, type) values ('Mad Empress of Callisto', 'Novel');
 insert into work (name, type) values ('Make Room! Make Room!', 'Novel');
@@ -429,6 +442,7 @@ insert into work (name, type) values ('Mutiny in the Time Machine', 'Novel');
 insert into work (name, type) values ('The Mysterious Planet', 'Novel');
 insert into work (name, type) values ('Mystery of the Third Mine', 'Novel');
 
+-- N
 insert into work (name, type) values ('Native Tongue', 'Novel');
 insert into work (name, type) values ('Neanderthal Planet', 'Novel');
 insert into work (name, type) values ('Neuromancer', 'Novel');
@@ -444,6 +458,7 @@ insert into work (name, type) values ('Nova', 'Novel');
 insert into work (name, type) values ('Nova Swing', 'Novel');
 insert into work (name, type) values ('Null-A Three', 'Novel');
 
+-- O
 insert into work (name, type) values ('The Obelisk Gate', 'Novel');
 insert into work (name, type) values ('Ocean on Top', 'Novel');
 insert into work (name, type) values ('Odd John', 'Novel');
@@ -462,6 +477,7 @@ insert into work (name, type) values ('Oryx and Crake', 'Novel');
 insert into work (name, type) values ('Out of the Silent Planet', 'Novel');
 insert into work (name, type) values ('The Outlaws of Mars', 'Novel');
 
+-- P
 insert into work (name, type) values ('Paladin of Souls', 'Novel');
 insert into work (name, type) values ('Parable of the Sower', 'Novel');
 insert into work (name, type) values ('Parable of the Talents', 'Novel');
@@ -499,12 +515,14 @@ insert into work (name, type) values ('The Puppet Masters', 'Novel');
 insert into work (name, type) values ('Pushing Ice', 'Novel');
 insert into work (name, type) values ('The Puzzle Planet', 'Novel');
 
+-- Q
 insert into work (name, type) values ('Quarantine', 'Novel');
 insert into work (name, type) values ('Queen of Angels', 'Novel');
 insert into work (name, type) values ('Quest Crosstime', 'Novel');
 insert into work (name, type) values ('Quest for the Future', 'Novel');
 insert into work (name, type) values ('Quinzinzinzili', 'Novel');
 
+-- R
 insert into work (name, type) values ('Raising the Stones', 'Novel');
 insert into work (name, type) values ('Rainbows End', 'Novel');
 insert into work (name, type) values ('Rappaccini''s Daughter', 'Novel');
@@ -540,6 +558,7 @@ insert into work (name, type) values ('Rule 34', 'Novel');
 insert into work (name, type) values ('Rumors of Spring', 'Novel');
 insert into work (name, type) values ('Rynosseros', 'Novel');
 
+-- S
 insert into work (name, type) values ('The Sands of Mars', 'Novel');
 insert into work (name, type) values ('Santiago: a Myth of the Far Future', 'Novel');
 insert into work (name, type) values ('Saraband of Lost Time', 'Novel');
@@ -643,6 +662,7 @@ insert into work (name, type) values ('Sword of Truth', 'Novel');
 insert into work (name, type) values ('The Syndic', 'Novel');
 insert into work (name, type) values ('Synners', 'Novel');
 
+-- T
 insert into work (name, type) values ('Tactics of Mistake', 'Novel');
 insert into work (name, type) values ('A Tale of the Ragged Mountains', 'Novel');
 insert into work (name, type) values ('Tatja Grimm''s World', 'Novel');
@@ -694,6 +714,7 @@ insert into work (name, type) values ('The Truth Machine', 'Novel');
 insert into work (name, type) values ('Tunnel in the Sky', 'Novel');
 insert into work (name, type) values ('The Two Faces of Tomorrow', 'Novel');
 
+-- U
 insert into work (name, type) values ('Ubik', 'Novel');
 insert into work (name, type) values ('Uhura''s Song', 'Novel');
 insert into work (name, type) values ('Under', 'Novel');
@@ -703,6 +724,7 @@ insert into work (name, type) values ('Unveiling a Parallel', 'Novel');
 insert into work (name, type) values ('The Uplift War', 'Novel');
 insert into work (name, type) values ('Use of Weapons', 'Novel');
 
+-- V
 insert into work (name, type) values ('Valentine Pontifex', 'Novel');
 insert into work (name, type) values ('VALIS|Valis', 'Novel');
 insert into work (name, type) values ('The Valley Where Time Stood Still', 'Novel');
@@ -723,6 +745,7 @@ insert into work (name, type) values ('Voyager in Night', 'Novel');
 insert into work (name, type) values ('Vulcan''s Hammer', 'Novel');
 insert into work (name, type) values ('Vurt', 'Novel');
 
+-- W
 insert into work (name, type) values ('The Wailing Asteroid', 'Novel');
 insert into work (name, type) values ('The Wanderer', 'Novel');
 insert into work (name, type) values ('War Against the Chtorr', 'Novel');
@@ -763,8 +786,10 @@ insert into work (name, type) values ('World War Z', 'Novel');
 insert into work (name, type) values ('A Wrinkle in Time', 'Novel');
 insert into work (name, type) values ('Wyrldmaker', 'Novel');
 
+-- X
 insert into work (name, type) values ('Xenocide', 'Novel');
 
+-- Y
 insert into work (name, type) values ('The Year of the Quiet Sun', 'Novel');
 insert into work (name, type) values ('The Year When Stardust Fell', 'Novel');
 insert into work (name, type) values ('Yesteryear', 'Novel');
@@ -772,6 +797,7 @@ insert into work (name, type) values ('The Yiddish Policemen''s Union', 'Novel')
 insert into work (name, type) values ('Ylana of Callisto', 'Novel');
 insert into work (name, type) values ('The Young Men are Coming', 'Novel');
 
+-- Z
 insert into work (name, type) values ('The Zap Gun', 'Novel');
 insert into work (name, type) values ('Zulu Heart', 'Novel');
 insert into work (name, type) values ('Z is for Zero', 'Novel');
