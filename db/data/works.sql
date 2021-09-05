@@ -531,6 +531,7 @@ insert into work (name, type) values ('Ready Player One', 'Novel');
 insert into work (name, type) values ('Ready Player Two', 'Novel');
 insert into work (name, type) values ('The Realms of Tartarus', 'Novel');
 insert into work (name, type) values ('Red', 'Novel');
+insert into work (name, type) values ('Red Mars', 'Novel');
 insert into work (name, type) values ('Red Planet', 'Novel');
 insert into work (name, type) values ('Red Thunder', 'Novel');
 insert into work (name, type) values ('Redshirts', 'Novel');

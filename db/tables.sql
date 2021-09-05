@@ -19,6 +19,20 @@ CREATE TABLE work (
     product_link TEXT
 );
 
+CREATE TABLE series (
+    id INTEGER PRIMARY KEY,
+    name TEXT NOT NULL,
+    genre TEXT NOT NULL
+);
+
+CREATE TABLE work_series (
+    id INTEGER PRIMARY KEY,
+    work_id INTEGER NOT NULL,
+    series_id INTEGER NOT NULL,
+    ordinal INTEGER,
+    ordinal_name TEXT
+);
+
 CREATE TABLE award (
     id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
