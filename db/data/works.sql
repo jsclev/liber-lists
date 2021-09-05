@@ -6,6 +6,7 @@ insert into work (name, type) values ('2312', 'Novel');
 insert into work (name, type) values ('20,000 Leagues Under the Sea', 'Novel');
 
 -- A
+insert into work (name, type) values ('...And Call Me Conrad', 'Novel');
 insert into work (name, type) values ('A Beautifully Foolish Endeavor', 'Novel');
 insert into work (name, type) values ('Absolution Gap', 'Novel');
 insert into work (name, type) values ('Accelerando', 'Novel');
@@ -675,7 +676,6 @@ insert into work (name, type) values ('There Are Doors', 'Novel');
 insert into work (name, type) values ('They''d Rather Be Right', 'Novel');
 insert into work (name, type) values ('They Shall Have Stars', 'Novel');
 insert into work (name, type) values ('The Third Craft', 'Novel');
-insert into work (name, type) values ('This Immortal', 'Novel');
 insert into work (name, type) values ('This Island Earth', 'Novel');
 insert into work (name, type) values ('This Perfect Day', 'Novel');
 insert into work (name, type) values ('Thorns', 'Novel');

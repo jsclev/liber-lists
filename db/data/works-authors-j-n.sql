@@ -1,4 +1,7 @@
 -- J
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Jonathan Strange & Mr Norrell'),
+    (select id from author where first_name = 'Susanna' and last_name = 'Clarke'));
 
 -- K
 
@@ -14,6 +17,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Man in the High Castle'),
     (select id from author where first_name = 'Philip' and last_name = 'Dick'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'A Memory Called Empire'),
+    (select id from author where first_name = 'Arkady' and last_name = 'Martine'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));

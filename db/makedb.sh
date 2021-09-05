@@ -1,3 +1,12 @@
+# TODO
+# Add concept of translater in addition to author
+# Add concept of book series
+# Clean up author middle names
+# Add concept of publisher (incorporate multiple publishings per work)
+# Add ISBN concept for works
+# Add nominations concept to awards
+# Add nominations data for Hugos
+# Add concept of alternate names for works (Here Gather the Stars = Way Station)
 rm scintillate.sqlite 2>/dev/null
 sqlite3 scintillate.sqlite ""
 sqlite3 scintillate.sqlite < tables.sql

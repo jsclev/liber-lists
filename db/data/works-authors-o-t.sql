@@ -1,4 +1,7 @@
--- 0
+-- O
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Obelisk Gate'),
+    (select id from author where first_name = 'N.' and last_name = 'Jemisin'));
 
 -- P
 insert into work_author (work_id, author_id) values (

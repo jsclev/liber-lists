@@ -28,7 +28,6 @@ select
     ac.year as Year,
     ac.name as Category,
     w.name as Name,
-    w.id as WorkId,
     a.first_name || ' ' || a.last_name as Author
 from
     award aw
