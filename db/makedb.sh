@@ -21,6 +21,7 @@ sqlite3 scintillate.sqlite < data/works-authors-o-t.sql
 sqlite3 scintillate.sqlite < data/works-authors-u-z.sql
 sqlite3 scintillate.sqlite < data/awards.sql
 sqlite3 scintillate.sqlite < data/works-hugo-winners.sql
+sqlite3 scintillate.sqlite < data/works-hugo-nominees.sql
 sqlite3 scintillate.sqlite < data/works-product-links.sql
 sqlite3 scintillate.sqlite < data/users.sql
 

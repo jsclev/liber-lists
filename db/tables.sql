@@ -13,7 +13,7 @@ CREATE TABLE author (
 );
 
 CREATE TABLE work (
-    id INTEGER PRIMARY KEY NOT NULL,
+    id INTEGER PRIMARY KEY,
     name TEXT NOT NULL,
     type TEXT NOT NULL,
     product_link TEXT
@@ -30,7 +30,9 @@ CREATE TABLE work_series (
     work_id INTEGER NOT NULL,
     series_id INTEGER NOT NULL,
     ordinal INTEGER,
-    ordinal_name TEXT
+    ordinal_name TEXT,
+    FOREIGN KEY (work_id) REFERENCES work (id),
+    FOREIGN KEY (series_id) REFERENCES series (id)
 );
 
 CREATE TABLE award (
@@ -45,14 +47,17 @@ CREATE TABLE award_category (
     award_id INTEGER NOT NULL,
     name TEXT NOT NULL,
     sort_order INTEGER NOT NULL,
-    year INTEGER NOT NULL
+    year INTEGER NOT NULL,
+    FOREIGN KEY (award_id) REFERENCES award (id)
 );
 
 CREATE TABLE work_author (
     id INTEGER PRIMARY KEY,
     work_id INTEGER NOT NULL,
     author_id INTEGER NOT NULL,
-    UNIQUE(work_id, author_id)
+    UNIQUE(work_id, author_id),
+    FOREIGN KEY (work_id) REFERENCES work (id),
+    FOREIGN KEY (author_id) REFERENCES author (id)
 );
 
 CREATE TABLE work_award_category (
@@ -60,7 +65,9 @@ CREATE TABLE work_award_category (
     work_id INTEGER NOT NULL,
     award_category_id INTEGER NOT NULL,
     status INTEGER NOT NULL,
-    UNIQUE(work_id, award_category_id)
+    UNIQUE(work_id, award_category_id),
+    FOREIGN KEY (work_id) REFERENCES work (id),
+    FOREIGN KEY (award_category_id) REFERENCES award_category (id)
 );
 
 CREATE TABLE user (
@@ -76,5 +83,7 @@ CREATE TABLE user_work_stat (
     user_id INTEGER NOT NULL,
     work_id INTEGER NOT NULL,
     read_status INTEGER,  -- 0=have not read, 1=want to read, 2=reading, 3=read
-    own_status INTEGER    -- 0=do not own, 1=want to own, 2=own it
+    own_status INTEGER,    -- 0=do not own, 1=want to own, 2=own it
+    FOREIGN KEY (user_id) REFERENCES user (id),
+    FOREIGN KEY (work_id) REFERENCES work (id)
 );
