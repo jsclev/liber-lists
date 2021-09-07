@@ -1,4 +1,4 @@
-package com.zippyzen.liberlists
+package com.zippyzen.scintillate
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,7 +6,10 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.zippyzen.liberlists.databinding.FragmentFirstBinding
+import androidx.room.Room
+import com.zippyzen.scintillate.databinding.FragmentFirstBinding
+import com.zippyzen.scintillate.db.AppDatabase
+import com.zippyzen.scintillate.model.Work
 
 /**
  * A simple [Fragment] subclass as the default destination in the navigation.
@@ -34,6 +37,13 @@ class FirstFragment : Fragment() {
 
         binding.buttonFirst.setOnClickListener {
             findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
+        }
+
+        val workDao = ScintillateApplication.database.workDao()
+        val works: List<Work> = workDao.getAll()
+
+        for (work in works) {
+            println(work.name)
         }
     }
 

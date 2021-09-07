@@ -24,6 +24,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Mona Lisa Overdrive'),
+    (select id from author where first_name = 'William' and last_name = 'Gibson'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Moon Is a Harsh Mistress'),
     (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
 

@@ -34,6 +34,8 @@ insert into work (name, type) values ('An Absolutely Remarkable Thing', 'Novel')
 insert into work (name, type) values ('Ancient Echoes', 'Novel');
 insert into work (name, type) values ('Ancient Shores', 'Novel');
 insert into work (name, type) values ('Ancillary Justice', 'Novel');
+insert into work (name, type) values ('Ancillary Mercy', 'Novel');
+insert into work (name, type) values ('Ancillary Sword', 'Novel');
 insert into work (name, type) values ('Andromeda', 'Novel');
 insert into work (name, type) values ('The Andromeda Strain', 'Novel');
 insert into work (name, type) values ('Andymon', 'Novel');
@@ -110,6 +112,7 @@ insert into work (name, type) values ('The Changeling', 'Novel');
 insert into work (name, type) values ('Chasm City', 'Novel');
 insert into work (name, type) values ('Child of Fortune', 'Novel');
 insert into work (name, type) values ('Childhood''s End', 'Novel');
+insert into work (name, type) values ('The Children of the Sky', 'Novel');
 insert into work (name, type) values ('Children of Tomorrow', 'Novel');
 insert into work (name, type) values ('Chromosome 6', 'Novel');
 insert into work (name, type) values ('Chronocules', 'Novel');
@@ -213,6 +216,8 @@ insert into work (name, type) values ('Empire of the Atom', 'Novel');
 insert into work (name, type) values ('En Iniya Iyanthira', 'Novel');
 insert into work (name, type) values ('The End of Eternity', 'Novel');
 insert into work (name, type) values ('Ender''s Game', 'Novel');
+insert into work (name, type) values ('Endymion', 'Novel');
+
 insert into work (name, type) values ('The Enemy Stars', 'Novel');
 insert into work (name, type) values ('Eon', 'Novel');
 insert into work (name, type) values ('Erewhon', 'Novel');
@@ -227,10 +232,11 @@ insert into work (name, type) values ('The Eye of the Heron', 'Novel');
 -- F
 insert into work (name, type) values ('The Facts in the Case of M. Valdemar', 'Novel');
 insert into work (name, type) values ('Fahrenheit 451', 'Novel');
+insert into work (name, type) values ('The Fall of Hyperion', 'Novel');
 insert into work (name, type) values ('A Fall of Moondust', 'Novel');
 insert into work (name, type) values ('Farewell Horizontal', 'Novel');
 insert into work (name, type) values ('Farnham''s Freehold', 'Novel');
-insert into work (name, type) values ('Fearful Symmetries (Swann Novel)|Fearful Symmetries', 'Novel');
+insert into work (name, type) values ('Fearful Symmetries', 'Novel');
 insert into work (name, type) values ('Feersum Endjinn', 'Novel');
 insert into work (name, type) values ('The Female Man', 'Novel');
 insert into work (name, type) values ('The Fifth Head of Cerberus', 'Novel');
@@ -543,6 +549,7 @@ insert into work (name, type) values ('Report on Probability A', 'Novel');
 insert into work (name, type) values ('Revelation Space', 'Novel');
 insert into work (name, type) values ('Revolt on Alpha C', 'Novel');
 insert into work (name, type) values ('Ringworld', 'Novel');
+insert into work (name, type) values ('The Rise of Endymion', 'Novel');
 insert into work (name, type) values ('Rite of Passage', 'Novel');
 insert into work (name, type) values ('Roadmarks', 'Novel');
 insert into work (name, type) values ('Roadside Picnic', 'Novel');
@@ -727,7 +734,7 @@ insert into work (name, type) values ('Use of Weapons', 'Novel');
 
 -- V
 insert into work (name, type) values ('Valentine Pontifex', 'Novel');
-insert into work (name, type) values ('VALIS|Valis', 'Novel');
+insert into work (name, type) values ('VALIS', 'Novel');
 insert into work (name, type) values ('The Valley Where Time Stood Still', 'Novel');
 insert into work (name, type) values ('Vandals of the Void', 'Novel');
 insert into work (name, type) values ('Vault of the Ages', 'Novel');

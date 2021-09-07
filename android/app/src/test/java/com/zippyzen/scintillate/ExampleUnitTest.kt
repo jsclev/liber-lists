@@ -1,4 +1,4 @@
-package com.zippyzen.liberlists
+package com.zippyzen.scintillate
 
 import org.junit.Test
 

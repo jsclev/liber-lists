@@ -22,6 +22,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Fountains of Paradise'),
     (select id from author where first_name = 'Arthur' and last_name = 'Clarke'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Frankenstein'),
+    (select id from author where first_name = 'Mary' and last_name = 'Shelley'));
 
 -- G
 insert into work_author (work_id, author_id) values (

@@ -1,4 +1,5 @@
 *.sqlite
+.idea
 
 ## User settings
 xcuserdata/

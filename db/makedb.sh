@@ -1,8 +1,9 @@
 # TODO
-# Add concept of translater in addition to author
-# Add concept of book series
+# Add foreign keys to db
+# Add concept of "translator" in addition to author
+# Add all book series
 # Clean up author middle names
-# Add concept of publisher (incorporate multiple publishings per work)
+# Add concept of publisher, including multiple publishers per work
 # Add ISBN concept for works
 # Add nominations concept to awards
 # Add nominations data for Hugos
@@ -19,6 +20,9 @@ sqlite3 scintillate.sqlite < data/works-authors-j-n.sql
 sqlite3 scintillate.sqlite < data/works-authors-o-t.sql
 sqlite3 scintillate.sqlite < data/works-authors-u-z.sql
 sqlite3 scintillate.sqlite < data/awards.sql
-sqlite3 scintillate.sqlite < data/works-hugos.sql
+sqlite3 scintillate.sqlite < data/works-hugo-winners.sql
 sqlite3 scintillate.sqlite < data/works-product-links.sql
+sqlite3 scintillate.sqlite < data/users.sql
 
+# Copy the database to the correct directory for the Android project
+cp scintillate.sqlite ../android/app/src/main/assets/scintillate99.sqlite

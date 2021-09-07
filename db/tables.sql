@@ -13,7 +13,7 @@ CREATE TABLE author (
 );
 
 CREATE TABLE work (
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY NOT NULL,
     name TEXT NOT NULL,
     type TEXT NOT NULL,
     product_link TEXT
@@ -61,4 +61,20 @@ CREATE TABLE work_award_category (
     award_category_id INTEGER NOT NULL,
     status INTEGER NOT NULL,
     UNIQUE(work_id, award_category_id)
+);
+
+CREATE TABLE user (
+    id INTEGER PRIMARY KEY,
+    username TEXT NOT NULL,
+    email TEXT,
+    first_name TEXT NOT NULL,
+    last_name TEXT NOT NULL
+);
+
+CREATE TABLE user_work_stat (
+    id INTEGER PRIMARY KEY,
+    user_id INTEGER NOT NULL,
+    work_id INTEGER NOT NULL,
+    read_status INTEGER,  -- 0=have not read, 1=want to read, 2=reading, 3=read
+    own_status INTEGER    -- 0=do not own, 1=want to own, 2=own it
 );

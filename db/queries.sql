@@ -23,6 +23,7 @@ order by
     a.last_name,
     a.first_name;
 
+-- Hugo Best Novel award winners
 select
     aw.name,
     ac.year as Year,
@@ -49,8 +50,56 @@ order by
     wac.status,
     w.name;
 
-select * from work_author where work_id = 147;
+-- Books I own
+select
+    w.name,
+    a.first_name,
+    a.last_name,
+    s.name,
+    ws.ordinal_name
+from
+    work w
+left outer join
+    work_author wa on w.id = wa.work_id
+left outer join
+    author a on wa.author_id = a.id
+left outer join
+    work_series ws on w.id = ws.work_id
+left outer join
+    series s on ws.series_id = s.id
+inner join
+    user_work_stat uws on uws.work_id = w.id
+inner join
+    user u on u.id = uws.user_id
+where
+    u.username = 'jsclev' and
+    uws.own_status = 2
+order by
+    w.name;
 
-select * from work_author order by work_id;
-
-select * from work where name = 'The Demolished Man';
+-- Books I have read
+select
+    w.name,
+    a.first_name,
+    a.last_name,
+    s.name,
+    ws.ordinal_name
+from
+    work w
+left outer join
+    work_author wa on w.id = wa.work_id
+left outer join
+    author a on wa.author_id = a.id
+left outer join
+    work_series ws on w.id = ws.work_id
+left outer join
+    series s on ws.series_id = s.id
+inner join
+    user_work_stat uws on uws.work_id = w.id
+inner join
+    user u on u.id = uws.user_id
+where
+    u.username = 'jsclev' and
+    uws.read_status = 3
+order by
+    w.name;

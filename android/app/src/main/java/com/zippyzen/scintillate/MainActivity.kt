@@ -1,4 +1,4 @@
-package com.zippyzen.liberlists
+package com.zippyzen.scintillate
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
@@ -9,7 +9,10 @@ import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
-import com.zippyzen.liberlists.databinding.ActivityMainBinding
+import androidx.room.Room
+import com.zippyzen.scintillate.databinding.ActivityMainBinding
+import com.zippyzen.scintillate.db.AppDatabase
+import com.zippyzen.scintillate.model.Work
 
 class MainActivity : AppCompatActivity() {
 
