@@ -670,1088 +670,709 @@ insert into work_award_category (work_id, award_category_id, status) values (
    2
 );
 
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blackout/All Clear'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Among Others'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Redshirts'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ancillary Justice'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Three-Body Problem'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fifth Season'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Obelisk Gate'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Stone Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Calculating Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Memory Called Empire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Demolished Man'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1953),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'They''d Rather Be Right'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1955),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Double Star'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1956),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Big Time'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1958),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Case of Conscience'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Starship Troopers'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1960),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Canticle for Leibowitz'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1961),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stranger in a Strange Land'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1962),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Man in the High Castle'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1963),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Here Gather the Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1964),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Wanderer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1965),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dune'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = '...And Call Me Conrad'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Moon Is a Harsh Mistress'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1967),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Lord of Light'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1968),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stand on Zanzibar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1969),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Left Hand of Darkness'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1970),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ringworld'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1971),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Your Scattered Bodies Go'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1972),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Gods Themselves'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1973),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rendezvous with Rama'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1974),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Dispossessed'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1975),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Forever War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1976),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Where Late the Sweet Birds Sang'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1977),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Gateway'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1978),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dreamsnake'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1979),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fountains of Paradise'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1980),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Snow Queen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1981),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Downbelow Station'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1982),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Foundation''s Edge'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1983),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Startide Rising'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1984),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Neuromancer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1985),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ender''s Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1986),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Speaker for the Dead'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1987),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Uplift War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1988),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Cyteen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1989),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hyperion'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Vor Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Barrayar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Fire Upon the Deep'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Doomsday Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Green Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Mirror Dance'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Diamond Age'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blue Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Forever Peace'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Say Nothing of the Dog'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Deepness in the Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Harry Potter and the Goblet of Fire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'American Gods'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hominids'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Paladin of Souls'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Jonathan Strange & Mr Norrell'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Spin'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rainbows End'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Yiddish Policemen''s Union'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Graveyard Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Windup Girl'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The City & the City'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blackout/All Clear'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Among Others'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Redshirts'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ancillary Justice'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Three-Body Problem'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fifth Season'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Obelisk Gate'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Stone Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Calculating Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Memory Called Empire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Demolished Man'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1953),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'They''d Rather Be Right'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1955),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Double Star'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1956),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Big Time'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1958),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Case of Conscience'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Starship Troopers'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1960),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Canticle for Leibowitz'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1961),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stranger in a Strange Land'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1962),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Man in the High Castle'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1963),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Here Gather the Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1964),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Wanderer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1965),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dune'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = '...And Call Me Conrad'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Moon Is a Harsh Mistress'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1967),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Lord of Light'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1968),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stand on Zanzibar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1969),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Left Hand of Darkness'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1970),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ringworld'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1971),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Your Scattered Bodies Go'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1972),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Gods Themselves'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1973),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rendezvous with Rama'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1974),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Dispossessed'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1975),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Forever War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1976),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Where Late the Sweet Birds Sang'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1977),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Gateway'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1978),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dreamsnake'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1979),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fountains of Paradise'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1980),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Snow Queen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1981),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Downbelow Station'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1982),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Foundation''s Edge'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1983),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Startide Rising'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1984),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Neuromancer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1985),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ender''s Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1986),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Speaker for the Dead'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1987),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Uplift War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1988),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Cyteen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1989),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hyperion'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Vor Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Barrayar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Fire Upon the Deep'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Doomsday Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Green Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Mirror Dance'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Diamond Age'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blue Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Forever Peace'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Say Nothing of the Dog'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Deepness in the Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Harry Potter and the Goblet of Fire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'American Gods'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hominids'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Paladin of Souls'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Jonathan Strange & Mr Norrell'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Spin'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rainbows End'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Yiddish Policemen''s Union'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Graveyard Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Windup Girl'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The City & the City'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blackout/All Clear'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Among Others'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Redshirts'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ancillary Justice'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Three-Body Problem'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fifth Season'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Obelisk Gate'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Stone Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Calculating Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Memory Called Empire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Demolished Man'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1953),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'They''d Rather Be Right'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1955),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Double Star'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1956),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Big Time'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1958),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Case of Conscience'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Starship Troopers'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1960),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Canticle for Leibowitz'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1961),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stranger in a Strange Land'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1962),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Man in the High Castle'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1963),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Here Gather the Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1964),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Wanderer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1965),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dune'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = '...And Call Me Conrad'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Moon Is a Harsh Mistress'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1967),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Lord of Light'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1968),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Stand on Zanzibar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1969),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Left Hand of Darkness'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1970),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ringworld'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1971),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Your Scattered Bodies Go'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1972),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Gods Themselves'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1973),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rendezvous with Rama'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1974),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Dispossessed'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1975),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Forever War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1976),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Where Late the Sweet Birds Sang'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1977),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Gateway'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1978),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Dreamsnake'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1979),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fountains of Paradise'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1980),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Snow Queen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1981),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Downbelow Station'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1982),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Foundation''s Edge'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1983),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Startide Rising'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1984),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Neuromancer'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1985),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ender''s Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1986),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Speaker for the Dead'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1987),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Uplift War'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1988),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Cyteen'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1989),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hyperion'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Vor Game'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Barrayar'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Fire Upon the Deep'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Doomsday Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Green Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Mirror Dance'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Diamond Age'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blue Mars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Forever Peace'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'To Say Nothing of the Dog'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Deepness in the Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Harry Potter and the Goblet of Fire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'American Gods'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Hominids'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Paladin of Souls'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Jonathan Strange & Mr Norrell'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Spin'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Rainbows End'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Yiddish Policemen''s Union'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Graveyard Book'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Windup Girl'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The City & the City'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Blackout/All Clear'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Among Others'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Redshirts'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'Ancillary Justice'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Three-Body Problem'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Fifth Season'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Obelisk Gate'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Stone Sky'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'The Calculating Stars'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
---    2
--- );
--- insert into work_award_category (work_id, award_category_id, status) values (
---    (select id from work where name = 'A Memory Called Empire'),
---    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
---    2
--- );
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Fire in the Sun'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Prentice Alvin'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Boat of a Million Years'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Grass'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1990),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Earth'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Fall of Hyperion'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Quiet Pools'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Queen of Angels'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1991),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Bone Dance'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'All the Weyrs of Pern'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Summer Queen'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Xenocide'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Stations of the Tide'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1992),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Red Mars'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'China Mountain Zhang'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Steel Beach'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1993),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Moving Mars'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Beggars in Spain'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Glory Season'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Virtual Light'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1994),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Mother of Storms'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Beggars and Choosers'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Brittle Innings'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Towing Jehovah'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1995),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Time Ships'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Brightness Reef'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Terminal Experiment'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Remake'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1996),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Memory'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Remnant Population'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Starplex'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Holy Fire'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1997),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'City on Fire'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Rise of Endymion'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Frameshift'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Jack Faust'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1998),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Children of God'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Darwinia'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Distraction'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Factoring Humanity'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1999),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Civil Campaign'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Cryptonomicon'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Darwin''s Radio'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Harry Potter and the Prisoner of Azkaban'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2000),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Storm of Swords'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Calculating God'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Sky Road'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Midnight Robber'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2001),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Curse of Chalion'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Passage'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Perdido Street Station'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Chronoliths'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Cosmonaut Keep'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2002),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Kiln People'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Bones of the Earth'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Scar'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Years of Rice and Salt'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2003),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Ilium'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Singularity Sky'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Blind Lake'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Humans'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2004),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'River of Gods'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Algebraist'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Iron Sunrise'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Iron Council'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2005),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Learning the World'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Feast for Crows'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Old Man''s War'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Accelerando'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2006),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Glasshouse'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'His Majesty''s Dragon'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Eifelheim'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Blindsight'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2007),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Last Colony'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Halting State'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Rollback'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Brasyl'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2008),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Little Brother'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Anathem'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Saturn''s Children'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Zoe''s Tale'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2009),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Boneshaker'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Wake'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Palimpsest'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Julian Comstock: A Story of 22nd-Century America'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2010),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Cryoburn'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Dervish House'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Feed'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Hundred Thousand Kingdoms'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2011),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Dance with Dragons'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Deadline'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Embassytown'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Leviathan Wakes'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2012),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = '2312'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Blackout'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Captain Vorpatril''s Alliance'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Throne of the Crescent Moon'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2013),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Neptune''s Brood'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Parasite'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Warbound'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Wheel of Time'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Goblin Emperor'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Dark Between the Stars'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Skin Game'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Ancillary Sword'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2015),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Uprooted'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Ancillary Mercy'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Seveneves'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Cinder Spires: The Aeronaut''s Windlass'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2016),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'All the Birds in the Sky'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Closed and Common Orbit'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Death''s End'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Ninefox Gambit'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Too Like the Lightning'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2017),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Collapsing Empire'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'New York 2140'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Provenance'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Raven Stratagem'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Six Wakes'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2018),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'A Fire Upon the Deep'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Doomsday Book'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Green Mars'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Mirror Dance'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Diamond Age'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The City in the Middle of the Night'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Gideon the Ninth'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Light Brigade'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Middlegame'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Ten Thousand Doors of January'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
+   2
+);
+
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Black Sun'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The City We Became'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Harrow the Ninth'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Network Effect'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'Piranesi'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where name = 'The Relentless Moon'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   2
+);

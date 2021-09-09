@@ -75,6 +75,7 @@ insert into award_category (award_id, name, sort_order, year) values (1, 'Best N
 insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 2018);
 insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 2019);
 insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 2020);
+insert into award_category (award_id, name, sort_order, year) values (1, 'Best Novel', 1, 2021);
 
 ----------------------------------------------------------------------------------------------------
 -- Nebula Award, Best Novel
