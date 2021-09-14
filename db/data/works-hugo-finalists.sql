@@ -30,7 +30,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'Have Space Suit — Will Travel'),
+   (select id from work where name = 'Have Space Suit - Will Travel'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
    2
 );
@@ -1295,27 +1295,27 @@ insert into work_award_category (work_id, award_category_id, status) values (
 );
 
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'A Fire Upon the Deep'),
+   (select id from work where name = 'Record of a Spaceborn Few'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'Doomsday Book'),
+   (select id from work where name = 'Revenant Gun'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'Green Mars'),
+   (select id from work where name = 'Spinning Silver'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'Mirror Dance'),
+   (select id from work where name = 'Trail of Lightning'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where name = 'The Diamond Age'),
+   (select id from work where name = 'Space Opera'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2019),
    2
 );

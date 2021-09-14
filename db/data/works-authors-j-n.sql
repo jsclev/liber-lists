@@ -10,6 +10,12 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Left Hand of Darkness'),
     (select id from author where first_name = 'Ursula' and last_name = 'Le Guin'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Light Brigade'),
+    (select id from author where first_name = 'Kameron' and last_name = 'Hurley'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Long Tomorrow'),
+    (select id from author where first_name = 'Leigh' and last_name = 'Brackett'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Lord of Light'),
     (select id from author where first_name = 'Roger' and last_name = 'Zelazny'));
 
@@ -20,6 +26,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Memory Called Empire'),
     (select id from author where first_name = 'Arkady' and last_name = 'Martine'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Middlegame'),
+    (select id from author where first_name = 'Seanan' and last_name = 'McGuire'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
@@ -32,5 +41,14 @@ insert into work_author (work_id, author_id) values (
 
 -- N
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Network Effect'),
+    (select id from author where first_name = 'Martha' and last_name = 'Wells'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Neuromancer'),
     (select id from author where first_name = 'William' and last_name = 'Gibson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'New York 2140'),
+    (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Not This August'),
+    (select id from author where first_name = 'Cyril' and last_name = 'Kornbluth'));
