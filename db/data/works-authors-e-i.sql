@@ -1,5 +1,8 @@
 -- E
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Earth'),
+    (select id from author where first_name = 'David' and last_name = 'Brin'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The End of Eternity'),
     (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
 insert into work_author (work_id, author_id) values (
@@ -8,8 +11,14 @@ insert into work_author (work_id, author_id) values (
 
 -- F
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Fall of Hyperion'),
+    (select id from author where first_name = 'Dan' and last_name = 'Simmons'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Fifth Season'),
     (select id from author where first_name = 'N.' and last_name = 'Jemisin'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'A Fire in the Sun'),
+    (select id from author where first_name = 'George' and last_name = 'Effinger'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Fire Upon the Deep'),
     (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
@@ -36,6 +45,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Gideon the Ninth'),
     (select id from author where first_name = 'Tamsyn' and last_name = 'Muir'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Grass'),
+    (select id from author where first_name = 'Sheri' and last_name = 'Tepper'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Graveyard Book'),
     (select id from author where first_name = 'Neil' and last_name = 'Gaiman'));

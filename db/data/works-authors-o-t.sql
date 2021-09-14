@@ -11,9 +11,19 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Piranesi'),
     (select id from author where first_name = 'Susanna' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Prentice Alvin'),
+    (select id from author where first_name = 'Orson' and last_name = 'Card'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Provenance'),
     (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
+
 -- Q
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Queen of Angels'),
+    (select id from author where first_name = 'Greg' and last_name = 'Bear'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Quiet Pools'),
+    (select id from author where first_name = 'Michael' and last_name = 'Kube-McDowell'));
 
 -- R
 insert into work_author (work_id, author_id) values (
@@ -61,11 +71,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Startide Rising'),
     (select id from author where first_name = 'David' and last_name = 'Brin'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Stations of the Tide'),
+    (select id from author where first_name = 'Michael' and last_name = 'Swanwick'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Stone Sky'),
     (select id from author where first_name = 'N.' and last_name = 'Jemisin'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Stranger in a Strange Land'),
     (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Summer Queen'),
+    (select id from author where first_name = 'Joan' and last_name = 'Vinge'));
 
 -- T
 insert into work_author (work_id, author_id) values (

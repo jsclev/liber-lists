@@ -1,10 +1,7 @@
 -- A
 insert into work_author (work_id, author_id) values (
-    (select id from work where name = 'Ancillary Justice'),
-    (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
-insert into work_author (work_id, author_id) values (
-    (select id from work where name = 'Ancillary Mercy'),
-    (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
+    (select id from work where name = 'All the Weyrs of Pern'),
+    (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Ancillary Sword'),
     (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
@@ -31,6 +28,13 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Blue Mars'),
     (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Boat of a Million Years'),
+    (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Bone Dance'),
+    (select id from author where first_name = 'Emma' and last_name = 'Bull'));
+
 
 -- C
 insert into work_author (work_id, author_id) values (

@@ -26,6 +26,9 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Paolo' and last_name = 'Bacigalupi'));
 
 -- X
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Xenocide'),
+    (select id from author where first_name = 'Orson' and last_name = 'Card'));
 
 -- Y
 insert into work_author (work_id, author_id) values (
