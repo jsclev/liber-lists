@@ -29,6 +29,12 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Forever War'),
     (select id from author where first_name = 'Joe' and last_name = 'Haldeman'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Foundation'),
+    (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Foundation and Empire'),
+    (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Foundation''s Edge'),
     (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
 insert into work_author (work_id, author_id) values (
@@ -42,6 +48,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Gateway'),
     (select id from author where first_name = 'Frederik' and last_name = 'Pohl'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Ghost Brigades'),
+    (select id from author where first_name = 'John' and last_name = 'Scalzi'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Gideon the Ninth'),
     (select id from author where first_name = 'Tamsyn' and last_name = 'Muir'));
@@ -79,6 +88,9 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Dan' and last_name = 'Simmons'));
 
 -- I
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Imperial Earth'),
+    (select id from author where first_name = 'Arthur' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = '...And Call Me Conrad'),
     (select id from author where first_name = 'Roger' and last_name = 'Zelazny'));

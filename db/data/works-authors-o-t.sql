@@ -24,6 +24,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Quiet Pools'),
     (select id from author where first_name = 'Michael' and last_name = 'Kube-McDowell'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Quiet War'),
+    (select id from author where first_name = 'Paul' and last_name = 'McAuley'));
 
 -- R
 insert into work_author (work_id, author_id) values (
@@ -32,6 +35,12 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Raven Stratagem'),
     (select id from author where first_name = 'Yoon Ha' and last_name = 'Lee'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Red Mars'),
+    (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Red Rising'),
+    (select id from author where first_name = 'Pierce' and last_name = 'Brown'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Redshirts'),
     (select id from author where first_name = 'John' and last_name = 'Scalzi'));
@@ -42,6 +51,12 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Rendezvous with Rama'),
     (select id from author where first_name = 'Arthur' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Revelation Space'),
+    (select id from author where first_name = 'Alastair' and last_name = 'Reynolds'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Revenant Gun'),
+    (select id from author where first_name = 'Yoon Ha' and last_name = 'Lee'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Ringworld'),
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
 
@@ -49,6 +64,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'To Say Nothing of the Dog'),
     (select id from author where first_name = 'Connie' and last_name = 'Willis'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Second Foundation'),
+    (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Six Wakes'),
     (select id from author where first_name = 'Mur' and last_name = 'Lafferty'));
@@ -99,6 +117,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Time Killer'),
     (select id from author where first_name = 'Robert' and last_name = 'Sheckley'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Time Machine'),
+    (select id from author where first_name = 'H.' and last_name = 'Wells'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'To Your Scattered Bodies Go'),
     (select id from author where first_name = 'Philip' and last_name = 'Farmer'));

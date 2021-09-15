@@ -50,5 +50,8 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'New York 2140'),
     (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Ninefox Gambit'),
+    (select id from author where first_name = 'Yoon Ha' and last_name = 'Lee'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Not This August'),
     (select id from author where first_name = 'Cyril' and last_name = 'Kornbluth'));

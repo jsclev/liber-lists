@@ -3,6 +3,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'All the Weyrs of Pern'),
     (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Ancillary Justice'),
+    (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Ancillary Sword'),
     (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
 insert into work_author (work_id, author_id) values (
@@ -89,7 +92,7 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Downbelow Station'),
-    (select id from author where first_name = 'James' and last_name = 'Blish'));
+    (select id from author where first_name = 'C.' and last_name = 'Cherryh'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Dreamsnake'),
     (select id from author where first_name = 'Vonda' and last_name = 'McIntyre'));

@@ -7,10 +7,12 @@ select
          when wac.status = 2 then 'Finalist'
     end as Status,
     w.name as Name,
-    case when a.middle_name is null
-        then a.first_name || ' ' || a.last_name
-        else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
-    end as AuthorName
+    case when a.middle_name is null then a.first_name || ' ' || a.last_name
+         else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
+    end as AuthorName,
+    case when uws.own_status = 2 then 'Owned'
+         else ''
+    end as Owned
 from
     award aw
 left outer join
@@ -23,8 +25,13 @@ left outer join
     work_author wa on wa.work_id = w.id
 left outer join
     author a on a.id = wa.author_id
+left outer join
+    user_work_stat uws on w.id = uws.work_id
+left outer join
+    user u on uws.user_id = u.id
 where
-    aw.name = 'Hugo Award'
+    aw.name = 'Hugo Award' and
+    u.username = 'jsclev'
 order by
     aw.name,
     ac.year,
@@ -38,7 +45,9 @@ select
     ac.year as Year,
     ac.name as Category,
     w.name as Name,
-    a.first_name || ' ' || a.last_name as Author
+    case when a.middle_name is null then a.first_name || ' ' || a.last_name
+         else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
+    end as Author
 from
     award aw
 left outer join
@@ -62,8 +71,9 @@ order by
 -- Books I own
 select
     w.name,
-    a.first_name,
-    a.last_name,
+    case when a.middle_name is null then a.first_name || ' ' || a.last_name
+         else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
+    end as Author,
     s.name,
     ws.ordinal_name
 from
@@ -84,6 +94,9 @@ where
     u.username = 'jsclev' and
     uws.own_status = 2
 order by
+    a.last_name,
+    a.first_name,
+    ws.ordinal,
     w.name;
 
 -- Books I have read
