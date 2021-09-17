@@ -46,6 +46,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Do Androids Dream of Electric Sheep?'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Doomsday Book'),
     1,
     2
@@ -116,6 +123,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Have Space Suit - Will Travel'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Hyperion'),
     2,
     2
@@ -130,6 +144,27 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Leviathan Wakes'),
+    3,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Martian'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Mote in God''s Eye'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Neuromancer'),
     3,
     2
@@ -138,6 +173,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
     (select id from work where name = 'Ninefox Gambit'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Obelisk Gate'),
     1,
     2
 );
@@ -179,6 +221,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Road'),
+    3,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Second Foundation'),
     1,
     2
@@ -200,7 +249,21 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Strange Case of Dr. Jekyll & Mr. Hyde'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Stranger in a Strange Land'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'That Hideous Strength'),
     1,
     2
 );
@@ -229,6 +292,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
     (select id from work where name = 'The Wanderer'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Wool'),
     1,
     2
 );

@@ -45,6 +45,9 @@ select
     ac.year as Year,
     ac.name as Category,
     w.name as Name,
+    case when wac.status = 1 then 'Winner'
+         when wac.status = 2 then 'Finalist'
+    end as Status,
     case when a.middle_name is null then a.first_name || ' ' || a.last_name
          else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
     end as Author
