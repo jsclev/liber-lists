@@ -8,6 +8,12 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Paladin of Souls'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Palimpsest'),
+    (select id from author where first_name = 'Catherynne' and last_name = 'Valente'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Parasite'),
+    (select id from author where first_name = 'Mira' and last_name = 'Grant'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Perelandra'),
     (select id from author where first_name = 'C.' and last_name = 'Lewis'));
 insert into work_author (work_id, author_id) values (
@@ -77,8 +83,14 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Second Foundation'),
     (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Seveneves'),
+    (select id from author where first_name = 'Neal' and last_name = 'Stephenson'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Six Wakes'),
     (select id from author where first_name = 'Mur' and last_name = 'Lafferty'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Skin Game'),
+    (select id from author where first_name = 'Jim' and last_name = 'Butcher'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Snow Queen'),
     (select id from author where first_name = 'Joan' and last_name = 'Vinge'));
@@ -135,6 +147,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Three-Body Problem'),
     (select id from author where first_name = 'Cixin' and last_name = 'Liu'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Throne of the Crescent Moon'),
+    (select id from author where first_name = 'Saladin' and last_name = 'Ahmed'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Time Killer'),
     (select id from author where first_name = 'Robert' and last_name = 'Sheckley'));

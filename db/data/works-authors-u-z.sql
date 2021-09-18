@@ -2,6 +2,9 @@
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Uplift War'),
     (select id from author where first_name = 'David' and last_name = 'Brin'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Uprooted'),
+    (select id from author where first_name = 'Naomi' and last_name = 'Novik'));
 
 -- V
 insert into work_author (work_id, author_id) values (
@@ -10,11 +13,23 @@ insert into work_author (work_id, author_id) values (
 
 -- W
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Wake'),
+    (select id from author where first_name = 'Robert' and last_name = 'Sawyer'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Wanderer'),
     (select id from author where first_name = 'Fritz' and last_name = 'Leiber'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Warbound'),
+    (select id from author where first_name = 'Larry' and last_name = 'Correia'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'We Have Fed Our Sea'),
     (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Wheel of Time'),
+    (select id from author where first_name = 'Robert' and last_name = 'Jordan'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Wheel of Time'),
+    (select id from author where first_name = 'Brandon' and last_name = 'Sanderson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Where Late the Sweet Birds Sang'),
     (select id from author where first_name = 'Kate' and last_name = 'Wilhelm'));

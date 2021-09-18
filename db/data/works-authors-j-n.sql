@@ -2,6 +2,9 @@
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jonathan Strange & Mr Norrell'),
     (select id from author where first_name = 'Susanna' and last_name = 'Clarke'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Julian Comstock: A Story of 22nd-Century America'),
+    (select id from author where first_name = 'Robert' and last_name = 'Wilson'));
 
 -- K
 
@@ -49,6 +52,9 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
 
 -- N
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Neptune''s Brood'),
+    (select id from author where first_name = 'Charles' and last_name = 'Stross'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Network Effect'),
     (select id from author where first_name = 'Martha' and last_name = 'Wells'));

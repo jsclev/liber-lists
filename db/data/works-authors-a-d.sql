@@ -1,3 +1,8 @@
+-- Numbers
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = '2312'),
+    (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
+
 -- A
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'All the Birds in the Sky'),
@@ -7,6 +12,9 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Ancillary Justice'),
+    (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Ancillary Mercy'),
     (select id from author where first_name = 'Ann' and last_name = 'Leckie'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Ancillary Sword'),
@@ -29,6 +37,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Black Sun'),
     (select id from author where first_name = 'Rebecca' and last_name = 'Roanhorse'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Blackout'),
+    (select id from author where first_name = 'Mira' and last_name = 'Grant'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Blackout/All Clear'),
     (select id from author where first_name = 'Connie' and last_name = 'Willis'));
 insert into work_author (work_id, author_id) values (
@@ -40,6 +51,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Bone Dance'),
     (select id from author where first_name = 'Emma' and last_name = 'Bull'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Boneshaker'),
+    (select id from author where first_name = 'Cherie' and last_name = 'Priest'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Brightness Reef'),
     (select id from author where first_name = 'David' and last_name = 'Brin'));
@@ -56,11 +70,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Canticle for Leibowitz'),
     (select id from author where first_name = 'Walter' and last_name = 'Miller, Jr.'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Captain Vorpatril''s Alliance'),
+    (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Case of Conscience'),
     (select id from author where first_name = 'James' and last_name = 'Blish'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The City & the City'),
     (select id from author where first_name = 'China' and last_name = 'Miéville'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Cinder Spires: The Aeronaut''s Windlass'),
+    (select id from author where first_name = 'Jim' and last_name = 'Butcher'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The City in the Middle of the Night'),
     (select id from author where first_name = 'Charlie' and last_name = 'Anders'));
@@ -77,6 +97,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Count Zero'),
     (select id from author where first_name = 'William' and last_name = 'Gibson'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Cryoburn'),
+    (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Cyteen'),
     (select id from author where first_name = 'C.' and last_name = 'Cherryh'));
 insert into work_author (work_id, author_id) values (
@@ -84,6 +107,15 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'John' and last_name = 'Scalzi'));
 
 -- D
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'A Dance with Dragons'),
+    (select id from author where first_name = 'George' and last_name = 'Martin'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Dark Between the Stars'),
+    (select id from author where first_name = 'Kevin' and last_name = 'Anderson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Deadline'),
+    (select id from author where first_name = 'Mira' and last_name = 'Grant'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Death''s End'),
     (select id from author where first_name = 'Cixin' and last_name = 'Liu'));
@@ -93,6 +125,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Demolished Man'),
     (select id from author where first_name = 'Alfred' and last_name = 'Bester'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Dervish House'),
+    (select id from author where first_name = 'Ian' and last_name = 'McDonald'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Diamond Age'),
     (select id from author where first_name = 'Neal' and last_name = 'Stephenson'));
