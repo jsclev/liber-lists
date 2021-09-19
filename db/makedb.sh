@@ -26,4 +26,7 @@ sqlite3 scintillate.sqlite < data/works-product-links.sql
 sqlite3 scintillate.sqlite < data/users.sql
 
 # Copy the database to the correct directory for the Android project
-cp scintillate.sqlite ../android/app/src/main/assets/scintillate99.sqlite
+cp scintillate.sqlite ../android/app/src/main/assets/scintillate.db
+
+# Copy the database to the correct directory for the Android project
+cp scintillate.sqlite ../ios/Scintillate/Scintillate/Assets.db/scintillate.db

@@ -8,6 +8,9 @@ insert into work_author (work_id, author_id) values (
 
 -- V
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Virtual Light'),
+    (select id from author where first_name = 'William' and last_name = 'Gibson'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Vor Game'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
 
@@ -49,6 +52,9 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Orson' and last_name = 'Card'));
 
 -- Y
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Years of Rice and Salt'),
+    (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Yiddish Policemen''s Union'),
     (select id from author where first_name = 'Michael' and last_name = 'Chabon'));

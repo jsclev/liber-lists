@@ -1035,3 +1035,4 @@ insert into work (name, type) values ('Wool', 'Novel');
 insert into work (name, type) values ('The Strange Case of Dr. Jekyll & Mr. Hyde', 'Novel');
 insert into work (name, type) values ('The Road', 'Novel');
 insert into work (name, type) values ('Earth Strike', 'Novel');
+insert into work (name, type) values ('Dandelion Wine', 'Novel');

@@ -1,5 +1,8 @@
 -- J
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Jack Faust'),
+    (select id from author where first_name = 'Michael' and last_name = 'Swanwick'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jonathan Strange & Mr Norrell'),
     (select id from author where first_name = 'Susanna' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
@@ -7,8 +10,17 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Robert' and last_name = 'Wilson'));
 
 -- K
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Kiln People'),
+    (select id from author where first_name = 'David' and last_name = 'Brin'));
 
 -- L
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Last Colony'),
+    (select id from author where first_name = 'John' and last_name = 'Scalzi'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Learning the World'),
+    (select id from author where first_name = 'Ken' and last_name = 'MacLeod'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Left Hand of Darkness'),
     (select id from author where first_name = 'Ursula' and last_name = 'Le Guin'));
@@ -18,6 +30,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Light Brigade'),
     (select id from author where first_name = 'Kameron' and last_name = 'Hurley'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Little Brother'),
+    (select id from author where first_name = 'Cory' and last_name = 'Doctorow'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Long Tomorrow'),
     (select id from author where first_name = 'Leigh' and last_name = 'Brackett'));
@@ -33,11 +48,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Martian'),
     (select id from author where first_name = 'Andy' and last_name = 'Weir'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Memory'),
+    (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Memory Called Empire'),
     (select id from author where first_name = 'Arkady' and last_name = 'Martine'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Middlegame'),
     (select id from author where first_name = 'Seanan' and last_name = 'McGuire'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Midnight Robber'),
+    (select id from author where first_name = 'Nalo' and last_name = 'Hopkinson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
@@ -50,6 +71,12 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Mote in God''s Eye'),
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Mother of Storms'),
+    (select id from author where first_name = 'John' and last_name = 'Barnes'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Moving Mars'),
+    (select id from author where first_name = 'Greg' and last_name = 'Bear'));
 
 -- N
 insert into work_author (work_id, author_id) values (

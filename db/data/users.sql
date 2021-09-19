@@ -32,6 +32,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Childhood''s End'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'Cordelia''s Honor'),
     1,
     2
@@ -40,6 +47,20 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
     (select id from work where name = 'Count Zero'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Cryptonomicon'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Dandelion Wine'),
     1,
     2
 );
@@ -70,6 +91,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from work where name = 'Ender''s Game'),
     3,
     0
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'The Fall of Hyperion'),
+    1,
+    2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
@@ -186,6 +214,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Queen of Angels'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where name = 'The Quiet War'),
     1,
     2
@@ -215,6 +250,13 @@ insert into user_work_stat (user_id, work_id, read_status, own_status) values (
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
     (select id from work where name = 'Revelation Space'),
+    1,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where name = 'Revenant Gun'),
     1,
     2
 );
