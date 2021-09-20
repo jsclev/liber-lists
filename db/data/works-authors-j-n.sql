@@ -3,6 +3,12 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jack Faust'),
     (select id from author where first_name = 'Michael' and last_name = 'Swanwick'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Jem'),
+    (select id from author where first_name = 'Frederik' and last_name = 'Pohl'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Job: A Comedy of Justice'),
+    (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jonathan Strange & Mr Norrell'),
     (select id from author where first_name = 'Susanna' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
@@ -31,6 +37,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Light Brigade'),
     (select id from author where first_name = 'Kameron' and last_name = 'Hurley'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Little, Big'),
+    (select id from author where first_name = 'John' and last_name = 'Crowley'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Little Brother'),
     (select id from author where first_name = 'Cory' and last_name = 'Doctorow'));
 insert into work_author (work_id, author_id) values (
@@ -39,11 +48,26 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Lord of Light'),
     (select id from author where first_name = 'Roger' and last_name = 'Zelazny'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Lord Valentine''s Castle'),
+    (select id from author where first_name = 'Robert' and last_name = 'Silverberg'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Lucifer''s Hammer'),
+    (select id from author where first_name = 'Larry' and last_name = 'Niven'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Lucifer''s Hammer'),
+    (select id from author where first_name = 'Jerry' and last_name = 'Pournelle'));
 
 -- M
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Man in the High Castle'),
     (select id from author where first_name = 'Philip' and last_name = 'Dick'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Many-Colored Land'),
+    (select id from author where first_name = 'Julian' and last_name = 'May'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Marooned in Realtime'),
+    (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Martian'),
     (select id from author where first_name = 'Andy' and last_name = 'Weir'));
@@ -60,8 +84,14 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Midnight Robber'),
     (select id from author where first_name = 'Nalo' and last_name = 'Hopkinson'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Millennium'),
+    (select id from author where first_name = 'John' and last_name = 'Varley'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Moreta: Dragonlady of Pern'),
+    (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mona Lisa Overdrive'),
     (select id from author where first_name = 'William' and last_name = 'Gibson'));
