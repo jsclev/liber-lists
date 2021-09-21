@@ -12,7 +12,6 @@
 		52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4226F797CB00EA956C /* Assets.xcassets */; };
 		52E2FE4626F797CB00EA956C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */; };
 		52E2FE5226F79AA800EA956C /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE5126F79AA800EA956C /* Db.swift */; };
-		52E2FE5526F79DEA00EA956C /* scintillate.db in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE5326F79C9300EA956C /* scintillate.db */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,7 +22,6 @@
 		52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E2FE4726F797CB00EA956C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E2FE5126F79AA800EA956C /* Db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Db.swift; sourceTree = "<group>"; };
-		52E2FE5326F79C9300EA956C /* scintillate.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = scintillate.db; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,7 +54,6 @@
 		52E2FE3D26F797C800EA956C /* Scintillate */ = {
 			isa = PBXGroup;
 			children = (
-				52E2FE4D26F7994C00EA956C /* Assets.db */,
 				52E2FE4226F797CB00EA956C /* Assets.xcassets */,
 				52E2FE5026F79A8500EA956C /* Data Access Layer */,
 				52E2FE3E26F797C800EA956C /* ScintillateApp.swift */,
@@ -73,14 +70,6 @@
 				52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		52E2FE4D26F7994C00EA956C /* Assets.db */ = {
-			isa = PBXGroup;
-			children = (
-				52E2FE5326F79C9300EA956C /* scintillate.db */,
-			);
-			path = Assets.db;
 			sourceTree = "<group>";
 		};
 		52E2FE5026F79A8500EA956C /* Data Access Layer */ = {
@@ -148,7 +137,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52E2FE5526F79DEA00EA956C /* scintillate.db in Resources */,
 				52E2FE4626F797CB00EA956C /* Preview Assets.xcassets in Resources */,
 				52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */,
 			);

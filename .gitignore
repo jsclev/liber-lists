@@ -2,6 +2,7 @@
 .idea
 
 scintillate.db
+.DS_Store
 
 ## User settings
 xcuserdata/
