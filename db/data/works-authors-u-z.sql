@@ -3,6 +3,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Urth of the New Sun'),
     (select id from author where first_name = 'Gene' and last_name = 'Wolfe'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Up the Line'),
+    (select id from author where first_name = 'Robert' and last_name = 'Silverberg'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Uplift War'),
     (select id from author where first_name = 'David' and last_name = 'Brin'));
 insert into work_author (work_id, author_id) values (
@@ -43,6 +46,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'When Gravity Fails'),
     (select id from author where first_name = 'George' and last_name = 'Effinger'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'When HARLIE Was One'),
+    (select id from author where first_name = 'David' and last_name = 'Gerrold'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The White Dragon'),
     (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
@@ -67,6 +73,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Years of Rice and Salt'),
     (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Year of the Quiet Sun'),
+    (select id from author where first_name = 'Wilson' and last_name = 'Tucker'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Yiddish Policemen''s Union'),
     (select id from author where first_name = 'Michael' and last_name = 'Chabon'));

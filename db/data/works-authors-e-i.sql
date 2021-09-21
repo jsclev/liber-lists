@@ -44,11 +44,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Fifth Season'),
     (select id from author where first_name = 'N.' and last_name = 'Jemisin'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Fire Time'),
+    (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Fire in the Sun'),
     (select id from author where first_name = 'George' and last_name = 'Effinger'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Fire Upon the Deep'),
     (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Flow My Tears, the Policeman Said'),
+    (select id from author where first_name = 'Philip' and last_name = 'Dick'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Footfall'),
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
@@ -170,8 +176,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Imperial Earth'),
     (select id from author where first_name = 'Arthur' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Inferno'),
+    (select id from author where first_name = 'Larry' and last_name = 'Niven'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Inferno'),
+    (select id from author where first_name = 'Jerry' and last_name = 'Pournelle'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Integral Trees'),
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Inverted World'),
+    (select id from author where first_name = 'Christopher' and last_name = 'Priest'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Iron Council'),
     (select id from author where first_name = 'China' and last_name = 'Miéville'));

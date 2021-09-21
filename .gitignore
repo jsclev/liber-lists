@@ -1,6 +1,8 @@
 *.sqlite
 .idea
 
+scintillate.db
+
 ## User settings
 xcuserdata/
 

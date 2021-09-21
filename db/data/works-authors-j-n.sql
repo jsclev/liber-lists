@@ -3,6 +3,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jack Faust'),
     (select id from author where first_name = 'Michael' and last_name = 'Swanwick'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Jack of Shadows'),
+    (select id from author where first_name = 'Roger' and last_name = 'Zelazny'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Jem'),
     (select id from author where first_name = 'Frederik' and last_name = 'Pohl'));
 insert into work_author (work_id, author_id) values (
@@ -24,6 +27,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Last Colony'),
     (select id from author where first_name = 'John' and last_name = 'Scalzi'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Lathe of Heaven'),
+    (select id from author where first_name = 'Ursula' and last_name = 'Le Guin'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Learning the World'),
     (select id from author where first_name = 'Ken' and last_name = 'MacLeod'));
@@ -60,11 +66,20 @@ insert into work_author (work_id, author_id) values (
 
 -- M
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Macroscope'),
+    (select id from author where first_name = 'Piers' and last_name = 'Anthony'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Man in the High Castle'),
     (select id from author where first_name = 'Philip' and last_name = 'Dick'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Man Plus'),
+    (select id from author where first_name = 'Frederik' and last_name = 'Pohl'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Many-Colored Land'),
     (select id from author where first_name = 'Julian' and last_name = 'May'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Man Who Folded Himself'),
+    (select id from author where first_name = 'David' and last_name = 'Gerrold'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Marooned in Realtime'),
     (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
@@ -86,6 +101,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Millennium'),
     (select id from author where first_name = 'John' and last_name = 'Varley'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Mindbridge'),
+    (select id from author where first_name = 'Joe' and last_name = 'Haldeman'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Mirror Dance'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
