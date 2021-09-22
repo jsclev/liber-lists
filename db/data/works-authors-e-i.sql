@@ -12,6 +12,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Embassytown'),
     (select id from author where first_name = 'China' and last_name = 'Miéville'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Einstein Intersection'),
+    (select id from author where first_name = 'Samuel' and last_name = 'Delany'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Emergence'),
     (select id from author where first_name = 'David' and last_name = 'Palmer'));
 insert into work_author (work_id, author_id) values (
@@ -31,6 +34,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Fall of Hyperion'),
     (select id from author where first_name = 'Dan' and last_name = 'Simmons'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'A Fall of Moondust'),
+    (select id from author where first_name = 'Arthur' and last_name = 'Clarke'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Falling Free'),
     (select id from author where first_name = 'Lois' and last_name = 'Bujold'));
@@ -53,8 +59,14 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'A Fire Upon the Deep'),
     (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Fisherman'),
+    (select id from author where first_name = 'Clifford' and last_name = 'Simak'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Flow My Tears, the Policeman Said'),
     (select id from author where first_name = 'Philip' and last_name = 'Dick'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Flowers for Algernon'),
+    (select id from author where first_name = 'Daniel' and last_name = 'Keyes'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Footfall'),
     (select id from author where first_name = 'Larry' and last_name = 'Niven'));
@@ -109,11 +121,17 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Glasshouse'),
     (select id from author where first_name = 'Charles' and last_name = 'Stross'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Glory Road'),
+    (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Glory Season'),
     (select id from author where first_name = 'David' and last_name = 'Brin'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Goblin Emperor'),
     (select id from author where first_name = 'Katherine' and last_name = 'Addison'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Goblin Reservation'),
+    (select id from author where first_name = 'Clifford' and last_name = 'Simak'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Grass'),
     (select id from author where first_name = 'Sheri' and last_name = 'Tepper'));
@@ -149,6 +167,9 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Have Space Suit - Will Travel'),
     (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The High Crusade'),
+    (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'His Majesty''s Dragon'),
     (select id from author where first_name = 'Naomi' and last_name = 'Novik'));

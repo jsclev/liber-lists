@@ -14,6 +14,9 @@ insert into work_author (work_id, author_id) values (
 
 -- V
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Venus Plus X'),
+    (select id from author where first_name = 'Theodore' and last_name = 'Sturgeon'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Virtual Light'),
     (select id from author where first_name = 'William' and last_name = 'Gibson'));
 insert into work_author (work_id, author_id) values (
@@ -49,14 +52,23 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'When HARLIE Was One'),
     (select id from author where first_name = 'David' and last_name = 'Gerrold'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Witches of Karres'),
+    (select id from author where first_name = 'James' and last_name = 'Schmitz'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The White Dragon'),
     (select id from author where first_name = 'Anne' and last_name = 'McCaffrey'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Who?'),
     (select id from author where first_name = 'Algis' and last_name = 'Budrys'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'The Whole Man'),
+    (select id from author where first_name = 'John' and last_name = 'Brunner'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Windup Girl'),
     (select id from author where first_name = 'Paolo' and last_name = 'Bacigalupi'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Witch World'),
+    (select id from author where first_name = 'Andre' and last_name = 'Norton'));
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Wizard'),
     (select id from author where first_name = 'John' and last_name = 'Varley'));

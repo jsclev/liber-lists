@@ -49,6 +49,9 @@ insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Little Brother'),
     (select id from author where first_name = 'Cory' and last_name = 'Doctorow'));
 insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Little Fuzzy'),
+    (select id from author where first_name = 'H.' and last_name = 'Piper'));
+insert into work_author (work_id, author_id) values (
     (select id from work where name = 'The Long Tomorrow'),
     (select id from author where first_name = 'Leigh' and last_name = 'Brackett'));
 insert into work_author (work_id, author_id) values (
@@ -145,3 +148,6 @@ insert into work_author (work_id, author_id) values (
 insert into work_author (work_id, author_id) values (
     (select id from work where name = 'Not This August'),
     (select id from author where first_name = 'Cyril' and last_name = 'Kornbluth'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where name = 'Nova'),
+    (select id from author where first_name = 'Samuel' and last_name = 'Delany'));
