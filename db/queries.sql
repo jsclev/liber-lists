@@ -39,7 +39,7 @@ order by
     a.last_name,
     a.first_name;
 
--- Hugo Best Novel award winners
+-- Hugo Best Novel award winners and finalists
 select
     aw.name,
     ac.year as Year,

@@ -56,7 +56,7 @@ class Db {
                     
                     try fileManager.copyItem(atPath: dbBundleUrl.path, toPath: docsDbUrl.path)
                 } catch {
-                    print("Unable to copy zippymeals.db: \(error)")
+                    print("Unable to copy scintillate.db: \(error)")
                 }
             } else {
                 // Copy the db file from the bundle if it's not in the Documents directory
@@ -69,15 +69,20 @@ class Db {
                 }
             }
         }
+        else {
+            print("Unable to find the \"Documents\" directory.")
+            //            throw SQLiteError.OpenDatabase(message: "Unable to find the \"Documents\" directory.")
+        }
         
         let docDirUrls = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)
         
         if docDirUrls.count == 0 {
+            print("Unable to find the \"Documents\" directory.")
             //            throw SQLiteError.OpenDatabase(message: "Unable to find the \"Documents\" directory.")
         }
         
         let documentsUrl = docDirUrls[0]
-        let dbPath = documentsUrl.appendingPathComponent("zippymeals.db").path
+        let dbPath = documentsUrl.appendingPathComponent("scintillate.db").path
         
         var rc: Int32
         rc = sqlite3_open_v2(dbPath, &dbPointer, SQLITE_OPEN_READWRITE, nil)
@@ -85,6 +90,7 @@ class Db {
         if (rc != SQLITE_OK) {
             let sqliteMsg = String(cString: sqlite3_errmsg(dbPointer))
             let errMsg = "Failed to open database connection to " + dbPath + ".  " + sqliteMsg
+            print(errMsg)
             //            throw SQLiteError.OpenDatabase(message: errMsg)
         }
         
@@ -98,11 +104,13 @@ class Db {
 //                logger.debug("Turned on foreign keys using command \"\(pragma, privacy: .public)\"")
             } else {
                 let errMsg = String(cString: sqlite3_errmsg(dbPointer)!)
-                //                throw SQLiteError.OpenDatabase(message: errMsg)
+                print(errMsg)
+//                throw SQLiteError.OpenDatabase(message: errMsg)
             }
         } else {
             let errMsg = String(cString: sqlite3_errmsg(dbPointer)!)
-            //            throw SQLiteError.OpenDatabase(message: errMsg)
+            print(errMsg)
+//            throw SQLiteError.OpenDatabase(message: errMsg)
         }
         
         sqlite3_finalize(stmt)

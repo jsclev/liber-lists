@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		52E032BB26FCCA07004E2C1C /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BA26FCCA07004E2C1C /* Work.swift */; };
+		52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BD26FCCABC004E2C1C /* BaseDAO.swift */; };
+		52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BF26FCCAFE004E2C1C /* DbError.swift */; };
+		52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032C126FCCB1F004E2C1C /* SqliteError.swift */; };
+		52E032D3270005AF004E2C1C /* Assets.db in Resources */ = {isa = PBXBuildFile; fileRef = 52E032D2270005AF004E2C1C /* Assets.db */; };
 		52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE3E26F797C800EA956C /* ScintillateApp.swift */; };
 		52E2FE4126F797C800EA956C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE4026F797C800EA956C /* ContentView.swift */; };
 		52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4226F797CB00EA956C /* Assets.xcassets */; };
@@ -15,6 +20,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		52E032BA26FCCA07004E2C1C /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
+		52E032BD26FCCABC004E2C1C /* BaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDAO.swift; sourceTree = "<group>"; };
+		52E032BF26FCCAFE004E2C1C /* DbError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbError.swift; sourceTree = "<group>"; };
+		52E032C126FCCB1F004E2C1C /* SqliteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteError.swift; sourceTree = "<group>"; };
+		52E032D2270005AF004E2C1C /* Assets.db */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets.db; sourceTree = "<group>"; };
 		52E2FE3B26F797C800EA956C /* Scintillate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scintillate.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E2FE3E26F797C800EA956C /* ScintillateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScintillateApp.swift; sourceTree = "<group>"; };
 		52E2FE4026F797C800EA956C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -35,6 +45,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		52E032B826FCC9D7004E2C1C /* Business Layer */ = {
+			isa = PBXGroup;
+			children = (
+				52E032B926FCC9E7004E2C1C /* Models */,
+			);
+			path = "Business Layer";
+			sourceTree = "<group>";
+		};
+		52E032B926FCC9E7004E2C1C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				52E032BA26FCCA07004E2C1C /* Work.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		52E032BC26FCCAA6004E2C1C /* DAOs */ = {
+			isa = PBXGroup;
+			children = (
+				52E032BD26FCCABC004E2C1C /* BaseDAO.swift */,
+			);
+			path = DAOs;
+			sourceTree = "<group>";
+		};
 		52E2FE3226F797C800EA956C = {
 			isa = PBXGroup;
 			children = (
@@ -54,7 +88,9 @@
 		52E2FE3D26F797C800EA956C /* Scintillate */ = {
 			isa = PBXGroup;
 			children = (
+				52E032D2270005AF004E2C1C /* Assets.db */,
 				52E2FE4226F797CB00EA956C /* Assets.xcassets */,
+				52E032B826FCC9D7004E2C1C /* Business Layer */,
 				52E2FE5026F79A8500EA956C /* Data Access Layer */,
 				52E2FE3E26F797C800EA956C /* ScintillateApp.swift */,
 				52E2FE4026F797C800EA956C /* ContentView.swift */,
@@ -75,7 +111,10 @@
 		52E2FE5026F79A8500EA956C /* Data Access Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52E032BC26FCCAA6004E2C1C /* DAOs */,
 				52E2FE5126F79AA800EA956C /* Db.swift */,
+				52E032BF26FCCAFE004E2C1C /* DbError.swift */,
+				52E032C126FCCB1F004E2C1C /* SqliteError.swift */,
 			);
 			path = "Data Access Layer";
 			sourceTree = "<group>";
@@ -139,6 +178,7 @@
 			files = (
 				52E2FE4626F797CB00EA956C /* Preview Assets.xcassets in Resources */,
 				52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */,
+				52E032D3270005AF004E2C1C /* Assets.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -149,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52E032BB26FCCA07004E2C1C /* Work.swift in Sources */,
 				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
+				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
+				52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */,
+				52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
