@@ -1,16 +1,14 @@
-//
-//  ContentView.swift
-//  Scintillate
-//
-//  Created by John Cleveland on 9/19/21.
-//
-
 import SwiftUI
 
 struct ContentView: View {
+    @EnvironmentObject var store: Store
+        
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            ForEach(store.db.work.getAll(), id: \.self) { work in
+                Text(work.title)
+            }
+        }
     }
 }
 

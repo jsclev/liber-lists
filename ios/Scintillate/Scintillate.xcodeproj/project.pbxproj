@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		525E4D06271285C100168E50 /* WorkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4D05271285C100168E50 /* WorkDAO.swift */; };
+		526A9CA427122A2F0098F7FE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA327122A2F0098F7FE /* Store.swift */; };
+		526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA727122AF80098F7FE /* WorkListViewModel.swift */; };
 		52E032BB26FCCA07004E2C1C /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BA26FCCA07004E2C1C /* Work.swift */; };
 		52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BD26FCCABC004E2C1C /* BaseDAO.swift */; };
 		52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BF26FCCAFE004E2C1C /* DbError.swift */; };
@@ -20,6 +23,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		525E4D05271285C100168E50 /* WorkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDAO.swift; sourceTree = "<group>"; };
+		526A9CA327122A2F0098F7FE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		526A9CA727122AF80098F7FE /* WorkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewModel.swift; sourceTree = "<group>"; };
 		52E032BA26FCCA07004E2C1C /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		52E032BD26FCCABC004E2C1C /* BaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDAO.swift; sourceTree = "<group>"; };
 		52E032BF26FCCAFE004E2C1C /* DbError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbError.swift; sourceTree = "<group>"; };
@@ -45,6 +51,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		526A9CA527122AB80098F7FE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		526A9CA627122AE90098F7FE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		52E032B826FCC9D7004E2C1C /* Business Layer */ = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				52E032BD26FCCABC004E2C1C /* BaseDAO.swift */,
+				525E4D05271285C100168E50 /* WorkDAO.swift */,
 			);
 			path = DAOs;
 			sourceTree = "<group>";
@@ -88,6 +110,8 @@
 		52E2FE3D26F797C800EA956C /* Scintillate */ = {
 			isa = PBXGroup;
 			children = (
+				526A9CA627122AE90098F7FE /* Views */,
+				526A9CA527122AB80098F7FE /* View Models */,
 				52E032D2270005AF004E2C1C /* Assets.db */,
 				52E2FE4226F797CB00EA956C /* Assets.xcassets */,
 				52E032B826FCC9D7004E2C1C /* Business Layer */,
@@ -96,6 +120,7 @@
 				52E2FE4026F797C800EA956C /* ContentView.swift */,
 				52E2FE4726F797CB00EA956C /* Info.plist */,
 				52E2FE4426F797CB00EA956C /* Preview Content */,
+				526A9CA327122A2F0098F7FE /* Store.swift */,
 			);
 			path = Scintillate;
 			sourceTree = "<group>";
@@ -192,9 +217,12 @@
 				52E032BB26FCCA07004E2C1C /* Work.swift in Sources */,
 				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
+				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,
+				526A9CA427122A2F0098F7FE /* Store.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
 				52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */,
+				526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */,
 				52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

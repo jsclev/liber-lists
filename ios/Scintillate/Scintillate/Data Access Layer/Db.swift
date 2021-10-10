@@ -6,35 +6,7 @@ class Db {
 //    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Db")
     var dbPointer: OpaquePointer?
     
-//    let account: AccountDAO
-//    let client: ClientDAO
-//    let disabilityStatus: DisabilityStatusDAO
-//    let email: EmailDAO
-//    let fts: FtsDAO
-//    let gender: GenderDAO
-//    let geopoint: GeopointDAO
-//    let hohStatus: HOHStatusDAO
-//    let language: LanguageDAO
-//    let livingArrangement: LivingArrangementDAO
-//    let mealType: MealTypeDAO
-//    let maritalStatus: MaritalStatusDAO
-//    let organization: OrganizationDAO
-//    let party: PartyDAO
-//    let paymentType: PaymentTypeDAO
-//    let person: PersonDAO
-//    let phone: PhoneDAO
-//    let phoneType: PhoneTypeDAO
-//    let postalAddress: PostalAddressDAO
-//    let povertyLevel: PovertyLevelDAO
-//    let raceType: RaceTypeDAO
-//    let route: RouteDAO
-//    let routeStop: RouteStopDAO
-//    let routeStopClient: RouteStopClientDAO
-//    let sync: SyncDAO
-//    let veteranStatus: VeteranStatusDAO
-//    let vol: VolunteerDAO
-//    let volRole: VolunteerRoleDAO
-//    let volRoleAsgmt: VolunteerRoleAsgmtDAO
+    let work: WorkDAO
     
     init(fullRefresh: Bool) {
         let dbBundlePath = "Assets.db/scintillate"
@@ -115,41 +87,7 @@ class Db {
         
         sqlite3_finalize(stmt)
         
-//        account = AccountDAO(conn: dbPointer)
-//        disabilityStatus = DisabilityStatusDAO(conn: dbPointer)
-//        email = EmailDAO(conn: dbPointer)
-//        fts = FtsDAO(conn: dbPointer)
-//        gender = GenderDAO(conn: dbPointer)
-//        geopoint = GeopointDAO(conn: dbPointer)
-//        hohStatus = HOHStatusDAO(conn: dbPointer)
-//        language = LanguageDAO(conn: dbPointer)
-//        livingArrangement = LivingArrangementDAO(conn: dbPointer)
-//        mealType = MealTypeDAO(conn: dbPointer)
-//        maritalStatus = MaritalStatusDAO(conn: dbPointer)
-//        organization = OrganizationDAO(conn: dbPointer)
-//        party = PartyDAO(conn: dbPointer)
-//        paymentType = PaymentTypeDAO(conn: dbPointer)
-//        person = PersonDAO(conn: dbPointer)
-//        phone = PhoneDAO(conn: dbPointer)
-//        phoneType = PhoneTypeDAO(conn: dbPointer)
-//        postalAddress = PostalAddressDAO(conn: dbPointer)
-//        povertyLevel = PovertyLevelDAO(conn: dbPointer)
-//        raceType = RaceTypeDAO(conn: dbPointer)
-//        route = RouteDAO(conn: dbPointer)
-//        routeStop = RouteStopDAO(conn: dbPointer)
-//        routeStopClient = RouteStopClientDAO(conn: dbPointer)
-//        sync = SyncDAO(conn: dbPointer)
-//        veteranStatus = VeteranStatusDAO(conn: dbPointer)
-//        volRole = VolunteerRoleDAO(conn: dbPointer)
-//        volRoleAsgmt = VolunteerRoleAsgmtDAO(conn: dbPointer)
-//
-//        client = ClientDAO(conn: dbPointer, ftsDAO: fts, personDAO: person)
-//        vol = VolunteerDAO(conn: dbPointer,
-//                           emailDAO: email,
-//                           organizationDAO: organization,
-//                           personDAO: person,
-//                           phoneDAO: phone,
-//                           postalAddressDAO: postalAddress)
+        work = WorkDAO(conn: dbPointer)
     }
     
     deinit {
