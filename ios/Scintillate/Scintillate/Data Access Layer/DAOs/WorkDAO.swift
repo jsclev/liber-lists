@@ -115,9 +115,29 @@ class WorkDAO: BaseDAO {
 //    }
 
     func getAll() -> [Work] {
+        var works = [Work]()
         let work1 = Work(id: 1, title: "Dune")
         let work2 = Work(id: 2, title: "Hyperion")
         
-        return [work1, work2]
+        let sql = "SELECT id, name FROM work ORDER BY NAME;"
+        
+        var stmt: OpaquePointer?
+
+        
+        do {
+            if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+                while sqlite3_step(stmt) == SQLITE_ROW {
+                    let id = try getInt(stmt: stmt, colIndex: 0)
+                    if let title = try getString(stmt: stmt, colIndex: 1) {
+                        works.append(Work(id: id,
+                                          title: title))
+                    }
+                }
+            }
+        } catch {
+            print(error)
+        }
+        
+        return works
     }
 }
