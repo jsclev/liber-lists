@@ -116,22 +116,154 @@ class WorkDAO: BaseDAO {
 
     func getAll() -> [Work] {
         var works = [Work]()
-        let work1 = Work(id: 1, title: "Dune")
-        let work2 = Work(id: 2, title: "Hyperion")
         
-        let sql = "SELECT id, name FROM work ORDER BY NAME;"
+        let sql = """
+            select
+                w.id as work_id,
+                w.title,
+                a.id as author_id,
+                a.first_name,
+                a.middle_name,
+                a.last_name
+            from
+                work w
+            left outer join
+                work_author wa on wa.work_id = w.id
+            left outer join
+                author a on a.id = wa.author_id
+            order by
+                w.sort_by_title, w.id, a.last_name, a.first_name;
+        """
         
         var stmt: OpaquePointer?
 
-        
         do {
             if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+                var prevWorkId = -1;
+                var currWorkId = -1;
+                var authors = [Author]()
+                var work = Work(id: -1, title: "", authors: authors)
+                
                 while sqlite3_step(stmt) == SQLITE_ROW {
-                    let id = try getInt(stmt: stmt, colIndex: 0)
-                    if let title = try getString(stmt: stmt, colIndex: 1) {
-                        works.append(Work(id: id,
-                                          title: title))
+                    let currWorkId = getInt(stmt: stmt, colIndex: 0)
+                    let authorId = getInt(stmt: stmt, colIndex: 2)
+                    let firstName = try getString(stmt: stmt, colIndex: 3)
+                    let middleName = try getString(stmt: stmt, colIndex: 4)
+                    let lastName = try getString(stmt: stmt, colIndex: 5)
+
+                    if currWorkId != prevWorkId {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                        
+                        if let title = try getString(stmt: stmt, colIndex: 1) {
+                            works.append(Work(id: currWorkId,
+                                              title: title,
+                                              authors: authors))
+                            authors = [Author]()
+                        }
                     }
+                    else {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                    }
+                    
+                    prevWorkId = currWorkId
+                }
+            }
+        } catch {
+            print(error)
+        }
+        
+        return works
+    }
+    
+    func getHugoWinners() -> [Work] {
+        var works = [Work]()
+        
+        let sql = """
+            select
+                aw.name as award_name,
+                ac.year as award_year,
+                ac.name as award_category,
+                w.id as work_id,
+                w.title as work_title,
+                case when wac.status = 1 then 'Winner'
+                     when wac.status = 2 then 'Finalist'
+                end as award_status,
+                a.id as author_id,
+                a.first_name as author_first_name,
+                a.middle_name as author_middle_name,
+                a.last_name as author_last_name
+            from
+                award aw
+            left outer join
+                award_category ac on ac.award_id = aw.id
+            left outer join
+                work_award_category wac on wac.award_category_id = ac.id
+            left outer join
+                work w on w.id = wac.work_id
+            left outer join
+                work_author wa on wa.work_id = w.id
+            left outer join
+                author a on a.id = wa.author_id
+            where
+                aw.name = 'Hugo Award' and
+                ac.name = 'Best Novel'
+            order by
+                ac.year,
+                wac.status,
+                w.title;
+        """
+        
+        var stmt: OpaquePointer?
+
+        do {
+            if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+                var prevWorkId = -1;
+                var currWorkId = -1;
+                var authors = [Author]()
+                var work = Work(id: -1, title: "", authors: authors)
+                
+                while sqlite3_step(stmt) == SQLITE_ROW {
+                    let currWorkId = getInt(stmt: stmt, colIndex: 0)
+                    let authorId = getInt(stmt: stmt, colIndex: 2)
+                    let firstName = try getString(stmt: stmt, colIndex: 3)
+                    let middleName = try getString(stmt: stmt, colIndex: 4)
+                    let lastName = try getString(stmt: stmt, colIndex: 5)
+
+                    if currWorkId != prevWorkId {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                        
+                        if let title = try getString(stmt: stmt, colIndex: 1) {
+                            works.append(Work(id: currWorkId,
+                                              title: title,
+                                              authors: authors))
+                            authors = [Author]()
+                        }
+                    }
+                    else {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                    }
+                    
+                    prevWorkId = currWorkId
                 }
             }
         } catch {

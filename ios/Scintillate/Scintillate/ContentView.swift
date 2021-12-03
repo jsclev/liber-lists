@@ -4,9 +4,9 @@ struct ContentView: View {
     @EnvironmentObject var store: Store
         
     var body: some View {
-        VStack {
+        ScrollView {
             ForEach(store.db.work.getAll(), id: \.self) { work in
-                Text(work.title)
+                Text(work.getTitleWithAuthors())
             }
         }
     }

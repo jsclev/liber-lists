@@ -1,4 +1,6 @@
 DROP TABLE IF EXISTS author;
+DROP TABLE IF EXISTS work_series;
+DROP TABLE IF EXISTS series;
 DROP TABLE IF EXISTS work;
 DROP TABLE IF EXISTS award;
 DROP TABLE IF EXISTS award_category;
@@ -14,7 +16,8 @@ CREATE TABLE author (
 
 CREATE TABLE work (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
+    title TEXT NOT NULL,
+    sort_by_title TEXT NOT NULL,
     type TEXT NOT NULL,
     product_link TEXT
 );
@@ -37,15 +40,15 @@ CREATE TABLE work_series (
 
 CREATE TABLE award (
     id INTEGER PRIMARY KEY,
-    name TEXT NOT NULL,
+    title TEXT NOT NULL,
     genre TEXT NOT NULL,
-    UNIQUE(name)
+    UNIQUE(title)
 );
 
 CREATE TABLE award_category (
     id INTEGER PRIMARY KEY,
     award_id INTEGER NOT NULL,
-    name TEXT NOT NULL,
+    title TEXT NOT NULL,
     sort_order INTEGER NOT NULL,
     year INTEGER NOT NULL,
     FOREIGN KEY (award_id) REFERENCES award (id)

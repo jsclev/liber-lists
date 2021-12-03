@@ -1,12 +1,12 @@
 -- Show Hugo Best Novel awards, ordered by year
 select
-    aw.name,
+    aw.title,
     ac.year as Year,
-    ac.name as Category,
+    ac.title as Category,
     case when wac.status = 1 then 'Winner'
          when wac.status = 2 then 'Finalist'
     end as Status,
-    w.name as Name,
+    w.title as Name,
     case when a.middle_name is null then a.first_name || ' ' || a.last_name
          else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
     end as AuthorName,
@@ -30,10 +30,10 @@ left outer join
 left outer join
     user u on uws.user_id = u.id
 where
-    aw.name = 'Hugo Award' and
+    aw.title = 'Hugo Award' and
     u.username = 'jsclev'
 order by
-    aw.name,
+    aw.title,
     ac.year,
     wac.status,
     a.last_name,
@@ -41,10 +41,10 @@ order by
 
 -- Hugo Best Novel award winners and finalists
 select
-    aw.name,
+    aw.title,
     ac.year as Year,
-    ac.name as Category,
-    w.name as Name,
+    ac.title as Category,
+    w.title as Name,
     case when wac.status = 1 then 'Winner'
          when wac.status = 2 then 'Finalist'
     end as Status,
@@ -64,20 +64,20 @@ left outer join
 left outer join
     author a on a.id = wa.author_id
 where
-    aw.name = 'Hugo Award' and
-    ac.name = 'Best Novel'
+    aw.title = 'Hugo Award' and
+    ac.title = 'Best Novel'
 order by
     ac.year,
     wac.status,
-    w.name;
+    w.title;
 
 -- Books I own
 select
-    w.name,
+    w.title,
     case when a.middle_name is null then a.first_name || ' ' || a.last_name
          else a.first_name || ' ' || a.middle_name || ' ' || a.last_name
     end as Author,
-    s.name,
+    s.title,
     ws.ordinal_name
 from
     work w
@@ -100,14 +100,14 @@ order by
     a.last_name,
     a.first_name,
     ws.ordinal,
-    w.name;
+    w.title;
 
 -- Books I have read
 select
-    w.name,
+    w.title,
     a.first_name,
     a.last_name,
-    s.name,
+    s.title,
     ws.ordinal_name
 from
     work w
@@ -127,4 +127,4 @@ where
     u.username = 'jsclev' and
     uws.read_status = 3
 order by
-    w.name;
+    w.title;

@@ -11,7 +11,7 @@
 rm scintillate.sqlite 2>/dev/null
 sqlite3 scintillate.sqlite ""
 sqlite3 scintillate.sqlite < tables.sql
-sqlite3 scintillate.sqlite < data/works.sql
+sqlite3 scintillate.sqlite < data/works-sort-titles.sql
 sqlite3 scintillate.sqlite < data/works-series.sql
 sqlite3 scintillate.sqlite < data/authors.sql
 sqlite3 scintillate.sqlite < data/works-authors-a-d.sql

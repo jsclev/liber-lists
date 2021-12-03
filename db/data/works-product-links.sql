@@ -1,2 +1,2 @@
 update work set product_link = '<a target="_blank"  href="https://www.amazon.com/gp/product/B004EYTK2C/ref=as_li_tl?ie=UTF8&camp=1789&creative=9325&creativeASIN=B004EYTK2C&linkCode=as2&tag=zippyzen-20&linkId=6872f8427e5038b11e19bfc81a9c11db"><img border="0" src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&MarketPlace=US&ASIN=B004EYTK2C&ServiceVersion=20070822&ID=AsinImage&WS=1&Format=_SL110_&tag=zippyzen-20" ></a>'
-where name = 'Starship Troopers';
+where title = 'Starship Troopers';

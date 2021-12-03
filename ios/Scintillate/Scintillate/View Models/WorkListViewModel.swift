@@ -26,8 +26,7 @@ class WorkListViewModel: ObservableObject {
         }
         
             do {
-                let results = try store.db.work.getAll()
-                self.results = results
+                self.results = try store.db.work.getAll()
             } catch DbError.Db(let message) {
                 self.logger.error("Unable to run main search query: \(message, privacy: .public)")
             } catch {

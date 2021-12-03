@@ -4,350 +4,350 @@ insert into user
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'American Gods'),
+    (select id from work where title = 'American Gods'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Ancillary Justice'),
+    (select id from work where title = 'Ancillary Justice'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Brightness Reef'),
+    (select id from work where title = 'Brightness Reef'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'A Canticle for Leibowitz'),
+    (select id from work where title = 'A Canticle for Leibowitz'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Childhood''s End'),
+    (select id from work where title = 'Childhood''s End'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Cordelia''s Honor'),
+    (select id from work where title = 'Cordelia''s Honor'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Count Zero'),
+    (select id from work where title = 'Count Zero'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Cryptonomicon'),
+    (select id from work where title = 'Cryptonomicon'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Dandelion Wine'),
+    (select id from work where title = 'Dandelion Wine'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Do Androids Dream of Electric Sheep?'),
+    (select id from work where title = 'Do Androids Dream of Electric Sheep?'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Doomsday Book'),
+    (select id from work where title = 'Doomsday Book'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Downbelow Station'),
+    (select id from work where title = 'Downbelow Station'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Ender''s Game'),
+    (select id from work where title = 'Ender''s Game'),
     3,
     0
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Fall of Hyperion'),
+    (select id from work where title = 'The Fall of Hyperion'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Fifth Season'),
+    (select id from work where title = 'The Fifth Season'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Forever War'),
+    (select id from work where title = 'The Forever War'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Foundation'),
+    (select id from work where title = 'Foundation'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Foundation and Empire'),
+    (select id from work where title = 'Foundation and Empire'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Frankenstein'),
+    (select id from work where title = 'Frankenstein'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Ghost Brigades'),
+    (select id from work where title = 'The Ghost Brigades'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Green Mars'),
+    (select id from work where title = 'Green Mars'),
     2,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Have Space Suit - Will Travel'),
+    (select id from work where title = 'Have Space Suit - Will Travel'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Hyperion'),
+    (select id from work where title = 'Hyperion'),
     2,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Imperial Earth'),
+    (select id from work where title = 'Imperial Earth'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Leviathan Wakes'),
+    (select id from work where title = 'Leviathan Wakes'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Martian'),
+    (select id from work where title = 'The Martian'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Mote in God''s Eye'),
+    (select id from work where title = 'The Mote in God''s Eye'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Neuromancer'),
+    (select id from work where title = 'Neuromancer'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Ninefox Gambit'),
+    (select id from work where title = 'Ninefox Gambit'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Obelisk Gate'),
+    (select id from work where title = 'The Obelisk Gate'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Queen of Angels'),
+    (select id from work where title = 'Queen of Angels'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Quiet War'),
+    (select id from work where title = 'The Quiet War'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Raven Stratagem'),
+    (select id from work where title = 'Raven Stratagem'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Red Mars'),
+    (select id from work where title = 'Red Mars'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Red Rising'),
+    (select id from work where title = 'Red Rising'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Revelation Space'),
+    (select id from work where title = 'Revelation Space'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Revenant Gun'),
+    (select id from work where title = 'Revenant Gun'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Road'),
+    (select id from work where title = 'The Road'),
     3,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Second Foundation'),
+    (select id from work where title = 'Second Foundation'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Starship Troopers'),
+    (select id from work where title = 'Starship Troopers'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Startide Rising'),
+    (select id from work where title = 'Startide Rising'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Strange Case of Dr. Jekyll & Mr. Hyde'),
+    (select id from work where title = 'The Strange Case of Dr. Jekyll & Mr. Hyde'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Stranger in a Strange Land'),
+    (select id from work where title = 'Stranger in a Strange Land'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'That Hideous Strength'),
+    (select id from work where title = 'That Hideous Strength'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Three-Body Problem'),
+    (select id from work where title = 'The Three-Body Problem'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'To Your Scattered Bodies Go'),
+    (select id from work where title = 'To Your Scattered Bodies Go'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Time Machine'),
+    (select id from work where title = 'The Time Machine'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'The Wanderer'),
+    (select id from work where title = 'The Wanderer'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Wool'),
+    (select id from work where title = 'Wool'),
     1,
     2
 );
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
-    (select id from work where name = 'Xenocide'),
+    (select id from work where title = 'Xenocide'),
     1,
     2
 );
