@@ -157,7 +157,7 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Patricia' and last_name = 'McKillip'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Harrow the Ninth'),
-    (select id from author where first_name = 'China' and last_name = 'Miéville'));
+    (select id from author where first_name = 'Tamsyn' and last_name = 'Muir'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Harry Potter and the Goblet of Fire'),
     (select id from author where first_name = 'J.' and last_name = 'Rowling'));

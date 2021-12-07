@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5203F85B27574CFD00701785 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85A27574CFD00701785 /* Author.swift */; };
+		5203F85D275AF79A00701785 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85C275AF79A00701785 /* Award.swift */; };
+		5203F85F275C4FE300701785 /* WorkListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListItemView.swift */; };
 		525E4D06271285C100168E50 /* WorkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4D05271285C100168E50 /* WorkDAO.swift */; };
 		526A9CA427122A2F0098F7FE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA327122A2F0098F7FE /* Store.swift */; };
 		526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA727122AF80098F7FE /* WorkListViewModel.swift */; };
@@ -25,6 +27,8 @@
 
 /* Begin PBXFileReference section */
 		5203F85A27574CFD00701785 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
+		5203F85C275AF79A00701785 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
+		5203F85E275C4FE300701785 /* WorkListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListItemView.swift; sourceTree = "<group>"; };
 		525E4D05271285C100168E50 /* WorkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDAO.swift; sourceTree = "<group>"; };
 		526A9CA327122A2F0098F7FE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		526A9CA727122AF80098F7FE /* WorkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewModel.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 		526A9CA627122AE90098F7FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				5203F85E275C4FE300701785 /* WorkListItemView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -81,6 +86,7 @@
 			children = (
 				52E032BA26FCCA07004E2C1C /* Work.swift */,
 				5203F85A27574CFD00701785 /* Author.swift */,
+				5203F85C275AF79A00701785 /* Award.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -218,10 +224,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E032BB26FCCA07004E2C1C /* Work.swift in Sources */,
+				5203F85D275AF79A00701785 /* Award.swift in Sources */,
 				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,
 				526A9CA427122A2F0098F7FE /* Store.swift in Sources */,
+				5203F85F275C4FE300701785 /* WorkListItemView.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
 				5203F85B27574CFD00701785 /* Author.swift in Sources */,

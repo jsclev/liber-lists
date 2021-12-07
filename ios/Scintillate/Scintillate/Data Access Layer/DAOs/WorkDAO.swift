@@ -142,7 +142,7 @@ class WorkDAO: BaseDAO {
                 var prevWorkId = -1;
                 var currWorkId = -1;
                 var authors = [Author]()
-                var work = Work(id: -1, title: "", authors: authors)
+                var work = Work(id: -1, title: "", authors: authors, awards: [])
                 
                 while sqlite3_step(stmt) == SQLITE_ROW {
                     let currWorkId = getInt(stmt: stmt, colIndex: 0)
@@ -162,8 +162,107 @@ class WorkDAO: BaseDAO {
                         if let title = try getString(stmt: stmt, colIndex: 1) {
                             works.append(Work(id: currWorkId,
                                               title: title,
-                                              authors: authors))
+                                              authors: authors,
+                                              awards: []))
                             authors = [Author]()
+                        }
+                    }
+                    else {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                    }
+                    
+                    prevWorkId = currWorkId
+                }
+            }
+        } catch {
+            print(error)
+        }
+        
+        return works
+    }
+    
+    func getHugoWinnersOnly() -> [Work] {
+        var works = [Work]()
+        
+        let sql = """
+            SELECT
+                w.id AS work_id,
+                w.title AS work_title,
+                aw.name AS award_name,
+                ac.year AS award_year,
+                ac.name AS award_category,
+                CASE WHEN wac.status = 1 THEN 'Winner'
+                     WHEN wac.status = 2 THEN 'Finalist'
+                END AS award_status,
+                a.id AS author_id,
+                a.first_name AS author_first_name,
+                a.middle_name AS author_middle_name,
+                a.last_name AS author_last_name
+            FROM
+                work w
+            INNER JOIN
+                work_award_category wac ON wac.work_id = w.id
+            INNER JOIN
+                award_category ac ON ac.id = wac.award_category_id
+            INNER JOIN
+                award aw ON aw.id = ac.award_id
+            LEFT OUTER JOIN
+                work_author wa ON wa.work_id = w.id
+            LEFT OUTER JOIN
+                author a ON a.id = wa.author_id
+            WHERE
+                aw.name = 'Hugo Award' and
+                ac.name = 'Best Novel'
+            ORDER BY
+                ac.year DESC,
+                wac.status,
+                w.title;
+        """
+        
+        var stmt: OpaquePointer?
+
+        do {
+            if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+                var prevWorkId = -1;
+                var currWorkId = -1;
+                var authors = [Author]()
+                var work = Work(id: -1, title: "", authors: authors, awards: [])
+                
+                while sqlite3_step(stmt) == SQLITE_ROW {
+                    let currWorkId = getInt(stmt: stmt, colIndex: 0)
+                    let awardYear = getInt(stmt: stmt, colIndex: 3)
+                    let authorId = getInt(stmt: stmt, colIndex: 6)
+                    let firstName = try getString(stmt: stmt, colIndex: 7)
+                    let middleName = try getString(stmt: stmt, colIndex: 8)
+                    let lastName = try getString(stmt: stmt, colIndex: 9)
+
+                    if currWorkId != prevWorkId {
+                        if let firstName = firstName, let lastName = lastName {
+                            authors.append(Author(id: authorId,
+                                                  firstName: firstName,
+                                                  middleName: middleName,
+                                                  lastName: lastName))
+                        }
+                        
+                        if let awardStatus = try getString(stmt: stmt, colIndex: 5) {
+                            let award = Award(id: 1,
+                                              type: "Hugo",
+                                              name: "Best Novel",
+                                              year: awardYear,
+                                              status: awardStatus)
+                            
+                            if let title = try getString(stmt: stmt, colIndex: 1) {
+                                works.append(Work(id: currWorkId,
+                                                  title: title,
+                                                  authors: authors,
+                                                  awards: [award]))
+                                authors = [Author]()
+                            }
                         }
                     }
                     else {
@@ -230,7 +329,7 @@ class WorkDAO: BaseDAO {
                 var prevWorkId = -1;
                 var currWorkId = -1;
                 var authors = [Author]()
-                var work = Work(id: -1, title: "", authors: authors)
+                var work = Work(id: -1, title: "", authors: authors, awards: [])
                 
                 while sqlite3_step(stmt) == SQLITE_ROW {
                     let currWorkId = getInt(stmt: stmt, colIndex: 0)
@@ -250,7 +349,8 @@ class WorkDAO: BaseDAO {
                         if let title = try getString(stmt: stmt, colIndex: 1) {
                             works.append(Work(id: currWorkId,
                                               title: title,
-                                              authors: authors))
+                                              authors: authors,
+                                              awards: []))
                             authors = [Author]()
                         }
                     }

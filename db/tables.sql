@@ -40,15 +40,15 @@ CREATE TABLE work_series (
 
 CREATE TABLE award (
     id INTEGER PRIMARY KEY,
-    title TEXT NOT NULL,
+    name TEXT NOT NULL,
     genre TEXT NOT NULL,
-    UNIQUE(title)
+    UNIQUE(name)
 );
 
 CREATE TABLE award_category (
     id INTEGER PRIMARY KEY,
     award_id INTEGER NOT NULL,
-    title TEXT NOT NULL,
+    name TEXT NOT NULL,
     sort_order INTEGER NOT NULL,
     year INTEGER NOT NULL,
     FOREIGN KEY (award_id) REFERENCES award (id)

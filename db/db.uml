@@ -1,63 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Diagram>
   <ID>DATABASE</ID>
-  <OriginalElement>dd1165db-1000-42ac-a390-4b44820b16f9</OriginalElement>
+  <OriginalElement>34f11ac8-9c88-443c-b541-c9a9347b0ecf</OriginalElement>
   <nodes>
-    <node x="733.6377836722664" y="461.44960212201596">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.user</node>
-    <node x="373.0" y="99.49425287356325">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work</node>
-    <node x="964.8888888888889" y="176.97288535219576">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award_category</node>
-    <node x="-167.9885057471265" y="86.49425287356325">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.series</node>
-    <node x="1228.2777777777778" y="267.7933981727085">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award</node>
-    <node x="1000.0" y="461.94960212201596">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.sqlite_master</node>
-    <node x="65.0" y="86.49425287356325">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_series</node>
-    <node x="91.83333333333337" y="328.9230769230769">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_author</node>
-    <node x="480.5603448275863" y="328.9230769230769">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.user_work_stat</node>
-    <node x="86.83333333333337" y="519.3519009725906">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.author</node>
-    <node x="645.5" y="99.49425287356325">dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_award_category</node>
+    <node x="0.0" y="907.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.author</node>
+    <node x="538.0" y="746.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_series</node>
+    <node x="533.0" y="360.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_award_category</node>
+    <node x="774.0" y="154.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.award_category</node>
+    <node x="357.0" y="540.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work</node>
+    <node x="175.0" y="751.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_author</node>
+    <node x="164.0" y="321.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.user_work_stat</node>
+    <node x="972.0" y="0.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.award</node>
+    <node x="0.0" y="1110.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.sqlite_master</node>
+    <node x="14.0" y="114.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.user</node>
+    <node x="732.0" y="952.0">34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.series</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_author" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.author" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_author" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_series" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.series" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_award_category" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.user_work_stat" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_series" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_series" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_award_category" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.award_category" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_author" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.user_work_stat" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.user" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award_category" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_series" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.series" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.user_work_stat" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.user" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.award_category" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.award" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_award_category" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.user_work_stat" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
-    <edge source="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.work_award_category" target="dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award_category" relationship="REFERENCES">
+    <edge source="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.work_author" target="34f11ac8-9c88-443c-b541-c9a9347b0ecf.TABLE:main.author" relationship="REFERENCES">
       <point x="0.0" y="0.0" />
       <point x="0.0" y="0.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic" zoom="0.7405063291139241" showDependencies="false" x="612.6068376068375" y="396.46153846153845" />
-  <SelectedNodes>
-    <node>dd1165db-1000-42ac-a390-4b44820b16f9.TABLE:main.award</node>
-  </SelectedNodes>
+  <settings layout="Hierarchic" zoom="0.7034003091190109" showDependencies="false" x="490.16677653263014" y="601.3161942430235" />
+  <SelectedNodes />
   <Categories>
     <Category>Columns</Category>
     <Category>Comments</Category>

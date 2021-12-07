@@ -10,14 +10,7 @@ class WorkListViewModel: ObservableObject {
     
     func setStore(_ store: Store) {
         self.store = store
-    }
-    
-//    @Published var query: String = "" {
-//        didSet {
-//            search()
-//        }
-//    }
-    
+    }    
     
     func search() {
         guard let store = store else {
@@ -26,7 +19,7 @@ class WorkListViewModel: ObservableObject {
         }
         
             do {
-                self.results = try store.db.work.getAll()
+                self.results = try store.db.work.getHugoWinnersOnly()
             } catch DbError.Db(let message) {
                 self.logger.error("Unable to run main search query: \(message, privacy: .public)")
             } catch {
