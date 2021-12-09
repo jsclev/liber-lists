@@ -8,7 +8,7 @@ struct Award: Equatable, Hashable {
     let status: String
     
     func getName() -> String {
-        return String(year) + " " + type + " " + status + " " + name
+        return String(year) + " " + status
     }
     
     func hash(into hasher: inout Hasher) {

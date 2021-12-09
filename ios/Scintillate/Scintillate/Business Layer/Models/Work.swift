@@ -3,6 +3,7 @@ import Foundation
 struct Work: Equatable, Hashable {
     let id: Int
     let title: String
+    let imageName: String
     let authors: [Author]
     let awards: [Award]
     

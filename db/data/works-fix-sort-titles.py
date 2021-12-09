@@ -1,11 +1,31 @@
 def write_line(f, apostrophe, original_title, modified_sort_title):
-    new_line = 'insert into work (title, sort_by_title, type) values ('
+    image_name = modified_sort_title
+
+    if original_title == '...And Call Me Conrad':
+        image_name = 'and-call-me-conrad'
+    else:
+        size = len(image_name)
+
+        if image_name.endswith(', a'):
+            image_name = image_name[:size - 3]
+        elif image_name.endswith(', an'):
+            image_name = image_name[:size - 4]
+        elif image_name.endswith(', the'):
+            image_name = image_name[:size - 5]
+
+    image_name = image_name.replace(' ', '-')
+
+    new_line = 'insert into work (title, sort_by_title, image_name, type) values ('
     new_line += apostrophe
     new_line += original_title
     new_line += apostrophe
     new_line += ', '
     new_line += apostrophe
     new_line += modified_sort_title
+    new_line += apostrophe
+    new_line += ", "
+    new_line += apostrophe
+    new_line += image_name
     new_line += apostrophe
     new_line += ", 'Novel');"
     new_line += '\n'

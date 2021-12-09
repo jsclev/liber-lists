@@ -114,77 +114,77 @@ class WorkDAO: BaseDAO {
 //        }
 //    }
 
-    func getAll() -> [Work] {
-        var works = [Work]()
-        
-        let sql = """
-            select
-                w.id as work_id,
-                w.title,
-                a.id as author_id,
-                a.first_name,
-                a.middle_name,
-                a.last_name
-            from
-                work w
-            left outer join
-                work_author wa on wa.work_id = w.id
-            left outer join
-                author a on a.id = wa.author_id
-            order by
-                w.sort_by_title, w.id, a.last_name, a.first_name;
-        """
-        
-        var stmt: OpaquePointer?
-
-        do {
-            if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
-                var prevWorkId = -1;
-                var currWorkId = -1;
-                var authors = [Author]()
-                var work = Work(id: -1, title: "", authors: authors, awards: [])
-                
-                while sqlite3_step(stmt) == SQLITE_ROW {
-                    let currWorkId = getInt(stmt: stmt, colIndex: 0)
-                    let authorId = getInt(stmt: stmt, colIndex: 2)
-                    let firstName = try getString(stmt: stmt, colIndex: 3)
-                    let middleName = try getString(stmt: stmt, colIndex: 4)
-                    let lastName = try getString(stmt: stmt, colIndex: 5)
-
-                    if currWorkId != prevWorkId {
-                        if let firstName = firstName, let lastName = lastName {
-                            authors.append(Author(id: authorId,
-                                                  firstName: firstName,
-                                                  middleName: middleName,
-                                                  lastName: lastName))
-                        }
-                        
-                        if let title = try getString(stmt: stmt, colIndex: 1) {
-                            works.append(Work(id: currWorkId,
-                                              title: title,
-                                              authors: authors,
-                                              awards: []))
-                            authors = [Author]()
-                        }
-                    }
-                    else {
-                        if let firstName = firstName, let lastName = lastName {
-                            authors.append(Author(id: authorId,
-                                                  firstName: firstName,
-                                                  middleName: middleName,
-                                                  lastName: lastName))
-                        }
-                    }
-                    
-                    prevWorkId = currWorkId
-                }
-            }
-        } catch {
-            print(error)
-        }
-        
-        return works
-    }
+//    func getAll() -> [Work] {
+//        var works = [Work]()
+//
+//        let sql = """
+//            select
+//                w.id as work_id,
+//                w.title,
+//                a.id as author_id,
+//                a.first_name,
+//                a.middle_name,
+//                a.last_name
+//            from
+//                work w
+//            left outer join
+//                work_author wa on wa.work_id = w.id
+//            left outer join
+//                author a on a.id = wa.author_id
+//            order by
+//                w.sort_by_title, w.id, a.last_name, a.first_name;
+//        """
+//
+//        var stmt: OpaquePointer?
+//
+//        do {
+//            if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+//                var prevWorkId = -1;
+//                var currWorkId = -1;
+//                var authors = [Author]()
+//                var work = Work(id: -1, title: "", authors: authors, awards: [])
+//
+//                while sqlite3_step(stmt) == SQLITE_ROW {
+//                    let currWorkId = getInt(stmt: stmt, colIndex: 0)
+//                    let authorId = getInt(stmt: stmt, colIndex: 2)
+//                    let firstName = try getString(stmt: stmt, colIndex: 3)
+//                    let middleName = try getString(stmt: stmt, colIndex: 4)
+//                    let lastName = try getString(stmt: stmt, colIndex: 5)
+//
+//                    if currWorkId != prevWorkId {
+//                        if let firstName = firstName, let lastName = lastName {
+//                            authors.append(Author(id: authorId,
+//                                                  firstName: firstName,
+//                                                  middleName: middleName,
+//                                                  lastName: lastName))
+//                        }
+//
+//                        if let title = try getString(stmt: stmt, colIndex: 1) {
+//                            works.append(Work(id: currWorkId,
+//                                              title: title,
+//                                              authors: authors,
+//                                              awards: []))
+//                            authors = [Author]()
+//                        }
+//                    }
+//                    else {
+//                        if let firstName = firstName, let lastName = lastName {
+//                            authors.append(Author(id: authorId,
+//                                                  firstName: firstName,
+//                                                  middleName: middleName,
+//                                                  lastName: lastName))
+//                        }
+//                    }
+//
+//                    prevWorkId = currWorkId
+//                }
+//            }
+//        } catch {
+//            print(error)
+//        }
+//
+//        return works
+//    }
     
     func getHugoWinnersOnly() -> [Work] {
         var works = [Work]()
@@ -193,6 +193,7 @@ class WorkDAO: BaseDAO {
             SELECT
                 w.id AS work_id,
                 w.title AS work_title,
+                w.image_name,
                 aw.name AS award_name,
                 ac.year AS award_year,
                 ac.name AS award_category,
@@ -231,15 +232,15 @@ class WorkDAO: BaseDAO {
                 var prevWorkId = -1;
                 var currWorkId = -1;
                 var authors = [Author]()
-                var work = Work(id: -1, title: "", authors: authors, awards: [])
+//                var work = Work(id: -1, title: "", imageName: "", authors: authors, awards: [])
                 
                 while sqlite3_step(stmt) == SQLITE_ROW {
                     let currWorkId = getInt(stmt: stmt, colIndex: 0)
-                    let awardYear = getInt(stmt: stmt, colIndex: 3)
-                    let authorId = getInt(stmt: stmt, colIndex: 6)
-                    let firstName = try getString(stmt: stmt, colIndex: 7)
-                    let middleName = try getString(stmt: stmt, colIndex: 8)
-                    let lastName = try getString(stmt: stmt, colIndex: 9)
+                    let awardYear = getInt(stmt: stmt, colIndex: 4)
+                    let authorId = getInt(stmt: stmt, colIndex: 7)
+                    let firstName = try getString(stmt: stmt, colIndex: 8)
+                    let middleName = try getString(stmt: stmt, colIndex: 9)
+                    let lastName = try getString(stmt: stmt, colIndex: 10)
 
                     if currWorkId != prevWorkId {
                         if let firstName = firstName, let lastName = lastName {
@@ -249,16 +250,18 @@ class WorkDAO: BaseDAO {
                                                   lastName: lastName))
                         }
                         
-                        if let awardStatus = try getString(stmt: stmt, colIndex: 5) {
+                        if let awardStatus = try getString(stmt: stmt, colIndex: 6) {
                             let award = Award(id: 1,
                                               type: "Hugo",
                                               name: "Best Novel",
                                               year: awardYear,
                                               status: awardStatus)
                             
-                            if let title = try getString(stmt: stmt, colIndex: 1) {
+                            if let title = try getString(stmt: stmt, colIndex: 1),
+                               let imageName = try getString(stmt: stmt, colIndex: 2) {
                                 works.append(Work(id: currWorkId,
                                                   title: title,
+                                                  imageName: imageName,
                                                   authors: authors,
                                                   awards: [award]))
                                 authors = [Author]()
@@ -329,7 +332,6 @@ class WorkDAO: BaseDAO {
                 var prevWorkId = -1;
                 var currWorkId = -1;
                 var authors = [Author]()
-                var work = Work(id: -1, title: "", authors: authors, awards: [])
                 
                 while sqlite3_step(stmt) == SQLITE_ROW {
                     let currWorkId = getInt(stmt: stmt, colIndex: 0)
@@ -349,6 +351,7 @@ class WorkDAO: BaseDAO {
                         if let title = try getString(stmt: stmt, colIndex: 1) {
                             works.append(Work(id: currWorkId,
                                               title: title,
+                                              imageName: "",
                                               authors: authors,
                                               awards: []))
                             authors = [Author]()

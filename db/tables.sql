@@ -18,6 +18,7 @@ CREATE TABLE work (
     id INTEGER PRIMARY KEY,
     title TEXT NOT NULL,
     sort_by_title TEXT NOT NULL,
+    image_name TEXT,
     type TEXT NOT NULL,
     product_link TEXT
 );

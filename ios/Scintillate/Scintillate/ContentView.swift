@@ -8,21 +8,36 @@ extension Color {
 
 struct ContentView: View {
     @EnvironmentObject var store: Store
-        
+    
+    var awardColumns: [GridItem] {[
+        GridItem(.flexible(minimum: 70)),
+        GridItem(.flexible(minimum: 70)),
+        GridItem(.flexible(minimum: 70)),
+        GridItem(.flexible(minimum: 70))
+    ]}
+
     var body: some View {
         ScrollView {
-            ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
-                WorkListItemView(work: work)
-                    .foregroundColor(Color("MainForeground"))
+            LazyVGrid(columns: awardColumns, spacing: 1.5) {
+                ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
+                    let uiImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
+
+                    VStack {
+                        Image(uiImage: uiImage)
+                             .resizable()
+                             .aspectRatio(contentMode: .fit)
+                             .frame(width: 92.8)
+//                             .cornerRadius(6)
+//                             .border(Color.white, width: 0.25)
+//                        Text(work.title).font(.system(size: 11.0)).multilineTextAlignment(.center)
+//                        Text(work.getAwardText()).font(.system(size: 11.0))
+//                        Spacer()
+                    }
+                }
             }
+            
         }
         .background(Color.black.ignoresSafeArea())
 //        .background(Color("MainBackground").ignoresSafeArea())
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
