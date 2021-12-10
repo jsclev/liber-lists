@@ -64,7 +64,10 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Blackout'),
     (select id from author where first_name = 'Mira' and last_name = 'Grant'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'Blackout/All Clear'),
+    (select id from work where title = 'Blackout' and image_name = 'blackout2'),
+    (select id from author where first_name = 'Connie' and last_name = 'Willis'));
+insert into work_author (work_id, author_id) values (
+    (select id from work where title = 'All Clear'),
     (select id from author where first_name = 'Connie' and last_name = 'Willis'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Blind Lake'),

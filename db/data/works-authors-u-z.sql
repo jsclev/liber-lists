@@ -37,10 +37,10 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'We Have Fed Our Sea'),
     (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'The Wheel of Time'),
+    (select id from work where title = 'The Eye of the World'),
     (select id from author where first_name = 'Robert' and last_name = 'Jordan'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'The Wheel of Time'),
+    (select id from work where title = 'The Eye of the World'),
     (select id from author where first_name = 'Brandon' and last_name = 'Sanderson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Where Late the Sweet Birds Sang'),

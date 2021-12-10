@@ -1195,7 +1195,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = 'The Wheel of Time'),
+   (select id from work where title = 'The Eye of the World'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2014),
    2
 );

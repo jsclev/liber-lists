@@ -29,8 +29,8 @@ struct ContentView: View {
                              .frame(width: 92.8)
 //                             .cornerRadius(6)
 //                             .border(Color.white, width: 0.25)
-//                        Text(work.title).font(.system(size: 11.0)).multilineTextAlignment(.center)
-//                        Text(work.getAwardText()).font(.system(size: 11.0))
+                        Text(work.title).font(.system(size: 11.0)).multilineTextAlignment(.center)
+                        Text(work.getAwardText()).font(.system(size: 11.0))
 //                        Spacer()
                     }
                 }

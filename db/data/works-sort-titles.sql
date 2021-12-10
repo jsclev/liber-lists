@@ -2,9 +2,9 @@
 insert into work (title, sort_by_title, image_name, type) values ('334', '334', '334', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('1Q84', '1q84', '1q84', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('1632 series', '1632 series', '1632-series', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('2010: Odyssey Two', '2010: odyssey two', '2010:-odyssey-two', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('2010: Odyssey Two', '2010: odyssey two', '2010-odyssey-two', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('2312', '2312', '2312', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('20,000 Leagues Under the Sea', '20,000 leagues under the sea', '20,000-leagues-under-the-sea', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('20,000 Leagues Under the Sea', '20,000 leagues under the sea', '20000-leagues-under-the-sea', 'Novel');
 
 -- A
 insert into work (title, sort_by_title, image_name, type) values ('...And Call Me Conrad', '...and call me conrad', 'and-call-me-conrad', 'Novel');
@@ -19,12 +19,13 @@ insert into work (title, sort_by_title, image_name, type) values ('Against the F
 insert into work (title, sort_by_title, image_name, type) values ('An Age', 'age, an', 'age', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Age of the Pussyfoot', 'age of the pussyfoot, the', 'age-of-the-pussyfoot', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Air', 'air', 'air', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Alas, Babylon', 'alas, babylon', 'alas,-babylon', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Alas, Babylon', 'alas, babylon', 'alas-babylon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Alastor Cluster', 'alastor cluster', 'alastor-cluster', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Alejandra Variations', 'alejandra variations, the', 'alejandra-variations', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Aleriel, or A Voyage to Other Worlds', 'aleriel, or a voyage to other worlds', 'aleriel,-or-a-voyage-to-other-worlds', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Aleriel, or A Voyage to Other Worlds', 'aleriel, or a voyage to other worlds', 'aleriel-or-a-voyage-to-other-worlds', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Algebraist', 'algebraist, the', 'algebraist', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Alien Tongue', 'alien tongue', 'alien-tongue', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('All Clear', 'all clear', 'all-clear', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('All You Need Is Kill', 'all you need is kill', 'all-you-need-is-kill', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('All the Weyrs of Pern', 'all the weyrs of pern', 'all-the-weyrs-of-pern', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Altered Carbon', 'altered carbon', 'altered-carbon', 'Novel');
@@ -75,7 +76,7 @@ insert into work (title, sort_by_title, image_name, type) values ('A Billion Day
 insert into work (title, sort_by_title, image_name, type) values ('Black', 'black', 'black', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Black Genesis', 'black genesis', 'black-genesis', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Black Legion of Callisto', 'black legion of callisto', 'black-legion-of-callisto', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Blackout/All Clear', 'blackout/all clear', 'blackout/all-clear', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Blackout', 'blackout', 'blackout', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Blackstar', 'blackstar', 'blackstar', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Blast Off at Woomera', 'blast off at woomera', 'blast-off-at-woomera', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Blind Voices', 'blind voices', 'blind-voices', 'Novel');
@@ -138,7 +139,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Cinnabar', 'c
 insert into work (title, sort_by_title, image_name, type) values ('Cirque', 'cirque', 'cirque', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Citizen of the Galaxy', 'citizen of the galaxy', 'citizen-of-the-galaxy', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('City', 'city', 'city', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The City & the City', 'city & the city, the', 'city-&-the-city', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The City & the City', 'city & the city, the', 'city-and-the-city', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The City and the Stars', 'city and the stars, the', 'city-and-the-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('City of Bones', 'city of bones', 'city-of-bones', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('City of Illusions', 'city of illusions', 'city-of-illusions', 'Novel');
@@ -173,12 +174,12 @@ insert into work (title, sort_by_title, image_name, type) values ('Cyteen', 'cyt
 insert into work (title, sort_by_title, image_name, type) values ('Daemon', 'daemon', 'daemon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dancers of Noyo', 'dancers of noyo, the', 'dancers-of-noyo', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dancing Jack', 'dancing jack', 'dancing-jack', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Danger: Dinosaurs!', 'danger: dinosaurs!', 'danger:-dinosaurs!', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Danger: Dinosaurs!', 'danger: dinosaurs!', 'danger-dinosaurs', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dark Beyond the Stars', 'dark beyond the stars', 'dark-beyond-the-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dark Universe', 'dark universe', 'dark-universe', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Darwin''s Radio', 'darwins radio', 'darwins-radio', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Davy', 'davy', 'davy', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Dawn, Book One of the Xenogenesis Series', 'dawn, book one of the xenogenesis series', 'dawn,-book-one-of-the-xenogenesis-series', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Dawn, Book One of the Xenogenesis Series', 'dawn, book one of the xenogenesis series', 'dawn-book-one-of-the-xenogenesis-series', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Day of the Minotaur', 'day of the minotaur', 'day-of-the-minotaur', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Day of the Triffids', 'day of the triffids, the', 'day-of-the-triffids', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Days of Grass', 'days of grass', 'days-of-grass', 'Novel');
@@ -192,7 +193,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Demon', 'demo
 insert into work (title, sort_by_title, image_name, type) values ('Desolation Road', 'desolation road', 'desolation-road', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Destination Alpha Four', 'destination alpha four', 'destination-alpha-four', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Destination Mars', 'destination mars', 'destination-mars', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Destination: Void', 'destination: void', 'destination:-void', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Destination: Void', 'destination: void', 'destination-void', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dhalgren', 'dhalgren', 'dhalgren', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Diamond Age', 'diamond age, the', 'diamond-age', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Diamond Lens', 'diamond lens, the', 'diamond-lens', 'Novel');
@@ -201,12 +202,12 @@ insert into work (title, sort_by_title, image_name, type) values ('The Dimension
 insert into work (title, sort_by_title, image_name, type) values ('The Disappearance', 'disappearance, the', 'disappearance', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dispossessed', 'dispossessed, the', 'dispossessed', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Distress', 'distress', 'distress', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Do Androids Dream of Electric Sheep?', 'do androids dream of electric sheep?', 'do-androids-dream-of-electric-sheep?', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Do Androids Dream of Electric Sheep?', 'do androids dream of electric sheep?', 'do-androids-dream-of-electric-sheep', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dog On The Highway', 'dog on the highway', 'dog-on-the-highway', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Domes of Pico', 'domes of pico, the', 'domes-of-pico', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Doomsday Book', 'doomsday book', 'doomsday-book', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Doorways in the Sand', 'doorways in the sand', 'doorways-in-the-sand', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Dorsai!', 'dorsai!', 'dorsai!', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Dorsai!', 'dorsai!', 'dorsai', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dosadi Experiment', 'dosadi experiment, the', 'dosadi-experiment', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Down and Out in the Magic Kingdom', 'down and out in the magic kingdom', 'down-and-out-in-the-magic-kingdom', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Down to a Sunless Sea', 'down to a sunless sea', 'down-to-a-sunless-sea', 'Novel');
@@ -217,7 +218,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Dragon Ne
 insert into work (title, sort_by_title, image_name, type) values ('Dragonriders of Pern', 'dragonriders of pern', 'dragonriders-of-pern', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dragonquest', 'dragonquest', 'dragonquest', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dream Park', 'dream park', 'dream-park', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Dream Park; The Voodoo Game', 'dream park; the voodoo game', 'dream-park;-the-voodoo-game', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Dream Park; The Voodoo Game', 'dream park; the voodoo game', 'dream-park-the-voodoo-game', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dreamsnake', 'dreamsnake', 'dreamsnake', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Drowned World', 'drowned world, the', 'drowned-world', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dry Salvages', 'dry salvages, the', 'dry-salvages', 'Novel');
@@ -235,7 +236,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Earth in Twil
 insert into work (title, sort_by_title, image_name, type) values ('Earth Logic', 'earth logic', 'earth-logic', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Earthborn', 'earthborn', 'earthborn', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Earthbound', 'earthbound', 'earthbound', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Earthman, Go Home!', 'earthman, go home!', 'earthman,-go-home!', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Earthman, Go Home!', 'earthman, go home!', 'earthman-go-home', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Earthseed', 'earthseed', 'earthseed', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Echo in the Skull', 'echo in the skull', 'echo-in-the-skull', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Einstein''s Dreams', 'einsteins dreams', 'einsteins-dreams', 'Novel');
@@ -261,7 +262,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Eye of th
 
 -- F
 insert into work (title, sort_by_title, image_name, type) values ('The Facts in the Case of M. Valdemar', 'facts in the case of m. valdemar, the', 'facts-in-the-case-of-m.-valdemar', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Faded Sun: Kesrith', 'faded sun: kesrith, the', 'faded-sun:-kesrith', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Faded Sun: Kesrith', 'faded sun: kesrith, the', 'faded-sun-kesrith', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Fahrenheit 451', 'fahrenheit 451', 'fahrenheit-451', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Fall of Hyperion', 'fall of hyperion, the', 'fall-of-hyperion', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Fall of Moondust', 'fall of moondust, a', 'fall-of-moondust', 'Novel');
@@ -285,7 +286,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Fisherman
 insert into work (title, sort_by_title, image_name, type) values ('Five Weeks in a Balloon', 'five weeks in a balloon', 'five-weeks-in-a-balloon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Fledgling', 'fledgling', 'fledgling', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Flight from Rebirth', 'flight from rebirth', 'flight-from-rebirth', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Flow My Tears, the Policeman Said', 'flow my tears, the policeman said', 'flow-my-tears,-the-policeman-said', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Flow My Tears, the Policeman Said', 'flow my tears, the policeman said', 'flow-my-tears-the-policeman-said', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Flowers for Algernon', 'flowers for algernon', 'flowers-for-algernon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Fluger', 'fluger, the', 'fluger', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Fool''s Run', 'fools run', 'fools-run', 'Novel');
@@ -341,7 +342,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Harpist in th
 insert into work (title, sort_by_title, image_name, type) values ('Harry Potter and the Goblet of Fire', 'harry potter and the goblet of fire', 'harry-potter-and-the-goblet-of-fire', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Haunted Stars', 'haunted stars, the', 'haunted-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Have Space Suit - Will Travel', 'have space suit - will travel', 'have-space-suit---will-travel', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('He, She and It', 'he, she and it', 'he,-she-and-it', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('He, She and It', 'he, she and it', 'he-she-and-it', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Hellspark', 'hellspark', 'hellspark', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Here Gather the Stars', 'here gather the stars', 'here-gather-the-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Hidden World', 'hidden world', 'hidden-world', 'Novel');
@@ -362,10 +363,10 @@ insert into work (title, sort_by_title, image_name, type) values ('Hyperion', 'h
 
 -- I
 insert into work (title, sort_by_title, image_name, type) values ('I Am Legend', 'i am legend', 'i-am-legend', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('I, Robot', 'i, robot', 'i,-robot', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('I, Robot', 'i, robot', 'i-robot', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Idlewild', 'idlewild', 'idlewild', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Ilium', 'ilium', 'ilium', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Imago, Book Three of the Xenogenesis Series', 'imago, book three of the xenogenesis series', 'imago,-book-three-of-the-xenogenesis-series', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Imago, Book Three of the Xenogenesis Series', 'imago, book three of the xenogenesis series', 'imago-book-three-of-the-xenogenesis-series', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Imperial Earth', 'imperial earth', 'imperial-earth', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Implosion', 'implosion', 'implosion', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('In Solitary', 'in solitary', 'in-solitary', 'Novel');
@@ -396,7 +397,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Jandar of Cal
 insert into work (title, sort_by_title, image_name, type) values ('The Jedi Academy Trilogy', 'jedi academy trilogy, the', 'jedi-academy-trilogy', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Jem', 'jem', 'jem', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Jennifer Government', 'jennifer government', 'jennifer-government', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Job: A Comedy of Justice', 'job: a comedy of justice', 'job:-a-comedy-of-justice', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Job: A Comedy of Justice', 'job: a comedy of justice', 'job-a-comedy-of-justice', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Jonathan Strange & Mr Norrell', 'jonathan strange & mr norrell', 'jonathan-strange-&-mr-norrell', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Journey in Other Worlds', 'journey in other worlds, a', 'journey-in-other-worlds', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Journey to the Center of the Earth', 'journey to the center of the earth', 'journey-to-the-center-of-the-earth', 'Novel');
@@ -410,7 +411,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Kaleidoscope 
 insert into work (title, sort_by_title, image_name, type) values ('Kalimantaan', 'kalimantaan', 'kalimantaan', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Killobyte', 'killobyte', 'killobyte', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Kindred', 'kindred', 'kindred', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('King of Morning, Queen of Day', 'king of morning, queen of day', 'king-of-morning,-queen-of-day', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('King of Morning, Queen of Day', 'king of morning, queen of day', 'king-of-morning-queen-of-day', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('King Rat', 'king rat', 'king-rat', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Knight of Delusions', 'knight of delusions', 'knight-of-delusions', 'Novel');
 
@@ -424,9 +425,9 @@ insert into work (title, sort_by_title, image_name, type) values ('The Left Hand
 insert into work (title, sort_by_title, image_name, type) values ('The Legacy of Herot', 'legacy of herot, the', 'legacy-of-herot', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Level 7', 'level 7', 'level-7', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Light', 'light', 'light', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Little, Big', 'little, big', 'little,-big', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Little, Big', 'little, big', 'little-big', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Little Fuzzy', 'little fuzzy', 'little-fuzzy', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Long Way to a Small, Angry Planet', 'long way to a small, angry planet, the', 'long-way-to-a-small,-angry-planet', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Long Way to a Small, Angry Planet', 'long way to a small, angry planet, the', 'long-way-to-a-small-angry-planet', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Long Tomorrow', 'long tomorrow, the', 'long-tomorrow', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Look to Windward', 'look to windward', 'look-to-windward', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Looking Backward', 'looking backward', 'looking-backward', 'Novel');
@@ -443,7 +444,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Lucifer''s Ha
 -- M
 insert into work (title, sort_by_title, image_name, type) values ('Macroscope', 'macroscope', 'macroscope', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Mad Empress of Callisto', 'mad empress of callisto', 'mad-empress-of-callisto', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Make Room! Make Room!', 'make room! make room!', 'make-room!-make-room!', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Make Room! Make Room!', 'make room! make room!', 'make-room-make-room', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Malacia Tapestry', 'malacia tapestry, the', 'malacia-tapestry', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Mammoth', 'mammoth', 'mammoth', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Man in a Cage', 'man in a cage', 'man-in-a-cage', 'Novel');
@@ -458,8 +459,8 @@ insert into work (title, sort_by_title, image_name, type) values ('Marooned on M
 insert into work (title, sort_by_title, image_name, type) values ('Marooned in Realtime', 'marooned in realtime', 'marooned-in-realtime', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Martian', 'martian, the', 'martian', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Martian Chronicles', 'martian chronicles, the', 'martian-chronicles', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Maske: Thaery', 'maske: thaery', 'maske:-thaery', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Master: An Adventure Story', 'master: an adventure story, the', 'master:-an-adventure-story', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Maske: Thaery', 'maske: thaery', 'maske-thaery', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Master: An Adventure Story', 'master: an adventure story, the', 'master-an-adventure-story', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Masters of Time', 'masters of time', 'masters-of-time', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Matter', 'matter', 'matter', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Maze of Death', 'maze of death, a', 'maze-of-death', 'Novel');
@@ -496,7 +497,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Moon of Mutin
 insert into work (title, sort_by_title, image_name, type) values ('Moon of Three Rings', 'moon of three rings', 'moon-of-three-rings', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Moon-Flash', 'moon-flash', 'moon-flash', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('More Than Human', 'more than human', 'more-than-human', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Moreta: Dragonlady of Pern', 'moreta: dragonlady of pern', 'moreta:-dragonlady-of-pern', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Moreta: Dragonlady of Pern', 'moreta: dragonlady of pern', 'moreta-dragonlady-of-pern', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Morgaine Stories', 'morgaine stories, the', 'morgaine-stories', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Mote in God''s Eye', 'mote in gods eye, the', 'mote-in-gods-eye', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Mother of Storms', 'mother of storms', 'mother-of-storms', 'Novel');
@@ -549,7 +550,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Paladin of So
 insert into work (title, sort_by_title, image_name, type) values ('Parable of the Sower', 'parable of the sower', 'parable-of-the-sower', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Parable of the Talents', 'parable of the talents', 'parable-of-the-talents', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Past Master', 'past master', 'past-master', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Pastwatch: The Redemption of Christopher Columbus', 'pastwatch: the redemption of christopher columbus', 'pastwatch:-the-redemption-of-christopher-columbus', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Pastwatch: The Redemption of Christopher Columbus', 'pastwatch: the redemption of christopher columbus', 'pastwatch-the-redemption-of-christopher-columbus', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Patternmaster', 'patternmaster', 'patternmaster', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Patterns of Chaos', 'patterns of chaos, the', 'patterns-of-chaos', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Pavane', 'pavane', 'pavane', 'Novel');
@@ -646,7 +647,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Rynosseros', 
 
 -- S
 insert into work (title, sort_by_title, image_name, type) values ('The Sands of Mars', 'sands of mars, the', 'sands-of-mars', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Santiago: a Myth of the Far Future', 'santiago: a myth of the far future', 'santiago:-a-myth-of-the-far-future', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Santiago: a Myth of the Far Future', 'santiago: a myth of the far future', 'santiago-a-myth-of-the-far-future', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Saraband of Lost Time', 'saraband of lost time', 'saraband-of-lost-time', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Sargasso of Space', 'sargasso of space', 'sargasso-of-space', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Saturn''s Children', 'saturns children', 'saturns-children', 'Novel');
@@ -663,7 +664,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Semper Mars',
 insert into work (title, sort_by_title, image_name, type) values ('Sentinels From Space', 'sentinels from space', 'sentinels-from-space', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Seveneves', 'seveneves', 'seveneves', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Seventh Son', 'seventh son', 'seventh-son', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Sewer, Gas, and Electric', 'sewer, gas, and electric', 'sewer,-gas,-and-electric', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Sewer, Gas, and Electric', 'sewer, gas, and electric', 'sewer-gas-and-electric', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Shadrach in the Furnace', 'shadrach in the furnace', 'shadrach-in-the-furnace', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Shape of Things to Come', 'shape of things to come, the', 'shape-of-things-to-come', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Shibboleth', 'shibboleth, the', 'shibboleth', 'Novel');
@@ -702,7 +703,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Space Opera',
 insert into work (title, sort_by_title, image_name, type) values ('The Space Vampires', 'space vampires, the', 'space-vampires', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Space Viking', 'space viking', 'space-viking', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Spaceling', 'spaceling', 'spaceling', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Spacemen, Go Home', 'spacemen, go home', 'spacemen,-go-home', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Spacemen, Go Home', 'spacemen, go home', 'spacemen-go-home', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Speaker for the Dead', 'speaker for the dead', 'speaker-for-the-dead', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Sphere', 'sphere', 'sphere', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Spin', 'spin', 'spin', 'Novel');
@@ -726,8 +727,8 @@ insert into work (title, sort_by_title, image_name, type) values ('The Star Seek
 insert into work (title, sort_by_title, image_name, type) values ('Star Smashers of the Galaxy Rangers', 'star smashers of the galaxy rangers', 'star-smashers-of-the-galaxy-rangers', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Star Surgeon', 'star surgeon', 'star-surgeon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Starman Jones', 'starman jones', 'starman-jones', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Stars are Ours!', 'stars are ours!, the', 'stars-are-ours!', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Stars, Like Dust', 'stars, like dust, the', 'stars,-like-dust', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Stars are Ours!', 'stars are ours!, the', 'stars-are-ours', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Stars, Like Dust', 'stars, like dust, the', 'stars-like-dust', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Stars My Destination', 'stars my destination, the', 'stars-my-destination', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Starplex', 'starplex', 'starplex', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Starship Through Space', 'starship through space', 'starship-through-space', 'Novel');
@@ -810,7 +811,7 @@ insert into work (title, sort_by_title, image_name, type) values ('To Your Scatt
 insert into work (title, sort_by_title, image_name, type) values ('Too Many Magicians', 'too many magicians', 'too-many-magicians', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Tower of Glass', 'tower of glass', 'tower-of-glass', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Towing Jehovah', 'towing jehovah', 'towing-jehovah', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('A Transatlantic Tunnel, Hurrah!', 'transatlantic tunnel, hurrah!, a', 'transatlantic-tunnel,-hurrah!', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('A Transatlantic Tunnel, Hurrah!', 'transatlantic tunnel, hurrah!, a', 'transatlantic-tunnel-hurrah', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Transmigration', 'transmigration', 'transmigration', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Trapped in Space', 'trapped in space', 'trapped-in-space', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Planet Called Treason', 'planet called treason, a', 'planet-called-treason', 'Novel');
@@ -955,7 +956,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Zoe''s Tale',
 insert into work (title, sort_by_title, image_name, type) values ('Boneshaker', 'boneshaker', 'boneshaker', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Wake', 'wake', 'wake', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Palimpsest', 'palimpsest', 'palimpsest', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Julian Comstock: A Story of 22nd-Century America', 'julian comstock: a story of 22nd-century america', 'julian-comstock:-a-story-of-22nd-century-america', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Julian Comstock: A Story of 22nd-Century America', 'julian comstock: a story of 22nd-century america', 'julian-comstock', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Cryoburn', 'cryoburn', 'cryoburn', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dervish House', 'dervish house, the', 'dervish-house', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Feed', 'feed', 'feed', 'Novel');
@@ -964,16 +965,16 @@ insert into work (title, sort_by_title, image_name, type) values ('A Dance with 
 insert into work (title, sort_by_title, image_name, type) values ('Deadline', 'deadline', 'deadline', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Embassytown', 'embassytown', 'embassytown', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Leviathan Wakes', 'leviathan wakes', 'leviathan-wakes', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Blackout', 'blackout', 'blackout', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Blackout', 'blackout', 'blackout2', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Captain Vorpatril''s Alliance', 'captain vorpatrils alliance', 'captain-vorpatrils-alliance', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Throne of the Crescent Moon', 'throne of the crescent moon', 'throne-of-the-crescent-moon', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Neptune''s Brood', 'neptunes brood', 'neptunes-brood', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Wheel of Time', 'wheel of time, the', 'wheel-of-time', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Eye of the World', 'eye of the world, the', 'eye-of-the-world', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Goblin Emperor', 'goblin emperor, the', 'goblin-emperor', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Dark Between the Stars', 'dark between the stars, the', 'dark-between-the-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Skin Game', 'skin game', 'skin-game', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Uprooted', 'uprooted', 'uprooted', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Cinder Spires: The Aeronaut''s Windlass', 'cinder spires: the aeronauts windlass, the', 'cinder-spires:-the-aeronauts-windlass', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Cinder Spires: The Aeronaut''s Windlass', 'cinder spires: the aeronauts windlass, the', 'cinder-spires-the-aeronauts-windlass', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('All the Birds in the Sky', 'all the birds in the sky', 'all-the-birds-in-the-sky', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Closed and Common Orbit', 'closed and common orbit, a', 'closed-and-common-orbit', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Death''s End', 'deaths end', 'deaths-end', 'Novel');
@@ -1007,7 +1008,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Ghost Bri
 insert into work (title, sort_by_title, image_name, type) values ('The Quiet War', 'quiet war, the', 'quiet-war', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Second Foundation', 'second foundation', 'second-foundation', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Wool', 'wool', 'wool', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('The Strange Case of Dr. Jekyll & Mr. Hyde', 'strange case of dr. jekyll & mr. hyde, the', 'strange-case-of-dr.-jekyll-&-mr.-hyde', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Strange Case of Dr. Jekyll & Mr. Hyde', 'strange case of dr. jekyll & mr. hyde, the', 'strange-case-of-dr-jekyll-and-mr-hyde', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Road', 'road, the', 'road', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Earth Strike', 'earth strike', 'earth-strike', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Dandelion Wine', 'dandelion wine', 'dandelion-wine', 'Novel');
