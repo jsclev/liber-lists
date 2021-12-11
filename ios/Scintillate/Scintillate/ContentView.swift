@@ -8,36 +8,52 @@ extension Color {
 
 struct ContentView: View {
     @EnvironmentObject var store: Store
-    
-    var awardColumns: [GridItem] {[
-        GridItem(.flexible(minimum: 70)),
-        GridItem(.flexible(minimum: 70)),
-        GridItem(.flexible(minimum: 70)),
-        GridItem(.flexible(minimum: 70))
-    ]}
 
     var body: some View {
+        let size: CGFloat = 110
+        let padding: CGFloat = 10
+        
         ScrollView {
-            LazyVGrid(columns: awardColumns, spacing: 1.5) {
+            LazyVGrid(columns: [GridItem(.adaptive(minimum: size))],
+                      spacing: padding) {
                 ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
                     let uiImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
-
+                    let borderColor = work.id % 2 == 0 ? Color.white : Color.white
+                    let borderWidth = 0.25 //work.id % 2 == 0 ? 0.25 : 0.25
+                    let checkmarkImageName = work.id % 3 == 0 ? "checkmark" : "checkmark-placeholder"
+                    
                     VStack {
-                        Image(uiImage: uiImage)
-                             .resizable()
-                             .aspectRatio(contentMode: .fit)
-                             .frame(width: 92.8)
-//                             .cornerRadius(6)
-//                             .border(Color.white, width: 0.25)
-                        Text(work.title).font(.system(size: 11.0)).multilineTextAlignment(.center)
-                        Text(work.getAwardText()).font(.system(size: 11.0))
-//                        Spacer()
+                        ZStack {
+                            Image(uiImage: uiImage)
+                                 .resizable()
+                                 .aspectRatio(contentMode: .fit)
+                                 .border(borderColor, width: borderWidth)
+                            VStack {
+                                HStack {
+                                    Spacer()
+                                    Image(checkmarkImageName)
+                                         .resizable()
+                                         .aspectRatio(contentMode: .fit)
+                                         .frame(width: 20)
+                                         .padding(2)
+                                }
+                                Spacer()
+                            }
+                        }
+                        Text(work.title)
+                            .font(.custom("Arial", size: 9))
+                            .lineLimit(1)
+                            .truncationMode(.tail)
+                            .allowsTightening(true)
+                        Text(work.getAuthorText())
+                            .font(.custom("Arial", size: 9))
+                        Text(work.getAwardText())
+                            .font(.custom("Arial", size: 9))
                     }
                 }
             }
             
         }
         .background(Color.black.ignoresSafeArea())
-//        .background(Color("MainBackground").ignoresSafeArea())
     }
 }

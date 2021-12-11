@@ -398,7 +398,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Jedi Acad
 insert into work (title, sort_by_title, image_name, type) values ('Jem', 'jem', 'jem', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Jennifer Government', 'jennifer government', 'jennifer-government', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Job: A Comedy of Justice', 'job: a comedy of justice', 'job-a-comedy-of-justice', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Jonathan Strange & Mr Norrell', 'jonathan strange & mr norrell', 'jonathan-strange-&-mr-norrell', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Jonathan Strange & Mr Norrell', 'jonathan strange & mr norrell', 'jonathan-strange-and-mr-norrell', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Journey in Other Worlds', 'journey in other worlds, a', 'journey-in-other-worlds', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Journey to the Center of the Earth', 'journey to the center of the earth', 'journey-to-the-center-of-the-earth', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Journey to Jupiter', 'journey to jupiter', 'journey-to-jupiter', 'Novel');
