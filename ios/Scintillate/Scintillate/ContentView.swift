@@ -10,11 +10,11 @@ struct ContentView: View {
     @EnvironmentObject var store: Store
 
     var body: some View {
-        let size: CGFloat = 110
-        let padding: CGFloat = 10
+        let size: CGFloat = 115
+        let padding: CGFloat = 20
         
         ScrollView {
-            LazyVGrid(columns: [GridItem(.adaptive(minimum: size))],
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                       spacing: padding) {
                 ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
                     let uiImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
@@ -50,10 +50,10 @@ struct ContentView: View {
                         Text(work.getAwardText())
                             .font(.custom("Arial", size: 9))
                     }
+                    .padding(.horizontal, 10)
                 }
             }
-            
         }
-        .background(Color.black.ignoresSafeArea())
+
     }
 }
