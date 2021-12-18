@@ -106,7 +106,7 @@ insert into work (title, sort_by_title, image_name, type) values ('By the Light 
 
 -- C
 insert into work (title, sort_by_title, image_name, type) values ('The Calcutta Chromosome', 'calcutta chromosome, the', 'calcutta-chromosome', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Call Him Dead', 'call him dead', 'call-him-dead', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Three to Conquer', 'three to conquer', 'three-to-conquer', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Calling B for Butterfly', 'calling b for butterfly', 'calling-b-for-butterfly', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Camp Concentration', 'camp concentration', 'camp-concentration', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Calculating Stars', 'calculating stars, the', 'calculating-stars', 'Novel');
@@ -341,7 +341,7 @@ insert into work (title, sort_by_title, image_name, type) values ('The Handmaid'
 insert into work (title, sort_by_title, image_name, type) values ('Harpist in the Wind', 'harpist in the wind', 'harpist-in-the-wind', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Harry Potter and the Goblet of Fire', 'harry potter and the goblet of fire', 'harry-potter-and-the-goblet-of-fire', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Haunted Stars', 'haunted stars, the', 'haunted-stars', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Have Space Suit - Will Travel', 'have space suit - will travel', 'have-space-suit---will-travel', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Have Space Suit - Will Travel', 'have space suit - will travel', 'have-space-suit-will-travel', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('He, She and It', 'he, she and it', 'he-she-and-it', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Hellspark', 'hellspark', 'hellspark', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Here Gather the Stars', 'here gather the stars', 'here-gather-the-stars', 'Novel');
@@ -791,7 +791,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Tik-Tok', 'ti
 insert into work (title, sort_by_title, image_name, type) values ('Time Enough for Love', 'time enough for love', 'time-enough-for-love', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Time for the Stars', 'time for the stars', 'time-for-the-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Time Held Me Green and Dying', 'time held me green and dying', 'time-held-me-green-and-dying', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Time Killer', 'time killer', 'time-killer', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Immortality, Inc.', 'immortality inc', 'immortality-inc', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Time Machine', 'time machine, the', 'time-machine', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('A Time of Changes', 'time of changes, a', 'time-of-changes', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Time Traders', 'time traders, the', 'time-traders', 'Novel');
@@ -869,7 +869,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Wave Without 
 insert into work (title, sort_by_title, image_name, type) values ('Waves', 'waves', 'waves', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Way Station', 'way station', 'way-station', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('We', 'we', 'we', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('We Have Fed Our Sea', 'we have fed our sea', 'we-have-fed-our-sea', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('The Enemy Stars', 'enemy stars, the', 'enemy-stars', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Weapon Makers', 'weapon makers, the', 'weapon-makers', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Weapon Shops of Isher', 'weapon shops of isher, the', 'weapon-shops-of-isher', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('What Entropy Means to Me', 'what entropy means to me', 'what-entropy-means-to-me', 'Novel');
@@ -881,7 +881,7 @@ insert into work (title, sort_by_title, image_name, type) values ('Where Time Wi
 insert into work (title, sort_by_title, image_name, type) values ('The Whisper', 'whisper, the', 'whisper', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('White', 'white', 'white', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The White Dragon', 'white dragon, the', 'white-dragon', 'Novel');
-insert into work (title, sort_by_title, image_name, type) values ('Who?', 'who?', 'who?', 'Novel');
+insert into work (title, sort_by_title, image_name, type) values ('Who?', 'who', 'who', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Whole Man', 'whole man, the', 'whole-man', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('Wildseed', 'wildseed', 'wildseed', 'Novel');
 insert into work (title, sort_by_title, image_name, type) values ('The Wind from Nowhere', 'wind from nowhere, the', 'wind-from-nowhere', 'Novel');

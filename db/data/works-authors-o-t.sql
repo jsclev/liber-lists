@@ -304,7 +304,7 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Time Enough for Love'),
     (select id from author where first_name = 'Robert' and last_name = 'Heinlein'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'Time Killer'),
+    (select id from work where title = 'Immortality, Inc.'),
     (select id from author where first_name = 'Robert' and last_name = 'Sheckley'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Time Machine'),

@@ -1,5 +1,5 @@
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = 'Call Him Dead'),
+   (select id from work where title = 'Three to Conquer'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1956),
    2
 );
@@ -20,7 +20,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
 );
 
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = 'We Have Fed Our Sea'),
+   (select id from work where title = 'The Enemy Stars'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
    2
 );
@@ -35,7 +35,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
    2
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = 'Time Killer'),
+   (select id from work where title = 'Immortality, Inc.'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1959),
    2
 );

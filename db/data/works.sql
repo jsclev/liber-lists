@@ -105,7 +105,7 @@ insert into work (title, type) values ('By the Light of the Green Star', 'Novel'
 
 -- C
 insert into work (title, type) values ('The Calcutta Chromosome', 'Novel');
-insert into work (title, type) values ('Call Him Dead', 'Novel');
+insert into work (title, type) values ('Three to Conquer', 'Novel');
 insert into work (title, type) values ('Calling B for Butterfly', 'Novel');
 insert into work (title, type) values ('Camp Concentration', 'Novel');
 insert into work (title, type) values ('The Calculating Stars', 'Novel');
@@ -790,7 +790,7 @@ insert into work (title, type) values ('Tik-Tok', 'Novel');
 insert into work (title, type) values ('Time Enough for Love', 'Novel');
 insert into work (title, type) values ('Time for the Stars', 'Novel');
 insert into work (title, type) values ('Time Held Me Green and Dying', 'Novel');
-insert into work (title, type) values ('Time Killer', 'Novel');
+insert into work (title, type) values ('Immortality, Inc.', 'Novel');
 insert into work (title, type) values ('The Time Machine', 'Novel');
 insert into work (title, type) values ('A Time of Changes', 'Novel');
 insert into work (title, type) values ('The Time Traders', 'Novel');
@@ -868,7 +868,7 @@ insert into work (title, type) values ('Wave Without a Shore', 'Novel');
 insert into work (title, type) values ('Waves', 'Novel');
 insert into work (title, type) values ('Way Station', 'Novel');
 insert into work (title, type) values ('We', 'Novel');
-insert into work (title, type) values ('We Have Fed Our Sea', 'Novel');
+insert into work (title, type) values ('The Enemy Stars', 'Novel');
 insert into work (title, type) values ('The Weapon Makers', 'Novel');
 insert into work (title, type) values ('The Weapon Shops of Isher', 'Novel');
 insert into work (title, type) values ('What Entropy Means to Me', 'Novel');

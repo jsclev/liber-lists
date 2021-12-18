@@ -127,7 +127,7 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Calculating Stars'),
     (select id from author where first_name = 'Mary' and last_name = 'Kowal'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'Call Him Dead'),
+    (select id from work where title = 'Three to Conquer'),
     (select id from author where first_name = 'Eric' and last_name = 'Russell'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'A Canticle for Leibowitz'),

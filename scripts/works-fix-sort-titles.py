@@ -48,10 +48,10 @@ def get_sort_title(orig_title, apostrophe):
     return sort_t
 
 
-file = open('works.sql', 'r')
+file = open('../db/data/works.sql', 'r')
 lines = file.readlines()
 
-target_file = open('works-sort-titles.sql', 'w')
+target_file = open('../db/data/works-sort-titles.sql', 'w')
 
 for line in lines:
     # noinspection SqlNoDataSourceInspection

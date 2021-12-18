@@ -6,6 +6,8 @@ struct Work: Equatable, Hashable {
     let imageName: String
     let authors: [Author]
     let awards: [Award]
+    var series: Series?
+    var seriesOrdinalName: String?
     
     func getAuthorText() -> String {
         if authors.count > 0 {

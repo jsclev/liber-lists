@@ -34,7 +34,7 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Warbound'),
     (select id from author where first_name = 'Larry' and last_name = 'Correia'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'We Have Fed Our Sea'),
+    (select id from work where title = 'The Enemy Stars'),
     (select id from author where first_name = 'Poul' and last_name = 'Anderson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Eye of the World'),

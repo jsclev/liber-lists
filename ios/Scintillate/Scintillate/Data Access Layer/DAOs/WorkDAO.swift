@@ -203,7 +203,10 @@ class WorkDAO: BaseDAO {
                 a.id AS author_id,
                 a.first_name AS author_first_name,
                 a.middle_name AS author_middle_name,
-                a.last_name AS author_last_name
+                a.last_name AS author_last_name,
+                s.id AS series_id,
+                s.name AS series_name,
+                ws.ordinal_name AS series_ordinal_name
             FROM
                 work w
             INNER JOIN
@@ -216,6 +219,10 @@ class WorkDAO: BaseDAO {
                 work_author wa ON wa.work_id = w.id
             LEFT OUTER JOIN
                 author a ON a.id = wa.author_id
+            LEFT OUTER JOIN
+                work_series ws ON ws.work_id = w.id
+            LEFT OUTER JOIN
+                series s ON s.id = ws.series_id
             WHERE
                 aw.name = 'Hugo Award' and
                 ac.name = 'Best Novel'
@@ -259,11 +266,28 @@ class WorkDAO: BaseDAO {
                             
                             if let title = try getString(stmt: stmt, colIndex: 1),
                                let imageName = try getString(stmt: stmt, colIndex: 2) {
-                                works.append(Work(id: currWorkId,
-                                                  title: title,
-                                                  imageName: imageName,
-                                                  authors: authors,
-                                                  awards: [award]))
+                                
+                                if let seriesName = try getString(stmt: stmt, colIndex: 12) {
+                                    let seriesId = getInt(stmt: stmt, colIndex: 11)
+                                    let seriesOrdinalName = try getString(stmt: stmt, colIndex: 13)
+                                    let series = Series(id: seriesId, name: seriesName)
+                                    
+                                    works.append(Work(id: currWorkId,
+                                                      title: title,
+                                                      imageName: imageName,
+                                                      authors: authors,
+                                                      awards: [award],
+                                                      series: series,
+                                                      seriesOrdinalName: seriesOrdinalName))
+                                }
+                                else {
+                                    works.append(Work(id: currWorkId,
+                                                      title: title,
+                                                      imageName: imageName,
+                                                      authors: authors,
+                                                      awards: [award]))
+                                }
+
                                 authors = [Author]()
                             }
                         }

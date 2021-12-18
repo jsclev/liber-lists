@@ -15,8 +15,10 @@ struct BookImageView: View {
             Image(uiImage: uiImage)
                  .resizable()
                  .aspectRatio(contentMode: .fit)
-                 .padding(7)
-//                 .border(Color.white, width: 0.25)
+                 .padding(.top, 12)
+                 .padding(.leading, 12)
+                 .padding(.trailing, 12)
+                 .padding(.bottom, 0)
             VStack {
                 HStack {
                     Spacer()
@@ -24,7 +26,7 @@ struct BookImageView: View {
                          .resizable()
                          .aspectRatio(contentMode: .fit)
                          .frame(width: 20)
-                         .padding(7)
+                         .padding(14)
                 }
                 Spacer()
             }
@@ -34,17 +36,57 @@ struct BookImageView: View {
 
 struct BookInfoView: View {
     var work: Work
+    let fontSize = 12.0
 
     var body: some View {
         Text(work.title)
-            .font(.custom("Arial", size: 9))
+            .foregroundColor(ColorManager.mainForeground)
+            .font(.custom("Arial", size: fontSize))
             .lineLimit(1)
             .truncationMode(.tail)
             .allowsTightening(true)
         Text(work.getAuthorText())
-            .font(.custom("Arial", size: 9))
+            .foregroundColor(ColorManager.mainForeground)
+            .font(.custom("Arial", size: fontSize))
+            .lineLimit(1)
+            .truncationMode(.tail)
+            .allowsTightening(true)
         Text(work.getAwardText())
-            .font(.custom("Arial", size: 9))
+            .foregroundColor(ColorManager.mainForeground)
+            .font(.custom("Arial", size: fontSize))
+            .lineLimit(1)
+            .truncationMode(.tail)
+            .allowsTightening(true)
+        
+        if let series = work.series {
+            if let seriesOrdinalName = work.seriesOrdinalName {
+                Text(series.name + ", " + seriesOrdinalName)
+                    .foregroundColor(ColorManager.mainForeground)
+                    .font(.custom("Arial", size: fontSize))
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .allowsTightening(true)
+                    .padding(.bottom, 4)
+            }
+            else {
+                Text(series.name)
+                    .foregroundColor(ColorManager.mainForeground)
+                    .font(.custom("Arial", size: fontSize))
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .allowsTightening(true)
+                    .padding(.bottom, 4)
+            }
+        }
+        else {
+            Text("")
+                .foregroundColor(ColorManager.mainForeground)
+                .font(.custom("Arial", size: fontSize))
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .allowsTightening(true)
+                .padding(.bottom, 6)
+        }
     }
 }
 
@@ -53,10 +95,10 @@ struct ContentView: View {
 
     var body: some View {
         let size: CGFloat = 115
-        let padding: CGFloat = 11
+        let padding: CGFloat = 3
 
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+            LazyVGrid(columns: [GridItem(.flexible())],
                       spacing: padding) {
                 ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
                     let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
@@ -66,12 +108,11 @@ struct ContentView: View {
                         BookImageView(uiImage: uiImage, checkmarkImageName: checkmarkImageName)
                         BookInfoView(work: work)
                     }
-//                    .border(Color.white, width: 0.25)
-                    .padding(10)
-
+//                    .padding(3)
                     .background(Color.app1.ignoresSafeArea())
-                    .padding(10)
-
+                    .cornerRadius(15)
+                    .padding(2)
+//                    .shadow(color: Color.white, radius: 3)
                 }
             }
         }
