@@ -66,7 +66,7 @@ struct BookInfoView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                     .allowsTightening(true)
-                    .padding(.bottom, 4)
+                    .padding(.bottom, 9)
             }
             else {
                 Text(series.name)
@@ -75,7 +75,7 @@ struct BookInfoView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                     .allowsTightening(true)
-                    .padding(.bottom, 4)
+                    .padding(.bottom, 9)
             }
         }
         else {
@@ -85,7 +85,7 @@ struct BookInfoView: View {
                 .lineLimit(1)
                 .truncationMode(.tail)
                 .allowsTightening(true)
-                .padding(.bottom, 6)
+                .padding(.bottom, 9)
         }
     }
 }
@@ -98,9 +98,10 @@ struct ContentView: View {
         let padding: CGFloat = 3
 
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible())],
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                       spacing: padding) {
                 ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
+//                    let uiImage: UIImage =  (UIImage(named: work.imageName + "-1") ?? UIImage(named: "default-cover-1"))!
                     let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
                     let checkmarkImageName: String = work.id % 3 == 0 ? "checkmark" : "checkmark-placeholder"
 

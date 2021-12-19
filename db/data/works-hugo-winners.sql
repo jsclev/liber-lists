@@ -348,3 +348,8 @@ insert into work_award_category (work_id, award_category_id, status) values (
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2020),
    1
 );
+insert into work_award_category (work_id, award_category_id, status) values (
+   (select id from work where title = 'Network Effect'),
+   (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 2021),
+   1
+);
