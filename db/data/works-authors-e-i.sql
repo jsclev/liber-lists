@@ -84,7 +84,7 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Joe' and last_name = 'Haldeman'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Forge of God'),
-    (select id from author where first_name = 'Dan' and last_name = 'Simmons'));
+    (select id from author where first_name = 'Greg' and last_name = 'Bear'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Foundation'),
     (select id from author where first_name = 'Isaac' and last_name = 'Asimov'));

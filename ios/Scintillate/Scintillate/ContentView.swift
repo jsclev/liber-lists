@@ -98,7 +98,7 @@ struct ContentView: View {
         let padding: CGFloat = 3
 
         ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
                       spacing: padding) {
                 ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
 //                    let uiImage: UIImage =  (UIImage(named: work.imageName + "-1") ?? UIImage(named: "default-cover-1"))!
@@ -111,7 +111,7 @@ struct ContentView: View {
                     }
 //                    .padding(3)
                     .background(Color.app1.ignoresSafeArea())
-                    .cornerRadius(15)
+                    .cornerRadius(12)
                     .padding(2)
 //                    .shadow(color: Color.white, radius: 3)
                 }
