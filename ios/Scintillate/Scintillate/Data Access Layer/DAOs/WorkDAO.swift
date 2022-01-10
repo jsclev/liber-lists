@@ -225,7 +225,7 @@ class WorkDAO: BaseDAO {
                 series s ON s.id = ws.series_id
             WHERE
                 aw.name = 'Hugo Award' and
-                ac.name = 'Best Novel' and ac.year <= 1990
+                ac.name = 'Best Novel'
             ORDER BY
                 ac.year DESC,
                 wac.status,

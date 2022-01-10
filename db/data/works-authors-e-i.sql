@@ -59,7 +59,7 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'A Fire Upon the Deep'),
     (select id from author where first_name = 'Vernor' and last_name = 'Vinge'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'The Fisherman'),
+    (select id from work where title = 'Time is the Simplest Thing'),
     (select id from author where first_name = 'Clifford' and last_name = 'Simak'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Flow My Tears, the Policeman Said'),
@@ -142,7 +142,7 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Green Mars'),
     (select id from author where first_name = 'Kim' and last_name = 'Robinson'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = 'Here Gather the Stars'),
+    (select id from work where title = 'Way Station'),
     (select id from author where first_name = 'Clifford' and last_name = 'Simak'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Gods Themselves'),
@@ -218,5 +218,5 @@ insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Islands in the Net'),
     (select id from author where first_name = 'Bruce' and last_name = 'Sterling'));
 insert into work_author (work_id, author_id) values (
-    (select id from work where title = '...And Call Me Conrad'),
+    (select id from work where title = 'This Immortal'),
     (select id from author where first_name = 'Roger' and last_name = 'Zelazny'));

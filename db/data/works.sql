@@ -7,7 +7,7 @@ insert into work (title, type) values ('2312', 'Novel');
 insert into work (title, type) values ('20,000 Leagues Under the Sea', 'Novel');
 
 -- A
-insert into work (title, type) values ('...And Call Me Conrad', 'Novel');
+insert into work (title, type) values ('This Immortal', 'Novel');
 insert into work (title, type) values ('A Beautifully Foolish Endeavor', 'Novel');
 insert into work (title, type) values ('Absolution Gap', 'Novel');
 insert into work (title, type) values ('Accelerando', 'Novel');
@@ -281,7 +281,7 @@ insert into work (title, type) values ('A Fire in the Sun', 'Novel');
 insert into work (title, type) values ('A Fire Upon the Deep', 'Novel');
 insert into work (title, type) values ('Firebird', 'Novel');
 insert into work (title, type) values ('First Men in the Moon', 'Novel');
-insert into work (title, type) values ('The Fisherman', 'Novel');
+insert into work (title, type) values ('Time is the Simplest Thing', 'Novel');
 insert into work (title, type) values ('Five Weeks in a Balloon', 'Novel');
 insert into work (title, type) values ('Fledgling', 'Novel');
 insert into work (title, type) values ('Flight from Rebirth', 'Novel');
@@ -343,7 +343,7 @@ insert into work (title, type) values ('The Haunted Stars', 'Novel');
 insert into work (title, type) values ('Have Space Suit - Will Travel', 'Novel');
 insert into work (title, type) values ('He, She and It', 'Novel');
 insert into work (title, type) values ('Hellspark', 'Novel');
-insert into work (title, type) values ('Here Gather the Stars', 'Novel');
+insert into work (title, type) values ('Way Station', 'Novel');
 insert into work (title, type) values ('Hidden World', 'Novel');
 insert into work (title, type) values ('The High Crusade', 'Novel');
 insert into work (title, type) values ('Highway of Eternity', 'Novel');

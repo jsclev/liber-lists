@@ -44,7 +44,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
    1
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = 'Here Gather the Stars'),
+   (select id from work where title = 'Way Station'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1964),
    1
 );
@@ -59,7 +59,7 @@ insert into work_award_category (work_id, award_category_id, status) values (
    1
 );
 insert into work_award_category (work_id, award_category_id, status) values (
-   (select id from work where title = '...And Call Me Conrad'),
+   (select id from work where title = 'This Immortal'),
    (select id from award_category where award_id = 1 and name = 'Best Novel' and year = 1966),
    1
 );

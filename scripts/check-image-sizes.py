@@ -21,4 +21,5 @@ for filename in onlyfiles:
         width, height = image.size
         ratio = height / width
 
-        print(filename + '\t' + "{:.2f}".format(ratio))
+        if ratio >= 1.57 or ratio < 1.558:
+            print(filename + '\t' + "{:.3f}".format(ratio))
