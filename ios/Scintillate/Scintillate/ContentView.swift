@@ -22,11 +22,11 @@ struct BookImageView: View {
             VStack {
                 HStack {
                     Spacer()
-                    Image(checkmarkImageName)
-                         .resizable()
-                         .aspectRatio(contentMode: .fit)
-                         .frame(width: 20)
-                         .padding(14)
+//                    Image(checkmarkImageName)
+//                         .resizable()
+//                         .aspectRatio(contentMode: .fit)
+//                         .frame(width: 20)
+//                         .padding(14)
                 }
                 Spacer()
             }
@@ -58,35 +58,43 @@ struct BookInfoView: View {
             .truncationMode(.tail)
             .allowsTightening(true)
         
-        if let series = work.series {
-            if let seriesOrdinalName = work.seriesOrdinalName {
-                Text(series.name + ", " + seriesOrdinalName)
-                    .foregroundColor(ColorManager.mainForeground)
-                    .font(.custom("Arial", size: fontSize))
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                    .allowsTightening(true)
-                    .padding(.bottom, 9)
-            }
-            else {
-                Text(series.name)
-                    .foregroundColor(ColorManager.mainForeground)
-                    .font(.custom("Arial", size: fontSize))
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                    .allowsTightening(true)
-                    .padding(.bottom, 9)
-            }
-        }
-        else {
-            Text("")
-                .foregroundColor(ColorManager.mainForeground)
-                .font(.custom("Arial", size: fontSize))
-                .lineLimit(1)
-                .truncationMode(.tail)
-                .allowsTightening(true)
-                .padding(.bottom, 9)
-        }
+//        if let series = work.series {
+//            if let seriesOrdinalName = work.seriesOrdinalName {
+//                Text(series.name + ", " + seriesOrdinalName)
+//                    .foregroundColor(ColorManager.mainForeground)
+//                    .font(.custom("Arial", size: fontSize))
+//                    .lineLimit(1)
+//                    .truncationMode(.tail)
+//                    .allowsTightening(true)
+//                    .padding(.bottom, 9)
+//            }
+//            else {
+//                Text(series.name)
+//                    .foregroundColor(ColorManager.mainForeground)
+//                    .font(.custom("Arial", size: fontSize))
+//                    .lineLimit(1)
+//                    .truncationMode(.tail)
+//                    .allowsTightening(true)
+//                    .padding(.bottom, 9)
+//            }
+//        }
+//        else {
+//            Text("")
+//                .foregroundColor(ColorManager.mainForeground)
+//                .font(.custom("Arial", size: fontSize))
+//                .lineLimit(1)
+//                .truncationMode(.tail)
+//                .allowsTightening(true)
+//                .padding(.bottom, 9)
+//        }
+        
+        Text("")
+            .foregroundColor(ColorManager.mainForeground)
+            .font(.custom("Arial", size: fontSize))
+            .lineLimit(1)
+            .truncationMode(.tail)
+            .allowsTightening(true)
+            .padding(.bottom, 9)
     }
 }
 
