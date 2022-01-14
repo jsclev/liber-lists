@@ -58,35 +58,35 @@ struct BookInfoView: View {
             .truncationMode(.tail)
             .allowsTightening(true)
         
-//        if let series = work.series {
-//            if let seriesOrdinalName = work.seriesOrdinalName {
-//                Text(series.name + ", " + seriesOrdinalName)
-//                    .foregroundColor(ColorManager.mainForeground)
-//                    .font(.custom("Arial", size: fontSize))
-//                    .lineLimit(1)
-//                    .truncationMode(.tail)
-//                    .allowsTightening(true)
+        if let series = work.series {
+            if let seriesOrdinalName = work.seriesOrdinalName {
+                Text(series.name + ", " + seriesOrdinalName)
+                    .foregroundColor(ColorManager.mainForeground)
+                    .font(.custom("Arial", size: fontSize))
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .allowsTightening(true)
 //                    .padding(.bottom, 9)
-//            }
-//            else {
-//                Text(series.name)
-//                    .foregroundColor(ColorManager.mainForeground)
-//                    .font(.custom("Arial", size: fontSize))
-//                    .lineLimit(1)
-//                    .truncationMode(.tail)
-//                    .allowsTightening(true)
+            }
+            else {
+                Text(series.name)
+                    .foregroundColor(ColorManager.mainForeground)
+                    .font(.custom("Arial", size: fontSize))
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .allowsTightening(true)
 //                    .padding(.bottom, 9)
-//            }
-//        }
-//        else {
-//            Text("")
-//                .foregroundColor(ColorManager.mainForeground)
-//                .font(.custom("Arial", size: fontSize))
-//                .lineLimit(1)
-//                .truncationMode(.tail)
-//                .allowsTightening(true)
+            }
+        }
+        else {
+            Text("")
+                .foregroundColor(ColorManager.mainForeground)
+                .font(.custom("Arial", size: fontSize))
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .allowsTightening(true)
 //                .padding(.bottom, 9)
-//        }
+        }
         
         Text("")
             .foregroundColor(ColorManager.mainForeground)
@@ -94,7 +94,7 @@ struct BookInfoView: View {
             .lineLimit(1)
             .truncationMode(.tail)
             .allowsTightening(true)
-            .padding(.bottom, 9)
+//            .padding(.bottom, 9)
     }
 }
 
@@ -120,7 +120,7 @@ struct ContentView: View {
 //                    .padding(3)
                     .background(Color.app1.ignoresSafeArea())
                     .cornerRadius(12)
-                    .padding(2)
+//                    .padding(2)
 //                    .shadow(color: Color.white, radius: 3)
                 }
             }

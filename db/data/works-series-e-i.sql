@@ -65,6 +65,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 1'
 );
 
+insert into series (name, genre) values ('The Grimnoir Chronicles', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Warbound'),
+    (select id from series where name = 'The Grimnoir Chronicles'),
+    3,
+    'Book 3'
+);
+
 -- H
 insert into series (name, genre) values ('Hyperion Cantos', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (

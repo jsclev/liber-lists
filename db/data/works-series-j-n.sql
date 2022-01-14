@@ -1,3 +1,4 @@
+-- L
 insert into series (name, genre) values ('Lady Astronaut', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Calculating Stars'),
@@ -5,12 +6,6 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1 of 3'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'The Fated Sky'),
---     (select id from series where name = 'Lady Astronaut'),
---     2,
---     'Book 2 of 3'
--- );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Relentless Moon'),
     (select id from series where name = 'Lady Astronaut'),
@@ -31,13 +26,8 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     2,
     'Book 2'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'As Yet Unsent'),
---     (select id from series where name = 'The Locked Tomb'),
---     3,
---     'Book 2.5'
--- );
 
+-- M
 insert into series (name, genre) values ('Machineries of Empire', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Ninefox Gambit'),
@@ -67,18 +57,6 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 insert into series (name, genre) values ('Murderbot Diaries', 'Science Fiction');
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'Foundation'),
---     (select id from series where name = 'Murderbot Diaries'),
---     1,
---     'Book 1'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'Foundation and Empire'),
---     (select id from series where name = 'Murderbot Diaries'),
---     2,
---     'Book 2'
--- );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Network Effect'),
     (select id from series where name = 'Murderbot Diaries'),

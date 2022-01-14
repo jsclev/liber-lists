@@ -1,3 +1,4 @@
+-- O
 insert into series (name, genre) values ('Old Man''s War', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Old Man''s War'),
@@ -24,6 +25,16 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 4'
 );
 
+-- P
+insert into series (name, genre) values ('Parasitology', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Parasite'),
+    (select id from series where name = 'Parasitology'),
+    1,
+    'Book 1'
+);
+
+-- R
 insert into series (name, genre) values ('Red Rising Saga', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Red Rising'),
@@ -31,31 +42,8 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title IS NULL),
---     (select id from series where name = 'Red Rising Saga'),
---     2,
---     'Book 2'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title IS NULL),
---     (select id from series where name = 'Red Rising Saga'),
---     3,
---     'Book 3'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title IS NULL),
---     (select id from series where name = 'Red Rising Saga'),
---     4,
---     'Book 4'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title IS NULL),
---     (select id from series where name = 'Red Rising Saga'),
---     5,
---     'Book 5'
--- );
 
+-- S
 insert into series (name, genre) values ('The Saga of Shadows', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Dark Between the Stars'),
@@ -71,12 +59,6 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'Storm of Locusts'),
---     (select id from series where name = 'The Sixth World'),
---     2,
---     'Book 2'
--- );
 
 insert into series (name, genre) values ('The Space Trilogy', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -125,19 +107,8 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'Center of Gravity'),
---     (select id from series where name = 'Star Carrier'),
---     2,
---     'Book 2'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'Singularity'),
---     (select id from series where name = 'Star Carrier'),
---     3,
---     'Book 3'
--- );
 
+-- T
 insert into series (name, genre) values ('Teixcalaan', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'A Memory Called Empire'),
@@ -161,12 +132,6 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'The Dark Forest'),
---     (select id from series where name = 'The Three-Body Problem'),
---     2,
---     'Book 2'
--- );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Death''s End'),
     (select id from series where name = 'The Three-Body Problem'),
