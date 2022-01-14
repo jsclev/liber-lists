@@ -43,7 +43,7 @@
 		52E032BF26FCCAFE004E2C1C /* DbError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbError.swift; sourceTree = "<group>"; };
 		52E032C126FCCB1F004E2C1C /* SqliteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteError.swift; sourceTree = "<group>"; };
 		52E032D2270005AF004E2C1C /* Assets.db */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets.db; sourceTree = "<group>"; };
-		52E2FE3B26F797C800EA956C /* Scintillate.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Scintillate.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scintillate - Sci-Fi Awards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E2FE3E26F797C800EA956C /* ScintillateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScintillateApp.swift; sourceTree = "<group>"; };
 		52E2FE4026F797C800EA956C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52E2FE4226F797CB00EA956C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -118,7 +118,7 @@
 		52E2FE3C26F797C800EA956C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52E2FE3B26F797C800EA956C /* Scintillate.app */,
+				52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52E2FE3A26F797C800EA956C /* Scintillate */ = {
+		52E2FE3A26F797C800EA956C /* Scintillate - Sci-Fi Awards */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate" */;
+			buildConfigurationList = 52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate - Sci-Fi Awards" */;
 			buildPhases = (
 				52E2FE3726F797C800EA956C /* Sources */,
 				52E2FE3826F797C800EA956C /* Frameworks */,
@@ -177,9 +177,9 @@
 			);
 			dependencies = (
 			);
-			name = Scintillate;
+			name = "Scintillate - Sci-Fi Awards";
 			productName = Scintillate;
-			productReference = 52E2FE3B26F797C800EA956C /* Scintillate.app */;
+			productReference = 52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -196,7 +196,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate" */;
+			buildConfigurationList = 52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate - Sci-Fi Awards" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -209,7 +209,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52E2FE3A26F797C800EA956C /* Scintillate */,
+				52E2FE3A26F797C800EA956C /* Scintillate - Sci-Fi Awards */,
 			);
 		};
 /* End PBXProject section */
@@ -375,6 +375,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Scintillate/Preview Content\"";
 				DEVELOPMENT_TEAM = SNJW4KBXLV;
@@ -385,7 +386,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zippyzen.Scintillate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zippyzen.scintillate-sci-fi-awards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -397,6 +398,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"Scintillate/Preview Content\"";
 				DEVELOPMENT_TEAM = SNJW4KBXLV;
@@ -407,7 +409,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.zippyzen.Scintillate;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zippyzen.scintillate-sci-fi-awards";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -417,7 +419,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate" */ = {
+		52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate - Sci-Fi Awards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E2FE4826F797CB00EA956C /* Debug */,
@@ -426,7 +428,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate" */ = {
+		52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate - Sci-Fi Awards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E2FE4B26F797CB00EA956C /* Debug */,
