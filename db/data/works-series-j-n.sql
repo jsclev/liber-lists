@@ -1,3 +1,12 @@
+-- K
+insert into series (name, genre) values ('The Kiln Books', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Kiln People'),
+    (select id from series where name = 'The Kiln Books'),
+    1,
+    'Book 1'
+);
+
 -- L
 insert into series (name, genre) values ('Lady Astronaut', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -11,6 +20,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'Lady Astronaut'),
     3,
     'Book 3 of 3'
+);
+
+insert into series (name, genre) values ('Little Brother', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Little Brother'),
+    (select id from series where name = 'Little Brother'),
+    1,
+    'Book 1'
 );
 
 insert into series (name, genre) values ('The Locked Tomb', 'Science Fiction');
@@ -80,6 +97,61 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Blue Mars'),
     (select id from series where name = 'The Mars Trilogy'),
+    3,
+    'Book 3'
+);
+
+insert into series (name, genre) values ('Miles Vorkosigan', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'A Civil Campaign'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    14,
+    'Book 14'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Cryoburn'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    14,
+    'Book 14'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Captain Vorpatril''s Alliance'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    15,
+    'Book 15'
+);
+
+-- N
+insert into series (name, genre) values ('Neanderthal Parallax', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Hominids'),
+    (select id from series where name = 'Neanderthal Parallax'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Humans'),
+    (select id from series where name = 'Neanderthal Parallax'),
+    2,
+    'Book 2'
+);
+
+insert into series (name, genre) values ('Newsflesh', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Feed'),
+    (select id from series where name = 'Newsflesh'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Deadline'),
+    (select id from series where name = 'Newsflesh'),
+    2,
+    'Book 2'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Blackout'),
+    (select id from series where name = 'Newsflesh'),
     3,
     'Book 3'
 );

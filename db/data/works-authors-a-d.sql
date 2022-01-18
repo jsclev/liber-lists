@@ -188,7 +188,7 @@ insert into work_author (work_id, author_id) values (
     (select id from author where first_name = 'Frank' and last_name = 'Herbert'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'The Chronoliths'),
-    (select id from author where first_name = 'Robert' and last_name = 'Wilson'));
+    (select id from author where first_name = 'Robert' and middle_name = 'Charles' and last_name = 'Wilson'));
 insert into work_author (work_id, author_id) values (
     (select id from work where title = 'Chthon'),
     (select id from author where first_name = 'Piers' and last_name = 'Anthony'));

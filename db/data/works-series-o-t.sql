@@ -52,12 +52,52 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 1'
 );
 
+insert into series (name, genre) values ('Singularity', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Singularity Sky'),
+    (select id from series where name = 'Singularity'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Iron Sunrise'),
+    (select id from series where name = 'Singularity'),
+    2,
+    'Book 2'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Accelerando'),
+    (select id from series where name = 'Singularity'),
+    3,
+    'Book 3'
+);
+
 insert into series (name, genre) values ('The Sixth World', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Trail of Lightning'),
     (select id from series where name = 'The Sixth World'),
     1,
     'Book 1'
+);
+
+insert into series (name, genre) values ('A Song of Ice and Fire', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'A Storm of Swords'),
+    (select id from series where name = 'A Song of Ice and Fire'),
+    3,
+    'Book 3'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'A Feast for Crows'),
+    (select id from series where name = 'A Song of Ice and Fire'),
+    4,
+    'Book 4'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'A Dance with Dragons'),
+    (select id from series where name = 'A Song of Ice and Fire'),
+    5,
+    'Book 5'
 );
 
 insert into series (name, genre) values ('The Space Trilogy', 'Science Fiction');
@@ -78,6 +118,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'The Space Trilogy'),
     3,
     'Book 3'
+);
+
+insert into series (name, genre) values ('Spin', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Spin'),
+    (select id from series where name = 'Spin'),
+    1,
+    'Book 1'
 );
 
 insert into series (name, genre) values ('The Sprawl Trilogy', 'Science Fiction');
@@ -113,6 +161,14 @@ insert into series (name, genre) values ('Teixcalaan', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'A Memory Called Empire'),
     (select id from series where name = 'Teixcalaan'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Temeraire', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'His Majesty''s Dragon'),
+    (select id from series where name = 'Temeraire'),
     1,
     'Book 1'
 );

@@ -42,6 +42,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book One'
 );
 
+insert into series (name, genre) values ('WWW Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Wake'),
+    (select id from series where name = 'WWW Trilogy'),
+    1,
+    'Book 1'
+);
+
 -- Z
 insert into series (name, genre) values ('Zones of Thought', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (

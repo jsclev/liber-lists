@@ -19,6 +19,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('Engines of Light', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Cosmonaut Keep'),
+    (select id from series where name = 'Engines of Light'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('The Expanse', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Leviathan Wakes'),
@@ -28,6 +36,22 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 -- F
+insert into series (name, genre) values ('Fall Revolution', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Sky Road'),
+    (select id from series where name = 'Fall Revolution'),
+    4,
+    'Book 4'
+);
+
+insert into series (name, genre) values ('Firefall', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Blindsight'),
+    (select id from series where name = 'Firefall'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('The Forever War Series', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Forever War'),
@@ -56,6 +80,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('A Freyaverse Novel (2 Books)', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Saturn''s Children'),
+    (select id from series where name = 'A Freyaverse Novel (2 Books)'),
+    1,
+    'Book 1'
+);
+
 -- G
 insert into series (name, genre) values ('The Great Cities', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -74,6 +106,28 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 -- H
+insert into series (name, genre) values ('Halting State', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Halting State'),
+    (select id from series where name = 'Halting State'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Harry Potter', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Harry Potter and the Prisoner of Azkaban'),
+    (select id from series where name = 'Harry Potter'),
+    3,
+    'Book 3'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Harry Potter and the Goblet of Fire'),
+    (select id from series where name = 'Harry Potter'),
+    4,
+    'Book 4'
+);
+
 insert into series (name, genre) values ('Hyperion Cantos', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Hyperion'),
@@ -101,6 +155,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 -- I
+insert into series (name, genre) values ('Ilium', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Ilium'),
+    (select id from series where name = 'Ilium'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('Imperial Radch', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Ancillary Justice'),
@@ -121,6 +183,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('The Inheritance Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Hundred Thousand Kingdoms'),
+    (select id from series where name = 'The Inheritance Trilogy'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('The Interdependency', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Collapsing Empire'),
@@ -128,15 +198,3 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'The Consuming Fire'),
---     (select id from series where name = 'The Interdependency'),
---     2,
---     'Book 2'
--- );
--- insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
---     (select id from work where title = 'The Last Emperox'),
---     (select id from series where name = 'The Interdependency'),
---     3,
---     'Book 3'
--- );
