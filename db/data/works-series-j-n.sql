@@ -101,7 +101,27 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('Metropolitan', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'City on Fire'),
+    (select id from series where name = 'Metropolitan'),
+    2,
+    'Book 2'
+);
+
 insert into series (name, genre) values ('Miles Vorkosigan', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Mirror Dance'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    8,
+    'Book 8'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Memory'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    10,
+    'Book 10'
+);
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'A Civil Campaign'),
     (select id from series where name = 'Miles Vorkosigan'),

@@ -34,6 +34,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('Beggars Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Beggars and Choosers'),
+    (select id from series where name = 'Beggars Trilogy'),
+    2,
+    'Book 2'
+);
+
 insert into series (name, genre) values ('Between Earth and Sky', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Black Sun'),

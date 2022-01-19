@@ -59,6 +59,12 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     1,
     'Book 1'
 );
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Forever Peace'),
+    (select id from series where name = 'The Forever War Series'),
+    2,
+    'Book 2'
+);
 
 insert into series (name, genre) values ('Foundation series', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -101,6 +107,14 @@ insert into series (name, genre) values ('The Grimnoir Chronicles', 'Science Fic
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Warbound'),
     (select id from series where name = 'The Grimnoir Chronicles'),
+    3,
+    'Book 3'
+);
+
+insert into series (name, genre) values ('The Godhead Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Towing Jehovah'),
+    (select id from series where name = 'The Godhead Trilogy'),
     3,
     'Book 3'
 );
