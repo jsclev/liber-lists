@@ -25,6 +25,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 4'
 );
 
+insert into series (name, genre) values ('Oxford Time Travel', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Doomsday Book'),
+    (select id from series where name = 'Oxford Time Travel'),
+    1,
+    'Part of'
+);
+
 -- P
 insert into series (name, genre) values ('Parasitology', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -32,6 +40,29 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'Parasitology'),
     1,
     'Book 1'
+);
+
+insert into series (name, genre) values ('Pern', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'All the Weyrs of Pern'),
+    (select id from series where name = 'Pern'),
+    11,
+    'Book 11'
+);
+
+-- Q
+insert into series (name, genre) values ('Queen of Angels', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Queen of Angels'),
+    (select id from series where name = 'Queen of Angels'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Moving Mars'),
+    (select id from series where name = 'Queen of Angels'),
+    3,
+    'Book 3'
 );
 
 -- R
@@ -78,6 +109,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'The Sixth World'),
     1,
     'Book 1'
+);
+
+insert into series (name, genre) values ('Snow Queen', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Summer Queen'),
+    (select id from series where name = 'Snow Queen'),
+    3,
+    'Book 3'
 );
 
 insert into series (name, genre) values ('A Song of Ice and Fire', 'Science Fiction');
@@ -157,6 +196,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 -- T
+insert into series (name, genre) values ('Tales of Alvin Maker', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Prentice Alvin'),
+    (select id from series where name = 'Tales of Alvin Maker'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('Teixcalaan', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'A Memory Called Empire'),

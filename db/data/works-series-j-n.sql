@@ -111,6 +111,18 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 
 insert into series (name, genre) values ('Miles Vorkosigan', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Vor Game'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    6,
+    'Book 6'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Barrayar'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    7,
+    'Book 7'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Mirror Dance'),
     (select id from series where name = 'Miles Vorkosigan'),
     8,

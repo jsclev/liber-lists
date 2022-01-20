@@ -13,6 +13,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 2'
 );
 
+insert into series (name, genre) values ('Arbai', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Grass'),
+    (select id from series where name = 'Arbai'),
+    1,
+    'Book 1'
+);
+
 -- B
 insert into series (name, genre) values ('Bas-Lag', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -36,6 +44,12 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 
 insert into series (name, genre) values ('Beggars Trilogy', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Beggars in Spain'),
+    (select id from series where name = 'Beggars Trilogy'),
+    2,
+    'Book 2'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Beggars and Choosers'),
     (select id from series where name = 'Beggars Trilogy'),
     2,
@@ -48,6 +62,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'Between Earth and Sky'),
     1,
     'Book 1 of 2'
+);
+
+insert into series (name, genre) values ('Bridge Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Virtual Light'),
+    (select id from series where name = 'Bridge Trilogy'),
+    1,
+    'Book 1'
 );
 
 insert into series (name, genre) values ('The Broken Earth', 'Science Fiction');
@@ -68,6 +90,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'The Broken Earth'),
     3,
     'Book 3'
+);
+
+insert into series (name, genre) values ('The Budayeen Cycle', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'A Fire in the Sun'),
+    (select id from series where name = 'The Budayeen Cycle'),
+    2,
+    'Book 2'
 );
 
 -- C

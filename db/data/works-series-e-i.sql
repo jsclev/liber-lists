@@ -1,4 +1,12 @@
 -- E
+insert into series (name, genre) values ('Eight Worlds', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Steel Beach'),
+    (select id from series where name = 'Eight Worlds'),
+    2,
+    'Book 2'
+);
+
 insert into series (name, genre) values ('Ender Series', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Ender''s Game'),
