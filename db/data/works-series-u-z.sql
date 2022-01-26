@@ -7,6 +7,12 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 2'
 );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Uplift War'),
+    (select id from series where name = 'The Uplift Saga'),
+    3,
+    'Book 3'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Brightness Reef'),
     (select id from series where name = 'The Uplift Saga'),
     4,

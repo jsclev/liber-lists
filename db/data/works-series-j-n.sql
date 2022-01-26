@@ -111,6 +111,12 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 
 insert into series (name, genre) values ('Miles Vorkosigan', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Falling Free'),
+    (select id from series where name = 'Miles Vorkosigan'),
+    4,
+    'Book 4'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Vor Game'),
     (select id from series where name = 'Miles Vorkosigan'),
     6,
@@ -153,6 +159,30 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 15'
 );
 
+insert into series (name, genre) values ('Majipoor Cycle', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Lord Valentine''s Castle'),
+    (select id from series where name = 'Majipoor Cycle'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Mote series', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Mote in God''s Eye'),
+    (select id from series where name = 'Mote series'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Mission Earth', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Black Genesis'),
+    (select id from series where name = 'Mission Earth'),
+    2,
+    'Book 2'
+);
+
 -- N
 insert into series (name, genre) values ('Neanderthal Parallax', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -164,6 +194,26 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Humans'),
     (select id from series where name = 'Neanderthal Parallax'),
+    2,
+    'Book 2'
+);
+
+insert into series (name, genre) values ('New Sun', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Urth of the New Sun'),
+    (select id from series where name = 'New Sun'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Sword of the Lictor'),
+    (select id from series where name = 'New Sun'),
+    2,
+    'Book 2'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Claw of the Conciliator'),
+    (select id from series where name = 'New Sun'),
     2,
     'Book 2'
 );

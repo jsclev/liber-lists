@@ -74,24 +74,38 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 2'
 );
 
-insert into series (name, genre) values ('Foundation series', 'Science Fiction');
+insert into series (name, genre) values ('Forge of God', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Forge of God'),
+    (select id from series where name = 'Forge of God'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Foundation Series', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Foundation'),
-    (select id from series where name = 'Foundation series'),
+    (select id from series where name = 'Foundation Series'),
     1,
     'Book 1'
 );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Foundation and Empire'),
-    (select id from series where name = 'Foundation series'),
+    (select id from series where name = 'Foundation Series'),
     2,
     'Book 2'
 );
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Second Foundation'),
-    (select id from series where name = 'Foundation series'),
+    (select id from series where name = 'Foundation Series'),
     3,
     'Book 3'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Foundation''s Edge'),
+    (select id from series where name = 'Foundation Series'),
+    4,
+    'Book 4'
 );
 
 insert into series (name, genre) values ('A Freyaverse Novel (2 Books)', 'Science Fiction');
@@ -103,6 +117,20 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 -- G
+insert into series (name, genre) values ('Gaia', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Titan'),
+    (select id from series where name = 'Gaia'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Wizard'),
+    (select id from series where name = 'Gaia'),
+    2,
+    'Book 2'
+);
+
 insert into series (name, genre) values ('The Great Cities', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The City We Became'),
@@ -127,6 +155,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 3'
 );
 
+insert into series (name, genre) values ('The Greenwich Village Trilogy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Butterfly Kid'),
+    (select id from series where name = 'The Greenwich Village Trilogy'),
+    1,
+    'Book 1'
+);
+
 -- H
 insert into series (name, genre) values ('Halting State', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
@@ -148,6 +184,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'Harry Potter'),
     4,
     'Book 4'
+);
+
+insert into series (name, genre) values ('Heechee Saga', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Beyond the Blue Event Horizon'),
+    (select id from series where name = 'Heechee Saga'),
+    2,
+    'Book 2'
 );
 
 insert into series (name, genre) values ('Hyperion Cantos', 'Science Fiction');
@@ -203,6 +247,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from series where name = 'Imperial Radch'),
     3,
     'Book 3'
+);
+
+insert into series (name, genre) values ('Inferno series', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Inferno'),
+    (select id from series where name = 'Inferno series'),
+    1,
+    'Book 1'
 );
 
 insert into series (name, genre) values ('The Inheritance Trilogy', 'Science Fiction');
