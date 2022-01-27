@@ -44,6 +44,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 2'
 );
 
+insert into series (name, genre) values ('Lord Darcy', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Too Many Magicians'),
+    (select id from series where name = 'Lord Darcy'),
+    1,
+    'Book 1'
+);
+
 -- M
 insert into series (name, genre) values ('Machineries of Empire', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (

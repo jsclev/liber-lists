@@ -153,6 +153,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 1'
 );
 
+insert into series (name, genre) values ('Childe Cycle', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Dorsai!'),
+    (select id from series where name = 'Childe Cycle'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('The Clockwork Century', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Boneshaker'),
@@ -185,11 +193,25 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     4,
     'Book 4'
 );
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Sword of Aldones'),
+    (select id from series where name = 'Darkover series'),
+    20,
+    'Book 20'
+);
 
 insert into series (name, genre) values ('Darwin''s Radio', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Darwin''s Radio'),
     (select id from series where name = 'Darwin''s Radio'),
+    2,
+    'Book 2'
+);
+
+insert into series (name, genre) values ('Deathworld', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Deathworld'),
+    (select id from series where name = 'Deathworld'),
     2,
     'Book 2'
 );
@@ -203,6 +225,18 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
 );
 
 insert into series (name, genre) values ('Dune', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Dune'),
+    (select id from series where name = 'Dune'),
+    1,
+    'Book 1'
+);
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Dune World'),
+    (select id from series where name = 'Dune'),
+    1,
+    'Book 1'
+);
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Children of Dune'),
     (select id from series where name = 'Dune'),

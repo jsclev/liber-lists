@@ -48,6 +48,22 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book One'
 );
 
+insert into series (name, genre) values ('Witch World Saga', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Witch World'),
+    (select id from series where name = 'Witch World Saga'),
+    1,
+    'Book 1'
+);
+
+insert into series (name, genre) values ('Witches of Karres', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'The Witches of Karres'),
+    (select id from series where name = 'Witches of Karres'),
+    1,
+    'Book 1'
+);
+
 insert into series (name, genre) values ('WWW Trilogy', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'Wake'),

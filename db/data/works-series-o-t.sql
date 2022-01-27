@@ -189,6 +189,14 @@ insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     'Book 1'
 );
 
+insert into series (name, genre) values ('Skylark', 'Science Fiction');
+insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
+    (select id from work where title = 'Skylark DuQuesne'),
+    (select id from series where name = 'Skylark'),
+    4,
+    'Book 4'
+);
+
 insert into series (name, genre) values ('The Smoke Ring', 'Science Fiction');
 insert into work_series (work_id, series_id, ordinal, ordinal_name) values (
     (select id from work where title = 'The Integral Trees'),
