@@ -9,24 +9,24 @@ extension Color {
 struct BookImageView: View {
     var uiImage: UIImage
     var checkmarkImageName: String
-
+    
     var body: some View {
         ZStack {
             Image(uiImage: uiImage)
-                 .resizable()
-                 .aspectRatio(contentMode: .fit)
-                 .padding(.top, 12)
-                 .padding(.leading, 12)
-                 .padding(.trailing, 12)
-                 .padding(.bottom, 0)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .padding(.top, 12)
+                .padding(.leading, 12)
+                .padding(.trailing, 12)
+                .padding(.bottom, 0)
             VStack {
                 HStack {
                     Spacer()
-//                    Image(checkmarkImageName)
-//                         .resizable()
-//                         .aspectRatio(contentMode: .fit)
-//                         .frame(width: 20)
-//                         .padding(14)
+                    //                    Image(checkmarkImageName)
+                    //                         .resizable()
+                    //                         .aspectRatio(contentMode: .fit)
+                    //                         .frame(width: 20)
+                    //                         .padding(14)
                 }
                 Spacer()
             }
@@ -37,7 +37,7 @@ struct BookImageView: View {
 struct BookInfoView: View {
     var work: Work
     let fontSize = 12.0
-
+    
     var body: some View {
         Text(work.title)
             .foregroundColor(ColorManager.mainForeground)
@@ -66,7 +66,6 @@ struct BookInfoView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                     .allowsTightening(true)
-//                    .padding(.bottom, 9)
             }
             else {
                 Text(series.name)
@@ -75,7 +74,6 @@ struct BookInfoView: View {
                     .lineLimit(1)
                     .truncationMode(.tail)
                     .allowsTightening(true)
-//                    .padding(.bottom, 9)
             }
         }
         else {
@@ -85,7 +83,6 @@ struct BookInfoView: View {
                 .lineLimit(1)
                 .truncationMode(.tail)
                 .allowsTightening(true)
-//                .padding(.bottom, 9)
         }
         
         Text("")
@@ -94,38 +91,49 @@ struct BookInfoView: View {
             .lineLimit(1)
             .truncationMode(.tail)
             .allowsTightening(true)
-//            .padding(.bottom, 9)
     }
 }
 
 struct ContentView: View {
     @EnvironmentObject var store: Store
-
+    
     var body: some View {
-        let size: CGFloat = 115
+//        let size: CGFloat = 115
         let padding: CGFloat = 3
-
-        ScrollView {
-            LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
-                      spacing: padding) {
-                ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
-//                    let uiImage: UIImage =  (UIImage(named: work.imageName + "-1") ?? UIImage(named: "default-cover-1"))!
-                    let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
-                    let checkmarkImageName: String = work.id % 3 == 0 ? "checkmark" : "checkmark-placeholder"
-
-                    VStack {
-                        BookImageView(uiImage: uiImage, checkmarkImageName: checkmarkImageName)
-                        BookInfoView(work: work)
+        
+        TabView {
+            ScrollView {
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
+                          spacing: padding) {
+                    ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
+                        let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
+                        let checkmarkImageName: String = work.id % 3 == 0 ? "checkmark" : "checkmark-placeholder"
+                        
+                        VStack {
+                            BookImageView(uiImage: uiImage, checkmarkImageName: checkmarkImageName)
+                            BookInfoView(work: work)
+                        }
+                        .background(Color.app1.ignoresSafeArea())
+                        .cornerRadius(12)
                     }
-//                    .padding(3)
-                    .background(Color.app1.ignoresSafeArea())
-                    .cornerRadius(12)
-//                    .padding(2)
-//                    .shadow(color: Color.white, radius: 3)
                 }
             }
+            .background(Color.app2.ignoresSafeArea())
+            .tabItem {
+                Image(systemName: "books.vertical")
+            }
+            
+            Text("Leaderboard Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "list.number")
+                }
+            
+            Text("Profile Tab")
+                .font(.system(size: 30, weight: .bold, design: .rounded))
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                }
         }
-        .background(Color.app2.ignoresSafeArea())
-
     }
 }

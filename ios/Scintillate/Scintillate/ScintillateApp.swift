@@ -15,6 +15,7 @@ struct ScintillateApp: App {
         WindowGroup {
             ContentView()
                 .environmentObject(store)
+                .environment(\.colorScheme, .dark)
         }
     }
 }
