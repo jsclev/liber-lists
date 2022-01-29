@@ -6,6 +6,7 @@ struct User: Equatable, Hashable {
     let firstName: String?
     let lastName: String?
     let email: String?
+    let workStats: [WorkStat]
     
     func getName() -> String {
         var name = "None"
@@ -32,6 +33,16 @@ struct User: Equatable, Hashable {
         }
         
         return "None"
+    }
+    
+    func getReadStatus(work: Work) -> ReadStatus {
+        for workStat in workStats {
+            if workStat.work.id == work.id {
+                return workStat.readStatus
+            }
+        }
+        
+        return ReadStatus.notRead
     }
     
     func hash(into hasher: inout Hasher) {

@@ -29,6 +29,7 @@
 		52ED00D027A4DF570014CF5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00CF27A4DF570014CF5C /* User.swift */; };
 		52ED00D227A4E0AE0014CF5C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */; };
 		52ED00D427A4E14E0014CF5C /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00D327A4E14E0014CF5C /* UserDAO.swift */; };
+		52ED00D627A518B90014CF5C /* WorkStat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00D527A518B90014CF5C /* WorkStat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		52ED00CF27A4DF570014CF5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		52ED00D327A4E14E0014CF5C /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
+		52ED00D527A518B90014CF5C /* WorkStat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStat.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,11 +99,12 @@
 		52E032B926FCC9E7004E2C1C /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				52E032BA26FCCA07004E2C1C /* Work.swift */,
 				5203F85A27574CFD00701785 /* Author.swift */,
 				5203F85C275AF79A00701785 /* Award.swift */,
 				52C2E32427654FF100FB4BA6 /* Series.swift */,
 				52ED00CF27A4DF570014CF5C /* User.swift */,
+				52E032BA26FCCA07004E2C1C /* Work.swift */,
+				52ED00D527A518B90014CF5C /* WorkStat.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -246,6 +249,7 @@
 				52C2E32727671BB000FB4BA6 /* Colors.swift in Sources */,
 				5203F85D275AF79A00701785 /* Award.swift in Sources */,
 				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
+				52ED00D627A518B90014CF5C /* WorkStat.swift in Sources */,
 				52ED00D027A4DF570014CF5C /* User.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,

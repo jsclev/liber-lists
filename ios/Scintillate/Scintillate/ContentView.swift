@@ -7,26 +7,30 @@ extension Color {
 }
 
 struct BookImageView: View {
-    var uiImage: UIImage
-    var checkmarkImageName: String
+    var user: User
+    var work: Work
     
     var body: some View {
         ZStack {
+            let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
+            
             Image(uiImage: uiImage)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .padding(.top, 12)
-                .padding(.leading, 12)
-                .padding(.trailing, 12)
+                .padding(.top, 9)
+                .padding(.leading, 9)
+                .padding(.trailing, 9)
                 .padding(.bottom, 0)
             VStack {
                 HStack {
                     Spacer()
-                    //                    Image(checkmarkImageName)
-                    //                         .resizable()
-                    //                         .aspectRatio(contentMode: .fit)
-                    //                         .frame(width: 20)
-                    //                         .padding(14)
+                    
+                    if user.getReadStatus(work: work) == ReadStatus.read {
+                        Image(systemName: "checkmark.circle.fill")
+                            .foregroundColor(Color(.systemGreen))
+                            .background(Color.white.mask(Circle()))
+                            .padding(12)
+                    }
                 }
                 Spacer()
             }
@@ -35,6 +39,7 @@ struct BookImageView: View {
 }
 
 struct BookInfoView: View {
+    var user: User
     var work: Work
     let fontSize = 12.0
     
@@ -98,20 +103,17 @@ struct ContentView: View {
     @EnvironmentObject var store: Store
     
     var body: some View {
-//        let size: CGFloat = 115
         let padding: CGFloat = 3
+        let user = store.db.user.getCurrentUser()
         
         TabView {
             ScrollView {
                 LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
                           spacing: padding) {
                     ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
-                        let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
-                        let checkmarkImageName: String = work.id % 3 == 0 ? "checkmark" : "checkmark-placeholder"
-                        
                         VStack {
-                            BookImageView(uiImage: uiImage, checkmarkImageName: checkmarkImageName)
-                            BookInfoView(work: work)
+                            BookImageView(user: user, work: work)
+                            BookInfoView(user: user, work: work)
                         }
                         .background(Color.app1.ignoresSafeArea())
                         .cornerRadius(12)
