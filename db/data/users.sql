@@ -4,6 +4,27 @@ insert into user
 
 insert into user_work_stat (user_id, work_id, read_status, own_status) values (
     (select id from user where username = 'jsclev'),
+    (select id from work where title = 'Network Effect'),
+    2,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where title = 'Black Sun'),
+    1,
+    0
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
+    (select id from work where title = 'A Memory Called Empire'),
+    3,
+    2
+);
+
+insert into user_work_stat (user_id, work_id, read_status, own_status) values (
+    (select id from user where username = 'jsclev'),
     (select id from work where title = 'American Gods'),
     1,
     2

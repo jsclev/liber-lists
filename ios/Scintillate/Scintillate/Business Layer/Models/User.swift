@@ -35,6 +35,16 @@ struct User: Equatable, Hashable {
         return "None"
     }
     
+    func getOwnStatus(work: Work) -> OwnStatus {
+        for workStat in workStats {
+            if workStat.work.id == work.id {
+                return workStat.ownStatus
+            }
+        }
+        
+        return OwnStatus.doNotOwn
+    }
+    
     func getReadStatus(work: Work) -> ReadStatus {
         for workStat in workStats {
             if workStat.work.id == work.id {

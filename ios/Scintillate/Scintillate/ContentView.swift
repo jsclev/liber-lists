@@ -25,11 +25,41 @@ struct BookImageView: View {
                 HStack {
                     Spacer()
                     
-                    if user.getReadStatus(work: work) == ReadStatus.read {
-                        Image(systemName: "checkmark.circle.fill")
-                            .foregroundColor(Color(.systemGreen))
-                            .background(Color.white.mask(Circle()))
-                            .padding(12)
+                    VStack {
+                        if user.getReadStatus(work: work) == ReadStatus.read {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.green)
+                                .background(Color.white.mask(Circle()))
+                                .font(.system(size: 20))
+                                .padding(12)
+                        } else if user.getReadStatus(work: work) == ReadStatus.wantToRead {
+                            Image(systemName: "checkmark.circle")
+                                .foregroundColor(.green)
+                                .background(Color.white.mask(Circle()))
+                                .font(.system(size: 20))
+                                .padding(12)
+                        } else if user.getReadStatus(work: work) == ReadStatus.currentlyReading {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(Color(.systemBlue))
+                                .background(Color.white.mask(Circle()))
+                                .font(.system(size: 20))
+                                .padding(12)
+                        }
+                        
+                        if user.getOwnStatus(work: work) == OwnStatus.owned {
+                            Image(systemName: "checkmark.circle.fill")
+                                .foregroundColor(.green)
+                                .background(Color.white.mask(Circle()))
+                                .font(.system(size: 20))
+                                .padding(.top, 0)
+                        } else if user.getOwnStatus(work: work) == OwnStatus.wantToOwn {
+                            Image(systemName: "checkmark.circle")
+                                .foregroundColor(.green)
+                                .background(Color.white.mask(Circle()))
+                                .font(.system(size: 20))
+                                .padding(.top, 0)
+                        }
+                        Spacer()
                     }
                 }
                 Spacer()
