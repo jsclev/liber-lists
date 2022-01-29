@@ -26,6 +26,9 @@
 		52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4226F797CB00EA956C /* Assets.xcassets */; };
 		52E2FE4626F797CB00EA956C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */; };
 		52E2FE5226F79AA800EA956C /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE5126F79AA800EA956C /* Db.swift */; };
+		52ED00D027A4DF570014CF5C /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00CF27A4DF570014CF5C /* User.swift */; };
+		52ED00D227A4E0AE0014CF5C /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */; };
+		52ED00D427A4E14E0014CF5C /* UserDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52ED00D327A4E14E0014CF5C /* UserDAO.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +53,9 @@
 		52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E2FE4726F797CB00EA956C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		52E2FE5126F79AA800EA956C /* Db.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Db.swift; sourceTree = "<group>"; };
+		52ED00CF27A4DF570014CF5C /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		52ED00D327A4E14E0014CF5C /* UserDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDAO.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
+				52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 				5203F85A27574CFD00701785 /* Author.swift */,
 				5203F85C275AF79A00701785 /* Award.swift */,
 				52C2E32427654FF100FB4BA6 /* Series.swift */,
+				52ED00CF27A4DF570014CF5C /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -103,6 +111,7 @@
 			children = (
 				52E032BD26FCCABC004E2C1C /* BaseDAO.swift */,
 				525E4D05271285C100168E50 /* WorkDAO.swift */,
+				52ED00D327A4E14E0014CF5C /* UserDAO.swift */,
 			);
 			path = DAOs;
 			sourceTree = "<group>";
@@ -237,6 +246,7 @@
 				52C2E32727671BB000FB4BA6 /* Colors.swift in Sources */,
 				5203F85D275AF79A00701785 /* Award.swift in Sources */,
 				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
+				52ED00D027A4DF570014CF5C /* User.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,
 				526A9CA427122A2F0098F7FE /* Store.swift in Sources */,
@@ -245,7 +255,9 @@
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
 				5203F85B27574CFD00701785 /* Author.swift in Sources */,
+				52ED00D427A4E14E0014CF5C /* UserDAO.swift in Sources */,
 				52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */,
+				52ED00D227A4E0AE0014CF5C /* UserViewModel.swift in Sources */,
 				526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */,
 				52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */,
 			);

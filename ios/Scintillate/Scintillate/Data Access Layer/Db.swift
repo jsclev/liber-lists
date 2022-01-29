@@ -6,6 +6,7 @@ class Db {
 //    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "Db")
     var dbPointer: OpaquePointer?
     
+    let user: UserDAO
     let work: WorkDAO
     
     init(fullRefresh: Bool) {
@@ -87,6 +88,7 @@ class Db {
         
         sqlite3_finalize(stmt)
         
+        user = UserDAO(conn: dbPointer)
         work = WorkDAO(conn: dbPointer)
     }
     

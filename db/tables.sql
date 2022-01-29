@@ -88,6 +88,7 @@ CREATE TABLE user_work_stat (
     work_id INTEGER NOT NULL,
     read_status INTEGER,  -- 0=have not read, 1=want to read, 2=reading, 3=read
     own_status INTEGER,    -- 0=do not own, 1=want to own, 2=own it
+    own_status_type INTEGER,  -- 0=physical book, 1=electronic version
     FOREIGN KEY (user_id) REFERENCES user (id),
     FOREIGN KEY (work_id) REFERENCES work (id)
 );

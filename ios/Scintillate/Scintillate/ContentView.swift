@@ -123,17 +123,23 @@ struct ContentView: View {
                 Image(systemName: "books.vertical")
             }
             
-            Text("Leaderboard Tab")
+            Text("User Stats")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-                    Image(systemName: "list.number")
+//                    Image(systemName: "chart.bar")
+//                    Image(systemName: "chart.pie")
+                    Image(systemName: "chart.line.uptrend.xyaxis")
                 }
             
-            Text("Profile Tab")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                }
+            VStack {
+                Text(store.db.user.getCurrentUser().getName())
+                    .font(.system(size: 30, weight: .bold, design: .rounded))
+                Text(store.db.user.getCurrentUser().getEmail())
+                    .font(.system(size: 24, weight: .regular, design: .rounded))
+            }
+            .tabItem {
+                Image(systemName: "person.crop.circle")
+            }
         }
     }
 }
