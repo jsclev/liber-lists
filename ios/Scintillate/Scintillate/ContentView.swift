@@ -1,8 +1,8 @@
 import SwiftUI
 
 extension Color {
-    static let app1 = Color(red: 50/255, green: 50/255, blue: 50/255)
-    static let app2 = Color(red: 30/255, green: 30/255, blue: 30/255)
+    static let app1 = Color(red: 35/255, green: 40/255, blue: 48/255)
+    static let app2 = Color(red: 27/255, green: 31/255, blue: 40/255)
     static let app3 = Color.black
 }
 
@@ -14,53 +14,24 @@ struct BookImageView: View {
         ZStack {
             let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
             
-            Image(uiImage: uiImage)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .padding(.top, 9)
-                .padding(.leading, 9)
-                .padding(.trailing, 9)
-                .padding(.bottom, 0)
+            if user.getReadStatus(work: work) == ReadStatus.read {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+//                    .border(Color.green)
+            }
+            else {
+                Image(uiImage: uiImage)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .cornerRadius(12)
+//                    .border(Color.red)
+            }
             VStack {
                 HStack {
                     Spacer()
                     
-                    VStack {
-                        if user.getReadStatus(work: work) == ReadStatus.read {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
-                                .background(Color.white.mask(Circle()))
-                                .font(.system(size: 20))
-                                .padding(12)
-                        } else if user.getReadStatus(work: work) == ReadStatus.wantToRead {
-                            Image(systemName: "checkmark.circle")
-                                .foregroundColor(.green)
-                                .background(Color.white.mask(Circle()))
-                                .font(.system(size: 20))
-                                .padding(12)
-                        } else if user.getReadStatus(work: work) == ReadStatus.currentlyReading {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(Color(.systemBlue))
-                                .background(Color.white.mask(Circle()))
-                                .font(.system(size: 20))
-                                .padding(12)
-                        }
-                        
-                        if user.getOwnStatus(work: work) == OwnStatus.owned {
-                            Image(systemName: "checkmark.circle.fill")
-                                .foregroundColor(.green)
-                                .background(Color.white.mask(Circle()))
-                                .font(.system(size: 20))
-                                .padding(.top, 0)
-                        } else if user.getOwnStatus(work: work) == OwnStatus.wantToOwn {
-                            Image(systemName: "checkmark.circle")
-                                .foregroundColor(.green)
-                                .background(Color.white.mask(Circle()))
-                                .font(.system(size: 20))
-                                .padding(.top, 0)
-                        }
-                        Spacer()
-                    }
+//
                 }
                 Spacer()
             }
@@ -74,58 +45,101 @@ struct BookInfoView: View {
     let fontSize = 12.0
     
     var body: some View {
-        Text(work.title)
-            .foregroundColor(ColorManager.mainForeground)
-            .font(.custom("Arial", size: fontSize))
-            .lineLimit(1)
-            .truncationMode(.tail)
-            .allowsTightening(true)
-        Text(work.getAuthorText())
-            .foregroundColor(ColorManager.mainForeground)
-            .font(.custom("Arial", size: fontSize))
-            .lineLimit(1)
-            .truncationMode(.tail)
-            .allowsTightening(true)
-        Text(work.getAwardText())
-            .foregroundColor(ColorManager.mainForeground)
-            .font(.custom("Arial", size: fontSize))
-            .lineLimit(1)
-            .truncationMode(.tail)
-            .allowsTightening(true)
-        
-        if let series = work.series {
-            if let seriesOrdinalName = work.seriesOrdinalName {
-                Text(series.name + ", " + seriesOrdinalName)
-                    .foregroundColor(ColorManager.mainForeground)
-                    .font(.custom("Arial", size: fontSize))
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                    .allowsTightening(true)
-            }
-            else {
-                Text(series.name)
-                    .foregroundColor(ColorManager.mainForeground)
-                    .font(.custom("Arial", size: fontSize))
-                    .lineLimit(1)
-                    .truncationMode(.tail)
-                    .allowsTightening(true)
-            }
-        }
-        else {
-            Text("")
+        HStack {
+        VStack(alignment: .leading, spacing: 0) {
+            Text(work.title)
                 .foregroundColor(ColorManager.mainForeground)
-                .font(.custom("Arial", size: fontSize))
+                .font(.headline)
+                .lineLimit(2)
+                .truncationMode(.tail)
+                .allowsTightening(true)
+                .padding(.bottom, 2)
+            Group {
+            Text(work.getAuthorText())
+                .foregroundColor(ColorManager.mainForeground)
+                .font(.caption)
                 .lineLimit(1)
                 .truncationMode(.tail)
                 .allowsTightening(true)
+            Text(work.getAwardText())
+                .foregroundColor(ColorManager.mainForeground)
+                .font(.caption)
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .allowsTightening(true)
+            
+            if let series = work.series {
+                if let seriesOrdinalName = work.seriesOrdinalName {
+                    Text(series.name + ", " + seriesOrdinalName)
+                        .foregroundColor(ColorManager.mainForeground)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .allowsTightening(true)
+                }
+                else {
+                    Text(series.name)
+                        .foregroundColor(ColorManager.mainForeground)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .allowsTightening(true)
+                }
+            }
+            else {
+                Text("")
+                    .foregroundColor(ColorManager.mainForeground)
+                    .font(.caption)
+                    .lineLimit(1)
+                    .truncationMode(.tail)
+                    .allowsTightening(true)
+            }
+            
+            Text("")
+                .foregroundColor(ColorManager.mainForeground)
+                .font(.caption)
+                .lineLimit(1)
+                .truncationMode(.tail)
+                .allowsTightening(true)
+            Spacer(minLength: 0)
+            HStack {
+                let read = user.getReadStatus(work: work) == ReadStatus.read
+                let wantToRead = user.getReadStatus(work: work) == ReadStatus.wantToRead
+                let currentlyReading = user.getReadStatus(work: work) == ReadStatus.currentlyReading
+                let owned = user.getOwnStatus(work: work) == OwnStatus.owned
+                let wantToOwn = user.getOwnStatus(work: work) == OwnStatus.wantToOwn
+                
+                let fadedColor = Color.white.opacity(0.3)
+                Image(systemName: read ? "checkmark.circle.fill" : "checkmark.circle")
+                    .foregroundColor(read ? .green : fadedColor)
+                    .font(.system(size: 16))
+                Spacer()
+                Image(systemName: wantToRead ? "bookmark.fill" : "bookmark")
+                    .foregroundColor(wantToRead ? .pink : fadedColor)
+                    .font(.system(size: 16))
+                Spacer()
+                Image(systemName: currentlyReading ? "eyeglasses" : "eyeglasses")
+                    .foregroundColor(currentlyReading ? .blue : fadedColor)
+                    .font(.system(size: 16))
+                Spacer()
+                Image(systemName: owned ? "book.closed.fill" : "book.closed")
+                    .foregroundColor(owned ? .yellow : fadedColor)
+                    .font(.system(size: 16))
+//                Image(systemName: "checkmark.circle")
+//                    .foregroundColor(.green)
+//                    .background(Color.white.mask(Circle()))
+//                    .font(.system(size: 20))
+//                    .padding(.top, 6)
+//                    .padding(.leading, 12)
+//                    .padding(.trailing, 12)
+//                    .padding(.bottom, 0)
+            }
+            .padding(.bottom, 5)
+            }
+            .opacity(0.6)
         }
-        
-        Text("")
-            .foregroundColor(ColorManager.mainForeground)
-            .font(.custom("Arial", size: fontSize))
-            .lineLimit(1)
-            .truncationMode(.tail)
-            .allowsTightening(true)
+            Spacer(minLength: 0)
+        }
     }
 }
 
@@ -138,17 +152,33 @@ struct ContentView: View {
         
         TabView {
             ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible()), GridItem(.flexible())],
+                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                           spacing: padding) {
                     ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
+                        let read = user.getReadStatus(work: work) == ReadStatus.read
                         VStack {
                             BookImageView(user: user, work: work)
                             BookInfoView(user: user, work: work)
                         }
-                        .background(Color.app1.ignoresSafeArea())
-                        .cornerRadius(12)
+                        .padding(.leading, 16)
+                        .padding(.trailing, 16)
+                        .padding(.top, 16)
+                        .padding(.bottom, 10)
+                        .background(
+                            RoundedRectangle(cornerRadius: 20)
+                                .strokeBorder(Color.app1, lineWidth: read ? 2 : 0, antialiased: true)
+                                .background(
+                                    RoundedRectangle(cornerRadius: 20)
+                                        .fill(Color.app1)
+                                        .overlay(Color.green.opacity(read ? 0.0 : 0).cornerRadius(20))
+                                )
+
+                        )
+                        .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 0)
+                        .padding(5)
                     }
                 }
+                .padding(.horizontal, 10)
             }
             .background(Color.app2.ignoresSafeArea())
             .tabItem {
@@ -158,8 +188,6 @@ struct ContentView: View {
             Text("User Stats")
                 .font(.system(size: 30, weight: .bold, design: .rounded))
                 .tabItem {
-//                    Image(systemName: "chart.bar")
-//                    Image(systemName: "chart.pie")
                     Image(systemName: "chart.line.uptrend.xyaxis")
                 }
             
