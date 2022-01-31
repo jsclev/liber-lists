@@ -55,6 +55,30 @@ struct User: Equatable, Hashable {
         return ReadStatus.notRead
     }
     
+    func getReadCount(readStatus: ReadStatus) -> Int {
+        var count = 0
+        
+        for workStat in workStats {
+            if workStat.readStatus == readStatus {
+                count += 1
+            }
+        }
+        
+        return count
+    }
+    
+    func getOwnCount(ownStatus: OwnStatus) -> Int {
+        var count = 0
+        
+        for workStat in workStats {
+            if workStat.ownStatus == ownStatus {
+                count += 1
+            }
+        }
+        
+        return count
+    }
+    
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
     }

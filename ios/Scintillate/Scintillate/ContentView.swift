@@ -6,6 +6,28 @@ extension Color {
     static let app3 = Color.black
 }
 
+struct UserStatsView: View {
+    var user: User
+    var works: [Work]
+    
+    var body: some View {
+        VStack {
+            let readMsg = "Read: " + String(user.getReadCount(readStatus: ReadStatus.read)) + " of " + String(works.count)
+            let readingMsg = "Reading: " + String(user.getReadCount(readStatus: ReadStatus.currentlyReading))
+            let wantToReadMsg = "Want to read: " + String(user.getReadCount(readStatus: ReadStatus.wantToRead))
+            
+            let ownMsg = "Own: " + String(user.getOwnCount(ownStatus: OwnStatus.owned)) + " of " + String(works.count)
+            let wantToOwnMsg = "Want to own: " + String(user.getOwnCount(ownStatus: OwnStatus.wantToOwn))
+
+            Text(readMsg)
+            Text(readingMsg)
+            Text(wantToReadMsg)
+            Text(ownMsg)
+            Text(wantToOwnMsg)
+        }
+    }
+}
+
 struct BookImageView: View {
     var user: User
     var work: Work
@@ -18,20 +40,16 @@ struct BookImageView: View {
                 Image(uiImage: uiImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-//                    .border(Color.green)
             }
             else {
                 Image(uiImage: uiImage)
                     .resizable()
                     .aspectRatio(contentMode: .fit)
                     .cornerRadius(12)
-//                    .border(Color.red)
             }
             VStack {
                 HStack {
                     Spacer()
-                    
-//
                 }
                 Spacer()
             }
@@ -125,14 +143,6 @@ struct BookInfoView: View {
                 Image(systemName: owned ? "book.closed.fill" : "book.closed")
                     .foregroundColor(owned ? .yellow : fadedColor)
                     .font(.system(size: 16))
-//                Image(systemName: "checkmark.circle")
-//                    .foregroundColor(.green)
-//                    .background(Color.white.mask(Circle()))
-//                    .font(.system(size: 20))
-//                    .padding(.top, 6)
-//                    .padding(.leading, 12)
-//                    .padding(.trailing, 12)
-//                    .padding(.bottom, 0)
             }
             .padding(.bottom, 5)
             }
@@ -143,54 +153,79 @@ struct BookInfoView: View {
     }
 }
 
+struct WorkDetailsView: View {
+    var user: User
+    var work: Work
+    
+    var body: some View {
+        Text(work.title)
+    }
+}
+
 struct ContentView: View {
     @EnvironmentObject var store: Store
     
     var body: some View {
         let padding: CGFloat = 3
         let user = store.db.user.getCurrentUser()
+        let works = store.db.work.getHugoWinnersOnly()
         
         TabView {
-            ScrollView {
-                LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                          spacing: padding) {
-                    ForEach(store.db.work.getHugoWinnersOnly(), id: \.self) { work in
-                        let read = user.getReadStatus(work: work) == ReadStatus.read
-                        VStack {
-                            BookImageView(user: user, work: work)
-                            BookInfoView(user: user, work: work)
-                        }
-                        .padding(.leading, 16)
-                        .padding(.trailing, 16)
-                        .padding(.top, 16)
-                        .padding(.bottom, 10)
-                        .background(
-                            RoundedRectangle(cornerRadius: 20)
-                                .strokeBorder(Color.app1, lineWidth: read ? 2 : 0, antialiased: true)
+            NavigationView {
+                ScrollView {
+
+                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                              spacing: padding) {
+                            ForEach(works, id: \.self) { work in
+                                let read = user.getReadStatus(work: work) == ReadStatus.read
+                                
+                                VStack {
+                                    NavigationLink(
+                                        destination: WorkDetailsView(user: user, work: work),
+                                        label: {
+                                            BookImageView(user: user, work: work)
+                                        })
+                                    BookInfoView(user: user, work: work)
+                                }
+                                .padding(.leading, 16)
+                                .padding(.trailing, 16)
+                                .padding(.top, 16)
+                                .padding(.bottom, 10)
                                 .background(
                                     RoundedRectangle(cornerRadius: 20)
-                                        .fill(Color.app1)
-                                        .overlay(Color.green.opacity(read ? 0.0 : 0).cornerRadius(20))
-                                )
+                                        .strokeBorder(Color.app1, lineWidth: read ? 2 : 0, antialiased: true)
+                                        .background(
+                                            RoundedRectangle(cornerRadius: 20)
+                                                .fill(Color.app1)
+                                                .overlay(Color.green.opacity(read ? 0.0 : 0).cornerRadius(20))
+                                        )
 
-                        )
-                        .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 0)
-                        .padding(5)
+                                )
+                                .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 0)
+                                .padding(5)
+                            }
+                        
                     }
+                    .padding(.horizontal, 10)
+                    
                 }
-                .padding(.horizontal, 10)
+                .navigationBarTitle("")
+                .navigationBarHidden(true)
             }
             .background(Color.app2.ignoresSafeArea())
             .tabItem {
                 Image(systemName: "books.vertical")
             }
             
-            Text("User Stats")
-                .font(.system(size: 30, weight: .bold, design: .rounded))
-                .tabItem {
-                    Image(systemName: "chart.line.uptrend.xyaxis")
-                }
-            
+            VStack {
+                Text("User Stats")
+                UserStatsView(user: user, works: works)
+            }
+            .font(.system(size: 30, weight: .bold, design: .rounded))
+            .tabItem {
+                Image(systemName: "chart.line.uptrend.xyaxis")
+            }
+                
             VStack {
                 Text(store.db.user.getCurrentUser().getName())
                     .font(.system(size: 30, weight: .bold, design: .rounded))
