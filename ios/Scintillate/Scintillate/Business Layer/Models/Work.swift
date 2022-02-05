@@ -1,6 +1,6 @@
 import Foundation
 
-struct Work: Equatable, Hashable {
+struct Work: Equatable, Hashable, Identifiable {
     let id: Int
     let title: String
     let imageName: String

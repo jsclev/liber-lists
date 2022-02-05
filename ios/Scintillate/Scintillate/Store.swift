@@ -2,8 +2,8 @@ import Foundation
 import Combine
 
 class Store: ObservableObject {
-    @Published var userViewModel = UserViewModel()
-    @Published var workListViewModel = WorkListViewModel()
+    @Published var userViewModel: UserViewModel
+    @Published var workListViewModel: WorkListViewModel
     
     let db: Db
     
@@ -14,11 +14,8 @@ class Store: ObservableObject {
     init(db: Db) {
         self.db = db
         
-        userViewModel.setStore(self)
-        userViewModel.load()
-        
-        workListViewModel.setStore(self)
-        workListViewModel.search()
+        userViewModel = UserViewModel(db.user.getCurrentUser())
+        workListViewModel = WorkListViewModel(db.work.getHugoWinnersOnly())
 
         // Deal with SwiftUI update problems
         anyCancellableUserViewModel = userViewModel.objectWillChange.sink { [weak self] _ in

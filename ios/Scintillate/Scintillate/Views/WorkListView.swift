@@ -4,6 +4,8 @@ extension Color {
     static let app1 = Color(red: 35/255, green: 40/255, blue: 48/255)
     static let app2 = Color(red: 27/255, green: 31/255, blue: 40/255)
     static let app3 = Color.black
+    
+    static let appGreen = Color(red: 70/255, green: 255/255, blue: 81/255)
 }
 
 struct UserStatsView: View {
@@ -85,7 +87,7 @@ struct BookInfoView: View {
                 .lineLimit(1)
                 .truncationMode(.tail)
                 .allowsTightening(true)
-            
+
             if let series = work.series {
                 if let seriesOrdinalName = work.seriesOrdinalName {
                     Text(series.name + ", " + seriesOrdinalName)
@@ -112,7 +114,7 @@ struct BookInfoView: View {
                     .truncationMode(.tail)
                     .allowsTightening(true)
             }
-            
+
             Text("")
                 .foregroundColor(ColorManager.mainForeground)
                 .font(.caption)
@@ -126,10 +128,10 @@ struct BookInfoView: View {
                 let currentlyReading = user.getReadStatus(work: work) == ReadStatus.currentlyReading
                 let owned = user.getOwnStatus(work: work) == OwnStatus.owned
                 let wantToOwn = user.getOwnStatus(work: work) == OwnStatus.wantToOwn
-                
                 let fadedColor = Color.white.opacity(0.3)
+                
                 Image(systemName: read ? "checkmark.circle.fill" : "checkmark.circle")
-                    .foregroundColor(read ? .green : fadedColor)
+                    .foregroundColor(read ? Color.appGreen : fadedColor)
                     .font(.system(size: 16))
                 Spacer()
                 Image(systemName: wantToRead ? "bookmark.fill" : "bookmark")
@@ -146,46 +148,36 @@ struct BookInfoView: View {
             }
             .padding(.bottom, 5)
             }
-            .opacity(0.6)
+//            .opacity(0.6)
         }
             Spacer(minLength: 0)
         }
     }
 }
 
-struct WorkDetailsView: View {
-    var user: User
-    var work: Work
-    
-    var body: some View {
-        Text(work.title)
-    }
-}
-
-struct ContentView: View {
+struct WorkListView: View {
     @EnvironmentObject var store: Store
     
     var body: some View {
         let padding: CGFloat = 3
-        let user = store.db.user.getCurrentUser()
+//        let user = store.db.user.getCurrentUser()
         let works = store.db.work.getHugoWinnersOnly()
-        
+            
         TabView {
             NavigationView {
                 ScrollView {
-
                     LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
                               spacing: padding) {
                             ForEach(works, id: \.self) { work in
-                                let read = user.getReadStatus(work: work) == ReadStatus.read
+                                let read = store.userViewModel.user.getReadStatus(work: work) == ReadStatus.read
                                 
                                 VStack {
                                     NavigationLink(
-                                        destination: WorkDetailsView(user: user, work: work),
+                                        destination: WorkDetailsView(work: work),
                                         label: {
-                                            BookImageView(user: user, work: work)
+                                            BookImageView(user: store.userViewModel.user, work: work)
                                         })
-                                    BookInfoView(user: user, work: work)
+                                    BookInfoView(user: store.userViewModel.user, work: work)
                                 }
                                 .padding(.leading, 16)
                                 .padding(.trailing, 16)
@@ -219,7 +211,7 @@ struct ContentView: View {
             
             VStack {
                 Text("User Stats")
-                UserStatsView(user: user, works: works)
+                UserStatsView(user: store.userViewModel.user, works: works)
             }
             .font(.system(size: 30, weight: .bold, design: .rounded))
             .tabItem {

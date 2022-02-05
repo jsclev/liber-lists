@@ -1,12 +1,12 @@
 import Foundation
 
 struct User: Equatable, Hashable {
-    let id: Int
+    var id: Int
     let username: String?
     let firstName: String?
     let lastName: String?
     let email: String?
-    let workStats: [WorkStat]
+    var workStats: [WorkStat]
     
     func getName() -> String {
         var name = "None"
@@ -55,6 +55,17 @@ struct User: Equatable, Hashable {
         return ReadStatus.notRead
     }
     
+    mutating func setReadStatus(workStat: WorkStat) {
+        for var existingWorkStat in workStats {
+            if existingWorkStat.id == workStat.id {
+                existingWorkStat.setReadStatus(workStat.readStatus)
+                return
+            }
+        }
+        
+        self.workStats.append(workStat)
+    }
+    
     func getReadCount(readStatus: ReadStatus) -> Int {
         var count = 0
         
@@ -77,6 +88,16 @@ struct User: Equatable, Hashable {
         }
         
         return count
+    }
+    
+    func getWorkStat(work: Work) -> WorkStat {
+        for workStat in workStats {
+            if workStat.work.id == work.id {
+                return workStat
+            }
+        }
+        
+        return WorkStat(id: -1, work: work, readStatus: ReadStatus.notRead, ownStatus: OwnStatus.doNotOwn)
     }
     
     func hash(into hasher: inout Hasher) {

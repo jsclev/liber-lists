@@ -89,6 +89,26 @@ class BaseDAO {
             throw DbError.Db(message: errMsg)
         }
     }
+    
+    func exists(sql: String) throws -> Bool {
+        logger.debug("Executing query '\(sql)'")
+
+        var stmt: OpaquePointer?
+        if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+            if sqlite3_step(stmt) == SQLITE_ROW {
+                return true
+            }
+        } else {
+            let sqliteMsg = String(cString: sqlite3_errmsg(conn)!)
+            sqlite3_finalize(stmt)
+
+            var errMsg = "Failed to prepare the statement \"" + sql + "\".  "
+            errMsg += "SQLite error message: " + sqliteMsg
+            throw DbError.Db(message: errMsg)
+        }
+
+        return false
+    }
 
     func exists(table: String, idName: String, id: Int) throws -> Bool {
         let sql = "SELECT EXISTS(SELECT 1 FROM \(table) WHERE \(idName) = ? LIMIT 1)"

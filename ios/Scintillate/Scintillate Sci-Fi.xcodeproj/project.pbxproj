@@ -9,20 +9,22 @@
 /* Begin PBXBuildFile section */
 		5203F85B27574CFD00701785 /* Author.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85A27574CFD00701785 /* Author.swift */; };
 		5203F85D275AF79A00701785 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85C275AF79A00701785 /* Award.swift */; };
-		5203F85F275C4FE300701785 /* WorkListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListItemView.swift */; };
+		5203F85F275C4FE300701785 /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListView.swift */; };
+		521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */; };
 		525E4D06271285C100168E50 /* WorkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4D05271285C100168E50 /* WorkDAO.swift */; };
 		526A9CA427122A2F0098F7FE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA327122A2F0098F7FE /* Store.swift */; };
 		526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA727122AF80098F7FE /* WorkListViewModel.swift */; };
 		52C2E32527654FF100FB4BA6 /* Series.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2E32427654FF100FB4BA6 /* Series.swift */; };
 		52C2E32727671BB000FB4BA6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C2E32627671BB000FB4BA6 /* Colors.swift */; };
 		52D5446A27783FE000BCFFDF /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52D5446927783FE000BCFFDF /* Launch Screen.storyboard */; };
+		52DAFC8F27A7A74500EBF0BC /* WorkDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC8E27A7A74500EBF0BC /* WorkDetailsView.swift */; };
+		52DAFC9227A9BF0700EBF0BC /* UpdateReadStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DAFC9127A9BF0700EBF0BC /* UpdateReadStatusView.swift */; };
 		52E032BB26FCCA07004E2C1C /* Work.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BA26FCCA07004E2C1C /* Work.swift */; };
 		52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BD26FCCABC004E2C1C /* BaseDAO.swift */; };
 		52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032BF26FCCAFE004E2C1C /* DbError.swift */; };
 		52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E032C126FCCB1F004E2C1C /* SqliteError.swift */; };
 		52E032D3270005AF004E2C1C /* Assets.db in Resources */ = {isa = PBXBuildFile; fileRef = 52E032D2270005AF004E2C1C /* Assets.db */; };
 		52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE3E26F797C800EA956C /* ScintillateApp.swift */; };
-		52E2FE4126F797C800EA956C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE4026F797C800EA956C /* ContentView.swift */; };
 		52E2FE4326F797CB00EA956C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4226F797CB00EA956C /* Assets.xcassets */; };
 		52E2FE4626F797CB00EA956C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */; };
 		52E2FE5226F79AA800EA956C /* Db.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E2FE5126F79AA800EA956C /* Db.swift */; };
@@ -35,21 +37,23 @@
 /* Begin PBXFileReference section */
 		5203F85A27574CFD00701785 /* Author.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Author.swift; sourceTree = "<group>"; };
 		5203F85C275AF79A00701785 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
-		5203F85E275C4FE300701785 /* WorkListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListItemView.swift; sourceTree = "<group>"; };
+		5203F85E275C4FE300701785 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
+		521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStatViewModel.swift; sourceTree = "<group>"; };
 		525E4D05271285C100168E50 /* WorkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDAO.swift; sourceTree = "<group>"; };
 		526A9CA327122A2F0098F7FE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		526A9CA727122AF80098F7FE /* WorkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewModel.swift; sourceTree = "<group>"; };
 		52C2E32427654FF100FB4BA6 /* Series.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Series.swift; sourceTree = "<group>"; };
 		52C2E32627671BB000FB4BA6 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		52D5446927783FE000BCFFDF /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		52DAFC8E27A7A74500EBF0BC /* WorkDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDetailsView.swift; sourceTree = "<group>"; };
+		52DAFC9127A9BF0700EBF0BC /* UpdateReadStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateReadStatusView.swift; sourceTree = "<group>"; };
 		52E032BA26FCCA07004E2C1C /* Work.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Work.swift; sourceTree = "<group>"; };
 		52E032BD26FCCABC004E2C1C /* BaseDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDAO.swift; sourceTree = "<group>"; };
 		52E032BF26FCCAFE004E2C1C /* DbError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DbError.swift; sourceTree = "<group>"; };
 		52E032C126FCCB1F004E2C1C /* SqliteError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqliteError.swift; sourceTree = "<group>"; };
 		52E032D2270005AF004E2C1C /* Assets.db */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Assets.db; sourceTree = "<group>"; };
-		52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scintillate - Sci-Fi Awards.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52E2FE3B26F797C800EA956C /* Scintillate Sci-Fi Sci-Fi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Scintillate Sci-Fi Sci-Fi.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E2FE3E26F797C800EA956C /* ScintillateApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScintillateApp.swift; sourceTree = "<group>"; };
-		52E2FE4026F797C800EA956C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		52E2FE4226F797CB00EA956C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52E2FE4526F797CB00EA956C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		52E2FE4726F797CB00EA956C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -76,6 +80,7 @@
 			children = (
 				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
 				52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */,
+				521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -83,9 +88,19 @@
 		526A9CA627122AE90098F7FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				5203F85E275C4FE300701785 /* WorkListItemView.swift */,
+				52DAFC9027A9BEDC00EBF0BC /* Work Details */,
+				5203F85E275C4FE300701785 /* WorkListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		52DAFC9027A9BEDC00EBF0BC /* Work Details */ = {
+			isa = PBXGroup;
+			children = (
+				52DAFC8E27A7A74500EBF0BC /* WorkDetailsView.swift */,
+				52DAFC9127A9BF0700EBF0BC /* UpdateReadStatusView.swift */,
+			);
+			path = "Work Details";
 			sourceTree = "<group>";
 		};
 		52E032B826FCC9D7004E2C1C /* Business Layer */ = {
@@ -130,7 +145,7 @@
 		52E2FE3C26F797C800EA956C /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */,
+				52E2FE3B26F797C800EA956C /* Scintillate Sci-Fi Sci-Fi.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -146,7 +161,6 @@
 				52E2FE5026F79A8500EA956C /* Data Access Layer */,
 				52E2FE3E26F797C800EA956C /* ScintillateApp.swift */,
 				52C2E32627671BB000FB4BA6 /* Colors.swift */,
-				52E2FE4026F797C800EA956C /* ContentView.swift */,
 				526A9CA327122A2F0098F7FE /* Store.swift */,
 				52E2FE4726F797CB00EA956C /* Info.plist */,
 				52E2FE4426F797CB00EA956C /* Preview Content */,
@@ -177,9 +191,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		52E2FE3A26F797C800EA956C /* Scintillate - Sci-Fi Awards */ = {
+		52E2FE3A26F797C800EA956C /* Scintillate Sci-Fi Sci-Fi */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate - Sci-Fi Awards" */;
+			buildConfigurationList = 52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate Sci-Fi Sci-Fi" */;
 			buildPhases = (
 				52E2FE3726F797C800EA956C /* Sources */,
 				52E2FE3826F797C800EA956C /* Frameworks */,
@@ -189,9 +203,9 @@
 			);
 			dependencies = (
 			);
-			name = "Scintillate - Sci-Fi Awards";
+			name = "Scintillate Sci-Fi Sci-Fi";
 			productName = Scintillate;
-			productReference = 52E2FE3B26F797C800EA956C /* Scintillate - Sci-Fi Awards.app */;
+			productReference = 52E2FE3B26F797C800EA956C /* Scintillate Sci-Fi Sci-Fi.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -208,7 +222,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate - Sci-Fi Awards" */;
+			buildConfigurationList = 52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate Sci-Fi" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -221,7 +235,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				52E2FE3A26F797C800EA956C /* Scintillate - Sci-Fi Awards */,
+				52E2FE3A26F797C800EA956C /* Scintillate Sci-Fi Sci-Fi */,
 			);
 		};
 /* End PBXProject section */
@@ -248,15 +262,17 @@
 				52E032BB26FCCA07004E2C1C /* Work.swift in Sources */,
 				52C2E32727671BB000FB4BA6 /* Colors.swift in Sources */,
 				5203F85D275AF79A00701785 /* Award.swift in Sources */,
-				52E2FE4126F797C800EA956C /* ContentView.swift in Sources */,
 				52ED00D627A518B90014CF5C /* WorkStat.swift in Sources */,
 				52ED00D027A4DF570014CF5C /* User.swift in Sources */,
+				52DAFC9227A9BF0700EBF0BC /* UpdateReadStatusView.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,
 				526A9CA427122A2F0098F7FE /* Store.swift in Sources */,
 				52C2E32527654FF100FB4BA6 /* Series.swift in Sources */,
-				5203F85F275C4FE300701785 /* WorkListItemView.swift in Sources */,
+				5203F85F275C4FE300701785 /* WorkListView.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
+				52DAFC8F27A7A74500EBF0BC /* WorkDetailsView.swift in Sources */,
+				521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
 				5203F85B27574CFD00701785 /* Author.swift in Sources */,
 				52ED00D427A4E14E0014CF5C /* UserDAO.swift in Sources */,
@@ -435,7 +451,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate - Sci-Fi Awards" */ = {
+		52E2FE3626F797C800EA956C /* Build configuration list for PBXProject "Scintillate Sci-Fi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E2FE4826F797CB00EA956C /* Debug */,
@@ -444,7 +460,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate - Sci-Fi Awards" */ = {
+		52E2FE4A26F797CB00EA956C /* Build configuration list for PBXNativeTarget "Scintillate Sci-Fi Sci-Fi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				52E2FE4B26F797CB00EA956C /* Debug */,

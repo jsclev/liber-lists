@@ -2,29 +2,12 @@ import Foundation
 import os
 
 class WorkListViewModel: ObservableObject {
-    @Published var results = [Work]()
+    @Published var works: [Work]
 
     let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "main")
     
-    var store: Store? = nil
-    
-    func setStore(_ store: Store) {
-        self.store = store
-    }    
-    
-    func search() {
-        guard let store = store else {
-            self.logger.error("Store not initialized")
-            return
-        }
-        
-            do {
-                self.results = try store.db.work.getHugoWinnersOnly()
-            } catch DbError.Db(let message) {
-                self.logger.error("Unable to run main search query: \(message, privacy: .public)")
-            } catch {
-                self.logger.error("Unable to run main search query.")
-            }
-
+    init(_ works: [Work]) {
+        self.works = works
     }
+    
 }

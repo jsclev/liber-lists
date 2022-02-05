@@ -5,7 +5,7 @@ struct ScintillateApp: App {
     @StateObject var store: Store
     
     init() {
-        let db = Db(fullRefresh: true)
+        let db = Db(fullRefresh: false)
         let store = Store(db: db)
         
         self._store = StateObject(wrappedValue: store)
@@ -13,7 +13,7 @@ struct ScintillateApp: App {
     
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WorkListView()
                 .environmentObject(store)
                 .environment(\.colorScheme, .dark)
         }

@@ -112,4 +112,87 @@ class UserDAO: BaseDAO {
                     email: email,
                     workStats: workStats)
     }
+    
+    func upsertWorkReadStatus(user: User, work: Work, readStatus: ReadStatus) -> WorkStat {
+        let sqlExists = "SELECT * FROM user_work_stat " +
+            "WHERE user_id = \(user.id) AND work_id = \(work.id);"
+        
+        do {
+            if try exists(sql: sqlExists) {
+                let sql = "UPDATE user_work_stat SET read_status = 3 " +
+                    "WHERE user_id = \(user.id) AND work_id = \(work.id);"
+
+                try executeNonQuery(sql: sql)
+            }
+            else {
+                let sql = "INSERT INTO user_work_stat " +
+                    "(user_id, work_id, read_status, own_status, own_status_type) " +
+                    "VALUES " +
+                    "(\(user.id) , \(work.id), 3, 0, NULL);"
+
+                try executeNonQuery(sql: sql)
+            }
+        }
+        catch {
+            print("An error occurred")
+        }
+        
+        if let workStat = getWorkStat(user: user, work: work) {
+            return workStat
+        }
+        else {
+            return WorkStat(id: -1,
+                            work: work,
+                            readStatus: ReadStatus.read,
+                            ownStatus: OwnStatus.doNotOwn)
+        }
+    }
+    
+    func getWorkStat(user: User, work: Work) -> WorkStat? {
+        let sql = "SELECT id, user_id, work_id, read_status, own_status, own_status_type " +
+            "FROM user_work_stat " +
+            "WHERE user_id = \(user.id) AND work_id = \(work.id);"
+        
+        var stmt: OpaquePointer?
+
+        if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
+            if sqlite3_step(stmt) == SQLITE_DONE {
+                let id = getInt(stmt: stmt, colIndex: 0)
+                let userId = getInt(stmt: stmt, colIndex: 1)
+                let workId = getInt(stmt: stmt, colIndex: 2)
+                let readStatusNum = getInt(stmt: stmt, colIndex: 3)
+                let ownStatusNum = getInt(stmt: stmt, colIndex: 4)
+                let ownStatusType = getInt(stmt: stmt, colIndex: 5)
+                
+                var readStatus = ReadStatus.notRead
+                if readStatusNum == 0 {
+                    readStatus = ReadStatus.notRead
+                }
+                else if readStatusNum == 1 {
+                    readStatus = ReadStatus.wantToRead
+                }
+                else if readStatusNum == 2 {
+                    readStatus = ReadStatus.currentlyReading
+                }
+                else if readStatusNum == 3 {
+                    readStatus = ReadStatus.read
+                }
+                
+                let ownStatus = OwnStatus.doNotOwn
+
+                let workStat = WorkStat(id: id,
+                                        work: work,
+                                        readStatus: readStatus,
+                                        ownStatus: ownStatus)
+                return workStat
+
+            }
+        } else {
+            let errMsg = String(cString: sqlite3_errmsg(conn)!)
+            sqlite3_finalize(stmt)
+//            throw SQLiteError.Step(message: errMsg)
+        }
+
+        return nil
+    }
 }

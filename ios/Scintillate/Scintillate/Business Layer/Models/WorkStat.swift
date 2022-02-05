@@ -16,10 +16,14 @@ enum OwnStatus {
 struct WorkStat: Equatable, Hashable {
     let id: Int
     let work: Work
-    let readStatus: ReadStatus
-    let ownStatus: OwnStatus
+    var readStatus: ReadStatus
+    var ownStatus: OwnStatus
     
     func hash(into hasher: inout Hasher) {
         hasher.combine(id)
+    }
+    
+    mutating func setReadStatus(_ readStatus: ReadStatus) {
+        self.readStatus = readStatus
     }
 }
