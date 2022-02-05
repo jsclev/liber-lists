@@ -60,6 +60,8 @@ struct BookImageView: View {
 }
 
 struct BookInfoView: View {
+    @StateObject var workStatVM: WorkStatViewModel
+
     var user: User
     var work: Work
     let fontSize = 12.0
@@ -122,31 +124,34 @@ struct BookInfoView: View {
                 .truncationMode(.tail)
                 .allowsTightening(true)
             Spacer(minLength: 0)
-            HStack {
-                let read = user.getReadStatus(work: work) == ReadStatus.read
-                let wantToRead = user.getReadStatus(work: work) == ReadStatus.wantToRead
-                let currentlyReading = user.getReadStatus(work: work) == ReadStatus.currentlyReading
-                let owned = user.getOwnStatus(work: work) == OwnStatus.owned
-                let wantToOwn = user.getOwnStatus(work: work) == OwnStatus.wantToOwn
-                let fadedColor = Color.white.opacity(0.3)
-                
-                Image(systemName: read ? "checkmark.circle.fill" : "checkmark.circle")
-                    .foregroundColor(read ? Color.appGreen : fadedColor)
-                    .font(.system(size: 16))
-                Spacer()
-                Image(systemName: wantToRead ? "bookmark.fill" : "bookmark")
-                    .foregroundColor(wantToRead ? .pink : fadedColor)
-                    .font(.system(size: 16))
-                Spacer()
-                Image(systemName: currentlyReading ? "eyeglasses" : "eyeglasses")
-                    .foregroundColor(currentlyReading ? .blue : fadedColor)
-                    .font(.system(size: 16))
-                Spacer()
-                Image(systemName: owned ? "book.closed.fill" : "book.closed")
-                    .foregroundColor(owned ? .yellow : fadedColor)
-                    .font(.system(size: 16))
-            }
-            .padding(.bottom, 5)
+            
+            WorkListItemReadStatusView(workStatVM: workStatVM)
+//            WorkListItemReadStatusView(workStatVM: <#T##WorkStatViewModel#>)
+//            HStack {
+//                let read = user.getReadStatus(work: work) == ReadStatus.read
+//                let wantToRead = user.getReadStatus(work: work) == ReadStatus.wantToRead
+//                let currentlyReading = user.getReadStatus(work: work) == ReadStatus.currentlyReading
+//                let owned = user.getOwnStatus(work: work) == OwnStatus.owned
+//                let wantToOwn = user.getOwnStatus(work: work) == OwnStatus.wantToOwn
+//                let fadedColor = Color.white.opacity(0.3)
+//                
+//                Image(systemName: read ? "checkmark.circle.fill" : "checkmark.circle")
+//                    .foregroundColor(read ? Color.appGreen : fadedColor)
+//                    .font(.system(size: 16))
+//                Spacer()
+//                Image(systemName: wantToRead ? "bookmark.fill" : "bookmark")
+//                    .foregroundColor(wantToRead ? .pink : fadedColor)
+//                    .font(.system(size: 16))
+//                Spacer()
+//                Image(systemName: currentlyReading ? "eyeglasses" : "eyeglasses")
+//                    .foregroundColor(currentlyReading ? .blue : fadedColor)
+//                    .font(.system(size: 16))
+//                Spacer()
+//                Image(systemName: owned ? "book.closed.fill" : "book.closed")
+//                    .foregroundColor(owned ? .yellow : fadedColor)
+//                    .font(.system(size: 16))
+//            }
+//            .padding(.bottom, 5)
             }
 //            .opacity(0.6)
         }
@@ -160,7 +165,6 @@ struct WorkListView: View {
     
     var body: some View {
         let padding: CGFloat = 3
-//        let user = store.db.user.getCurrentUser()
         let works = store.db.work.getHugoWinnersOnly()
             
         TabView {
@@ -170,14 +174,16 @@ struct WorkListView: View {
                               spacing: padding) {
                             ForEach(works, id: \.self) { work in
                                 let read = store.userViewModel.user.getReadStatus(work: work) == ReadStatus.read
+                                let workStat = store.userViewModel.user.getWorkStat(work: work)
+                                let workStatViewModel = WorkStatViewModel(workStat)
                                 
                                 VStack {
                                     NavigationLink(
-                                        destination: WorkDetailsView(work: work),
+                                        destination: WorkDetailsView(work: work, workStatVM: workStatViewModel),
                                         label: {
                                             BookImageView(user: store.userViewModel.user, work: work)
                                         })
-                                    BookInfoView(user: store.userViewModel.user, work: work)
+                                    BookInfoView(workStatVM: workStatViewModel, user: store.userViewModel.user, work: work)
                                 }
                                 .padding(.leading, 16)
                                 .padding(.trailing, 16)

@@ -3,7 +3,8 @@ import SwiftUI
 struct WorkDetailsView: View {
     @EnvironmentObject var store: Store
     var work: Work
-    
+    @StateObject var workStatVM: WorkStatViewModel
+
     var user: User {
         store.userViewModel.user
     }
@@ -26,8 +27,7 @@ struct WorkDetailsView: View {
                 }
             }
             
-            let workStat = user.getWorkStat(work: work)
-            UpdateReadStatusView(workStatVM: WorkStatViewModel(workStat))
+            UpdateReadStatusView(workStatVM: workStatVM)
         }
     }
 }

@@ -119,7 +119,22 @@ class UserDAO: BaseDAO {
         
         do {
             if try exists(sql: sqlExists) {
-                let sql = "UPDATE user_work_stat SET read_status = 3 " +
+                var readStatusNum = 0
+                if readStatus == ReadStatus.notRead {
+                    readStatusNum = 0
+                }
+                else if readStatus == ReadStatus.wantToRead {
+                    readStatusNum = 1
+                }
+                else if readStatus == ReadStatus.currentlyReading {
+                    readStatusNum = 2
+                }
+                else if readStatus == ReadStatus.read {
+                    readStatusNum = 3
+                }
+                
+                let sql = "UPDATE user_work_stat " +
+                    "SET read_status = \(readStatusNum) " +
                     "WHERE user_id = \(user.id) AND work_id = \(work.id);"
 
                 try executeNonQuery(sql: sql)
@@ -156,7 +171,7 @@ class UserDAO: BaseDAO {
         var stmt: OpaquePointer?
 
         if sqlite3_prepare_v2(conn, sql, -1, &stmt, nil) == SQLITE_OK {
-            if sqlite3_step(stmt) == SQLITE_DONE {
+            if sqlite3_step(stmt) == SQLITE_ROW {
                 let id = getInt(stmt: stmt, colIndex: 0)
                 let userId = getInt(stmt: stmt, colIndex: 1)
                 let workId = getInt(stmt: stmt, colIndex: 2)

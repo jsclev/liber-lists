@@ -11,6 +11,7 @@
 		5203F85D275AF79A00701785 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85C275AF79A00701785 /* Award.swift */; };
 		5203F85F275C4FE300701785 /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListView.swift */; };
 		521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */; };
+		521B799227AE4C030054CFA6 /* WorkListItemReadStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */; };
 		525E4D06271285C100168E50 /* WorkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4D05271285C100168E50 /* WorkDAO.swift */; };
 		526A9CA427122A2F0098F7FE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA327122A2F0098F7FE /* Store.swift */; };
 		526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA727122AF80098F7FE /* WorkListViewModel.swift */; };
@@ -39,6 +40,7 @@
 		5203F85C275AF79A00701785 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		5203F85E275C4FE300701785 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
 		521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStatViewModel.swift; sourceTree = "<group>"; };
+		521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListItemReadStatusView.swift; sourceTree = "<group>"; };
 		525E4D05271285C100168E50 /* WorkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDAO.swift; sourceTree = "<group>"; };
 		526A9CA327122A2F0098F7FE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		526A9CA727122AF80098F7FE /* WorkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewModel.swift; sourceTree = "<group>"; };
@@ -75,6 +77,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		521B799027AE4BD20054CFA6 /* Work List Item */ = {
+			isa = PBXGroup;
+			children = (
+				521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */,
+			);
+			path = "Work List Item";
+			sourceTree = "<group>";
+		};
 		526A9CA527122AB80098F7FE /* View Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -88,6 +98,7 @@
 		526A9CA627122AE90098F7FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				521B799027AE4BD20054CFA6 /* Work List Item */,
 				52DAFC9027A9BEDC00EBF0BC /* Work Details */,
 				5203F85E275C4FE300701785 /* WorkListView.swift */,
 			);
@@ -271,6 +282,7 @@
 				52C2E32527654FF100FB4BA6 /* Series.swift in Sources */,
 				5203F85F275C4FE300701785 /* WorkListView.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
+				521B799227AE4C030054CFA6 /* WorkListItemReadStatusView.swift in Sources */,
 				52DAFC8F27A7A74500EBF0BC /* WorkDetailsView.swift in Sources */,
 				521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,
