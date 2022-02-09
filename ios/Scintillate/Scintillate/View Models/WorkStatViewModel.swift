@@ -1,10 +1,9 @@
 import Foundation
 import os
+import Combine
 
 class WorkStatViewModel: ObservableObject {
     @Published var workStat: WorkStat
-
-    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "main")
     
     init(_ workStat: WorkStat) {
         self.workStat = workStat
@@ -16,5 +15,14 @@ class WorkStatViewModel: ObservableObject {
     
     func setWorkStat(_ workStat: WorkStat) {
         self.workStat = workStat
+    }
+    
+    func toggleReadStatus() {
+        if workStat.readStatus == ReadStatus.read {
+            workStat.readStatus = ReadStatus.notRead
+        }
+        else {
+            workStat.readStatus = ReadStatus.read
+        }
     }
 }

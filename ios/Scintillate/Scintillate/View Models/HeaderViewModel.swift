@@ -3,8 +3,6 @@ import os
 import Combine
 
 class HeaderViewModel: ObservableObject {
-    let logger = Logger(subsystem: Bundle.main.bundleIdentifier!, category: "main")
-
     @Published var userViewModel: UserViewModel
     @Published var workListViewModel: WorkListViewModel
     
@@ -24,7 +22,9 @@ class HeaderViewModel: ObservableObject {
     
     var userScorePercent: Double {
         if workListViewModel.workList.getTotalScore() > 0 {
-            return Double(userViewModel.user.getScore()) / Double(workListViewModel.workList.getTotalScore())
+            let s = Double(userViewModel.getScore()) / Double(workListViewModel.workList.getTotalScore())
+            print(String(s))
+            return Double(userViewModel.getScore()) / Double(workListViewModel.workList.getTotalScore())
         }
         
         return 0.0

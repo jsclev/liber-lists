@@ -1,17 +1,5 @@
 import SwiftUI
 
-struct TempView: View {
-    @StateObject var headerViewModel: HeaderViewModel
-
-    var body: some View {
-        Text("Name: " + headerViewModel.userViewModel.user.getName())
-
-        Text("Num work stats: " + String(headerViewModel.userViewModel.user.workStats.count))
-        Text("Num read: " + String(headerViewModel.userViewModel.user.getReadCount(readStatus: ReadStatus.read)))
-
-    }
-}
-
 struct HeaderView: View {
     @EnvironmentObject var store: Store
     @StateObject var headerViewModel: HeaderViewModel
@@ -20,6 +8,8 @@ struct HeaderView: View {
         VStack {
             HStack {
                 Text(String(headerViewModel.userScoreText))
+                Spacer()
+                Text(headerViewModel.userViewModel.user.getName())
                 Spacer()
                 Text("1000")
             }

@@ -44,7 +44,6 @@ struct UpdateReadStatusView: View {
                 let workStat = userDao.upsertWorkReadStatus(user: user,
                                                             work: work,
                                                             readStatus: newStatus)
-                store.userViewModel.updateName(work.title)
                 store.userViewModel.updateWorkStat(workStat)
                 workStatVM.setWorkStat(workStat)
             }) {

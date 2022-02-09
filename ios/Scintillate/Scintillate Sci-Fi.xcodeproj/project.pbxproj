@@ -11,7 +11,7 @@
 		5203F85D275AF79A00701785 /* Award.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85C275AF79A00701785 /* Award.swift */; };
 		5203F85F275C4FE300701785 /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListView.swift */; };
 		521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */; };
-		521B799227AE4C030054CFA6 /* WorkListItemReadStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */; };
+		521B799227AE4C030054CFA6 /* ListItemStatusBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799127AE4C030054CFA6 /* ListItemStatusBarView.swift */; };
 		521B799527AF76120054CFA6 /* WorkListCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799427AF76120054CFA6 /* WorkListCoverView.swift */; };
 		521B799827AF80400054CFA6 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799727AF80400054CFA6 /* UserStatsView.swift */; };
 		521B799A27AF8A9B0054CFA6 /* WorkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799927AF8A9B0054CFA6 /* WorkList.swift */; };
@@ -45,7 +45,7 @@
 		5203F85C275AF79A00701785 /* Award.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Award.swift; sourceTree = "<group>"; };
 		5203F85E275C4FE300701785 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
 		521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStatViewModel.swift; sourceTree = "<group>"; };
-		521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListItemReadStatusView.swift; sourceTree = "<group>"; };
+		521B799127AE4C030054CFA6 /* ListItemStatusBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemStatusBarView.swift; sourceTree = "<group>"; };
 		521B799427AF76120054CFA6 /* WorkListCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListCoverView.swift; sourceTree = "<group>"; };
 		521B799727AF80400054CFA6 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
 		521B799927AF8A9B0054CFA6 /* WorkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkList.swift; sourceTree = "<group>"; };
@@ -90,7 +90,7 @@
 		521B799027AE4BD20054CFA6 /* Work List Item */ = {
 			isa = PBXGroup;
 			children = (
-				521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */,
+				521B799127AE4C030054CFA6 /* ListItemStatusBarView.swift */,
 			);
 			path = "Work List Item";
 			sourceTree = "<group>";
@@ -123,10 +123,10 @@
 		526A9CA527122AB80098F7FE /* View Models */ = {
 			isa = PBXGroup;
 			children = (
-				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
-				52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */,
-				521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */,
 				521B799E27B23FE00054CFA6 /* HeaderViewModel.swift */,
+				52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */,
+				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
+				521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -323,7 +323,7 @@
 				52C2E32527654FF100FB4BA6 /* Series.swift in Sources */,
 				5203F85F275C4FE300701785 /* WorkListView.swift in Sources */,
 				52E2FE5226F79AA800EA956C /* Db.swift in Sources */,
-				521B799227AE4C030054CFA6 /* WorkListItemReadStatusView.swift in Sources */,
+				521B799227AE4C030054CFA6 /* ListItemStatusBarView.swift in Sources */,
 				52DAFC8F27A7A74500EBF0BC /* WorkDetailsView.swift in Sources */,
 				521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */,
 				52E032C026FCCAFE004E2C1C /* DbError.swift in Sources */,

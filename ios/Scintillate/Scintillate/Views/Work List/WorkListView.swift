@@ -15,7 +15,7 @@ extension Color {
 }
 
 struct BookInfoView: View {
-    @StateObject var workStatVM: WorkStatViewModel
+    @StateObject var workStatViewModel: WorkStatViewModel
 
     var user: User
     var work: Work
@@ -23,92 +23,66 @@ struct BookInfoView: View {
     
     var body: some View {
         HStack {
-        VStack(alignment: .leading, spacing: 0) {
-            Text(work.title)
-                .foregroundColor(ColorManager.mainForeground)
-                .font(.headline)
-                .lineLimit(2)
-                .truncationMode(.tail)
-                .allowsTightening(true)
-                .padding(.bottom, 2)
-            Group {
-            Text(work.getAuthorText())
-                .foregroundColor(ColorManager.mainForeground)
-                .font(.caption)
-                .lineLimit(1)
-                .truncationMode(.tail)
-                .allowsTightening(true)
-            Text(work.getAwardText())
-                .foregroundColor(ColorManager.mainForeground)
-                .font(.caption)
-                .lineLimit(1)
-                .truncationMode(.tail)
-                .allowsTightening(true)
-
-            if let series = work.series {
-                if let seriesOrdinalName = work.seriesOrdinalName {
-                    Text(series.name + ", " + seriesOrdinalName)
-                        .foregroundColor(ColorManager.mainForeground)
-                        .font(.caption)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                        .allowsTightening(true)
-                }
-                else {
-                    Text(series.name)
-                        .foregroundColor(ColorManager.mainForeground)
-                        .font(.caption)
-                        .lineLimit(1)
-                        .truncationMode(.tail)
-                        .allowsTightening(true)
-                }
-            }
-            else {
-                Text("")
+            VStack(alignment: .leading, spacing: 0) {
+                Text(work.title)
                     .foregroundColor(ColorManager.mainForeground)
-                    .font(.caption)
-                    .lineLimit(1)
+                    .font(.headline)
+                    .lineLimit(2)
                     .truncationMode(.tail)
                     .allowsTightening(true)
-            }
+                    .padding(.bottom, 2)
+                Group {
+                    Text(work.getAuthorText())
+                        .foregroundColor(ColorManager.mainForeground)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .allowsTightening(true)
+                    Text(work.getAwardText())
+                        .foregroundColor(ColorManager.mainForeground)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .allowsTightening(true)
 
-            Text("")
-                .foregroundColor(ColorManager.mainForeground)
-                .font(.caption)
-                .lineLimit(1)
-                .truncationMode(.tail)
-                .allowsTightening(true)
-            Spacer(minLength: 0)
-            
-            WorkListItemReadStatusView(workStatVM: workStatVM)
-//            HStack {
-//                let read = user.getReadStatus(work: work) == ReadStatus.read
-//                let wantToRead = user.getReadStatus(work: work) == ReadStatus.wantToRead
-//                let currentlyReading = user.getReadStatus(work: work) == ReadStatus.currentlyReading
-//                let owned = user.getOwnStatus(work: work) == OwnStatus.owned
-//                let wantToOwn = user.getOwnStatus(work: work) == OwnStatus.wantToOwn
-//                let fadedColor = Color.white.opacity(0.3)
-//                
-//                Image(systemName: read ? "checkmark.circle.fill" : "checkmark.circle")
-//                    .foregroundColor(read ? Color.appGreen : fadedColor)
-//                    .font(.system(size: 16))
-//                Spacer()
-//                Image(systemName: wantToRead ? "bookmark.fill" : "bookmark")
-//                    .foregroundColor(wantToRead ? .pink : fadedColor)
-//                    .font(.system(size: 16))
-//                Spacer()
-//                Image(systemName: currentlyReading ? "eyeglasses" : "eyeglasses")
-//                    .foregroundColor(currentlyReading ? .blue : fadedColor)
-//                    .font(.system(size: 16))
-//                Spacer()
-//                Image(systemName: owned ? "book.closed.fill" : "book.closed")
-//                    .foregroundColor(owned ? .yellow : fadedColor)
-//                    .font(.system(size: 16))
-//            }
-//            .padding(.bottom, 5)
+                    if let series = work.series {
+                        if let seriesOrdinalName = work.seriesOrdinalName {
+                            Text(series.name + ", " + seriesOrdinalName)
+                                .foregroundColor(ColorManager.mainForeground)
+                                .font(.caption)
+                                .lineLimit(1)
+                                .truncationMode(.tail)
+                                .allowsTightening(true)
+                        }
+                        else {
+                            Text(series.name)
+                                .foregroundColor(ColorManager.mainForeground)
+                                .font(.caption)
+                                .lineLimit(1)
+                                .truncationMode(.tail)
+                                .allowsTightening(true)
+                        }
+                    }
+                    else {
+                        Text("")
+                            .foregroundColor(ColorManager.mainForeground)
+                            .font(.caption)
+                            .lineLimit(1)
+                            .truncationMode(.tail)
+                            .allowsTightening(true)
+                    }
+
+                    Text("")
+                        .foregroundColor(ColorManager.mainForeground)
+                        .font(.caption)
+                        .lineLimit(1)
+                        .truncationMode(.tail)
+                        .allowsTightening(true)
+                    Spacer(minLength: 0)
+                
+                    ListItemStatusBarView(workStatViewModel: workStatViewModel)
+                }
             }
-//            .opacity(0.6)
-        }
             Spacer(minLength: 0)
         }
     }
@@ -116,8 +90,6 @@ struct BookInfoView: View {
 
 struct WorkListView: View {
     @EnvironmentObject var store: Store
-//    @StateObject var workListVM: WorkListViewModel
-//    @StateObject var userVM: UserViewModel
     
     var works: [Work] {
         store.workListViewModel.workList.works
@@ -125,29 +97,12 @@ struct WorkListView: View {
     
     var body: some View {
         let padding: CGFloat = 2
-        let headerViewModel = HeaderViewModel(userViewModel: store.userViewModel, workListViewModel: store.workListViewModel)
+        let headerViewModel = HeaderViewModel(userViewModel: store.userViewModel,
+                                              workListViewModel: store.workListViewModel)
 
         TabView {
             NavigationView {
                 VStack {
-//                    TempView(headerViewModel: headerViewModel)
-                    
-                    Button(action: {
-                        store.userViewModel.updateName("Joshua")
-                        store.userViewModel.updateWorkStat(WorkStat(id: -1,
-                                                                    work: Work(id: -1,
-                                                                               title: "hello",
-                                                                               imageName: "dune",
-                                                                               authors: [],
-                                                                               awards: [],
-                                                                               series: nil,
-                                                                               seriesOrdinalName: nil),
-                                                                    readStatus: ReadStatus.read,
-                                                                    ownStatus: OwnStatus.doNotOwn))
-                    }) {
-                        Text("Update work stats")
-                    }
-                    
                     HeaderView(headerViewModel: headerViewModel)
                     
                     ScrollView {
@@ -164,7 +119,7 @@ struct WorkListView: View {
                                             label: {
                                                 WorkListCoverView(user: store.userViewModel.user, work: work)
                                             })
-                                        BookInfoView(workStatVM: workStatViewModel, user: store.userViewModel.user, work: work)
+                                        BookInfoView(workStatViewModel: workStatViewModel, user: store.userViewModel.user, work: work)
                                     }
                                     .padding(.leading, 16)
                                     .padding(.trailing, 16)
@@ -204,15 +159,6 @@ struct WorkListView: View {
             .tabItem {
                 Image(systemName: "chart.line.uptrend.xyaxis")
             }
-//            VStack {
-//                Text(store.db.user.getCurrentUser().getName())
-//                    .font(.system(size: 30, weight: .bold, design: .rounded))
-//                Text(store.db.user.getCurrentUser().getEmail())
-//                    .font(.system(size: 24, weight: .regular, design: .rounded))
-//            }
-//            .tabItem {
-//                Image(systemName: "person.crop.circle")
-//            }
         }
     }
 }

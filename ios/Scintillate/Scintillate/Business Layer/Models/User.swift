@@ -56,12 +56,22 @@ struct User: Equatable, Hashable {
     }
     
     mutating func setReadStatus(workStat: WorkStat) {
-        for var existingWorkStat in workStats {
-            if existingWorkStat.id == workStat.id {
-                existingWorkStat.setReadStatus(workStat.readStatus)
-                return
+//        self.workStats = []
+//        for var existingWorkStat in workStats {
+//            if existingWorkStat.id == workStat.id {
+//                print("Modifying workStat " + String(workStat.id))
+//                existingWorkStat.setReadStatus(workStat.readStatus)
+//                return
+//            }
+//        }
+        
+        for index in 0..<workStats.count {
+            if workStats[index].id == workStat.id {
+                workStats.remove(at: index)
+                break
             }
         }
+
         
         self.workStats.append(workStat)
     }
@@ -107,6 +117,14 @@ struct User: Equatable, Hashable {
         var score = 0
         
         for workStat in workStats {
+            if workStat.id == 2 {
+                if workStat.readStatus == ReadStatus.read {
+                    print("workStat is read")
+                }
+                else if workStat.readStatus == ReadStatus.notRead {
+                    print("workStat is not read")
+                }
+            }
             if workStat.readStatus == ReadStatus.read {
                 score += 5
             }
@@ -118,6 +136,8 @@ struct User: Equatable, Hashable {
                 score += 1
             }
         }
+        
+        print("Calling getScore(): " + String(score))
         
         return score
     }
