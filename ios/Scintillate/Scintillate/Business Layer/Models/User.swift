@@ -3,7 +3,7 @@ import Foundation
 struct User: Equatable, Hashable {
     var id: Int
     let username: String?
-    let firstName: String?
+    var firstName: String?
     let lastName: String?
     let email: String?
     var workStats: [WorkStat]
@@ -97,7 +97,29 @@ struct User: Equatable, Hashable {
             }
         }
         
-        return WorkStat(id: -1, work: work, readStatus: ReadStatus.notRead, ownStatus: OwnStatus.doNotOwn)
+        return WorkStat(id: -1,
+                        work: work,
+                        readStatus: ReadStatus.notRead,
+                        ownStatus: OwnStatus.doNotOwn)
+    }
+    
+    func getScore() -> Int {
+        var score = 0
+        
+        for workStat in workStats {
+            if workStat.readStatus == ReadStatus.read {
+                score += 5
+            }
+            else if workStat.readStatus == ReadStatus.currentlyReading {
+                score += 2
+            }
+            
+            if workStat.ownStatus == OwnStatus.owned {
+                score += 1
+            }
+        }
+        
+        return score
     }
     
     func hash(into hasher: inout Hasher) {

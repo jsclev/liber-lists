@@ -1,5 +1,22 @@
 import SwiftUI
 
+extension View {
+    func cornerRadius(_ radius: CGFloat, corners: UIRectCorner) -> some View {
+        clipShape( RoundedCorner(radius: radius, corners: corners) )
+    }
+}
+
+struct RoundedCorner: Shape {
+
+    var radius: CGFloat = .infinity
+    var corners: UIRectCorner = .allCorners
+
+    func path(in rect: CGRect) -> Path {
+        let path = UIBezierPath(roundedRect: rect, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        return Path(path.cgPath)
+    }
+}
+
 struct UpdateReadStatusView: View {
     @EnvironmentObject var store: Store
     @StateObject var workStatVM: WorkStatViewModel
@@ -21,47 +38,176 @@ struct UpdateReadStatusView: View {
     }
     
     var body: some View {
-        VStack {
-            if readStatus == ReadStatus.notRead {
-                Button(action: {
-                    let workStat = userDao.upsertWorkReadStatus(user: user,
-                                                                work: work,
-                                                                readStatus: ReadStatus.read)
-                    workStatVM.setWorkStat(workStat)
-                }) {
-                    HStack {
-                        Image(systemName: "checkmark.circle")
-                        Text("I have read it")
-                    }.padding(10.0)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .stroke(lineWidth: 2.0)
-                    )
-                }
-            }
-            else if readStatus == ReadStatus.currentlyReading {
-                Text("I am currently reading it")
-            }
-            else if readStatus == ReadStatus.read {
-                Button(action: {
-                    let workStat = userDao.upsertWorkReadStatus(user: user,
-                                                                work: work,
-                                                                readStatus: ReadStatus.notRead)
-                    workStatVM.setWorkStat(workStat)
+        HStack(spacing: 0) {
+            Button(action: {
+                let newStatus = readStatus == ReadStatus.read ? ReadStatus.notRead : ReadStatus.read
+                let workStat = userDao.upsertWorkReadStatus(user: user,
+                                                            work: work,
+                                                            readStatus: newStatus)
+                store.userViewModel.updateName(work.title)
+                store.userViewModel.updateWorkStat(workStat)
+                workStatVM.setWorkStat(workStat)
+            }) {
+                if readStatus == ReadStatus.read {
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.appGreen)
+                            .cornerRadius(10, corners: [.topLeft, .bottomLeft])
+                        VStack {
+                            Image(systemName: "checkmark.circle")
+                                .foregroundColor(Color.black)
+                            Text("Read it")
+                                .foregroundColor(Color.black)
+                                .font(Font.headline.weight(.semibold))
 
-                }) {
-                    HStack {
-                        Image(systemName: "checkmark.circle")
-                        Text("I have read it, back to not read")
-                    }.padding(10.0)
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10.0)
-                            .stroke(lineWidth: 2.0)
-                    )
+                        }
+                        .padding(10.0)
+                    }
+                } else {
+                    ZStack {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.appGreen)
+                                .cornerRadius(10, corners: [.topLeft, .bottomLeft])
+                            Rectangle()
+                                .fill(Color.black)
+                                .cornerRadius(10, corners: [.topLeft, .bottomLeft])
+                                .padding(2)
+                            VStack {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(Color.appGreen)
+                                Text("Read it")
+                                    .foregroundColor(Color.appGreen)
+                            }
+                            .padding(10.0)
+                        }
+                    }
                 }
             }
-            else if readStatus == ReadStatus.wantToRead {
-                Text("I want to read it")
+            
+            Button(action: {
+                let newStatus = readStatus == ReadStatus.currentlyReading ? ReadStatus.notRead : ReadStatus.currentlyReading
+                let workStat = userDao.upsertWorkReadStatus(user: user,
+                                                            work: work,
+                                                            readStatus: newStatus)
+                workStatVM.setWorkStat(workStat)
+            }) {
+                if readStatus == ReadStatus.currentlyReading {
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.appGreen)
+                        VStack {
+                            Image(systemName: "eyeglasses")
+                                .foregroundColor(Color.black)
+                            Text("Currently reading it")
+                                .foregroundColor(Color.black)
+                                .font(Font.headline.weight(.semibold))
+                        }
+                        .padding(10.0)
+                    }
+                } else {
+                    ZStack {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.appGreen)
+                            Rectangle()
+                                .fill(Color.black)
+                                .padding(.top, 2)
+                                .padding(.bottom, 2)
+                            VStack {
+                                Image(systemName: "eyeglasses")
+                                    .foregroundColor(Color.appGreen)
+                                Text("Currently reading it")
+                                    .foregroundColor(Color.appGreen)
+                            }
+                            .padding(10.0)
+                        }
+                    }
+                }
+            }
+            
+            Button(action: {
+                let newStatus = readStatus == ReadStatus.wantToRead ? ReadStatus.notRead : ReadStatus.wantToRead
+                let workStat = userDao.upsertWorkReadStatus(user: user,
+                                                            work: work,
+                                                            readStatus: newStatus)
+                workStatVM.setWorkStat(workStat)
+            }) {
+                if readStatus == ReadStatus.wantToRead {
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.appGreen)
+                        VStack {
+                            Image(systemName: "bookmark")
+                                .foregroundColor(Color.black)
+                            Text("Want to read it")
+                                .foregroundColor(Color.black)
+                                .font(Font.headline.weight(.semibold))
+                        }
+                        .padding(10.0)
+                    }
+                } else {
+                    ZStack {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.appGreen)
+                            Rectangle()
+                                .fill(Color.black)
+                                .padding(.top, 2)
+                                .padding(.bottom, 2)
+                            VStack {
+                                Image(systemName: "bookmark")
+                                    .foregroundColor(Color.appGreen)
+                                Text("Want to read it")
+                                    .foregroundColor(Color.appGreen)
+                            }
+                            .padding(10.0)
+                        }
+                    }
+                }
+            }
+            
+            Button(action: {
+                let workStat = userDao.upsertWorkReadStatus(user: user,
+                                                            work: work,
+                                                            readStatus: ReadStatus.notRead)
+                workStatVM.setWorkStat(workStat)
+            }) {
+                if readStatus == ReadStatus.notRead {
+                    ZStack {
+                        Rectangle()
+                            .fill(Color.appGreen)
+                            .cornerRadius(10, corners: [.topRight, .bottomRight])
+                        VStack {
+                            Image(systemName: "checkmark.circle")
+                                .foregroundColor(Color.black)
+                            Text("Have not read it")
+                                .foregroundColor(Color.black)
+                                .font(Font.headline.weight(.semibold))
+
+                        }
+                        .padding(10.0)
+                    }
+                } else {
+                    ZStack {
+                        ZStack {
+                            Rectangle()
+                                .fill(Color.appGreen)
+                                .cornerRadius(10, corners: [.topRight, .bottomRight])
+                            Rectangle()
+                                .fill(Color.black)
+                                .cornerRadius(10, corners: [.topRight, .bottomRight])
+                                .padding(2)
+                            VStack {
+                                Image(systemName: "checkmark.circle")
+                                    .foregroundColor(Color.appGreen)
+                                Text("Have not read it")
+                                    .foregroundColor(Color.appGreen)
+                            }
+                            .padding(10.0)
+                        }
+                    }
+                }
             }
         }
     }

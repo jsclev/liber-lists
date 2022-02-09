@@ -12,6 +12,11 @@
 		5203F85F275C4FE300701785 /* WorkListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5203F85E275C4FE300701785 /* WorkListView.swift */; };
 		521B798F27AE385F0054CFA6 /* WorkStatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */; };
 		521B799227AE4C030054CFA6 /* WorkListItemReadStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */; };
+		521B799527AF76120054CFA6 /* WorkListCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799427AF76120054CFA6 /* WorkListCoverView.swift */; };
+		521B799827AF80400054CFA6 /* UserStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799727AF80400054CFA6 /* UserStatsView.swift */; };
+		521B799A27AF8A9B0054CFA6 /* WorkList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799927AF8A9B0054CFA6 /* WorkList.swift */; };
+		521B799D27AF91080054CFA6 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799C27AF91080054CFA6 /* HeaderView.swift */; };
+		521B799F27B23FE00054CFA6 /* HeaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521B799E27B23FE00054CFA6 /* HeaderViewModel.swift */; };
 		525E4D06271285C100168E50 /* WorkDAO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 525E4D05271285C100168E50 /* WorkDAO.swift */; };
 		526A9CA427122A2F0098F7FE /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA327122A2F0098F7FE /* Store.swift */; };
 		526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526A9CA727122AF80098F7FE /* WorkListViewModel.swift */; };
@@ -41,6 +46,11 @@
 		5203F85E275C4FE300701785 /* WorkListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListView.swift; sourceTree = "<group>"; };
 		521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkStatViewModel.swift; sourceTree = "<group>"; };
 		521B799127AE4C030054CFA6 /* WorkListItemReadStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListItemReadStatusView.swift; sourceTree = "<group>"; };
+		521B799427AF76120054CFA6 /* WorkListCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListCoverView.swift; sourceTree = "<group>"; };
+		521B799727AF80400054CFA6 /* UserStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStatsView.swift; sourceTree = "<group>"; };
+		521B799927AF8A9B0054CFA6 /* WorkList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkList.swift; sourceTree = "<group>"; };
+		521B799C27AF91080054CFA6 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		521B799E27B23FE00054CFA6 /* HeaderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderViewModel.swift; sourceTree = "<group>"; };
 		525E4D05271285C100168E50 /* WorkDAO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkDAO.swift; sourceTree = "<group>"; };
 		526A9CA327122A2F0098F7FE /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		526A9CA727122AF80098F7FE /* WorkListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkListViewModel.swift; sourceTree = "<group>"; };
@@ -85,12 +95,38 @@
 			path = "Work List Item";
 			sourceTree = "<group>";
 		};
+		521B799327AF75B60054CFA6 /* Work List */ = {
+			isa = PBXGroup;
+			children = (
+				5203F85E275C4FE300701785 /* WorkListView.swift */,
+				521B799427AF76120054CFA6 /* WorkListCoverView.swift */,
+			);
+			path = "Work List";
+			sourceTree = "<group>";
+		};
+		521B799627AF80230054CFA6 /* Stats */ = {
+			isa = PBXGroup;
+			children = (
+				521B799727AF80400054CFA6 /* UserStatsView.swift */,
+			);
+			path = Stats;
+			sourceTree = "<group>";
+		};
+		521B799B27AF90F50054CFA6 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				521B799C27AF91080054CFA6 /* HeaderView.swift */,
+			);
+			path = Header;
+			sourceTree = "<group>";
+		};
 		526A9CA527122AB80098F7FE /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				526A9CA727122AF80098F7FE /* WorkListViewModel.swift */,
 				52ED00D127A4E0AE0014CF5C /* UserViewModel.swift */,
 				521B798E27AE385F0054CFA6 /* WorkStatViewModel.swift */,
+				521B799E27B23FE00054CFA6 /* HeaderViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -98,9 +134,11 @@
 		526A9CA627122AE90098F7FE /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				521B799B27AF90F50054CFA6 /* Header */,
+				521B799327AF75B60054CFA6 /* Work List */,
 				521B799027AE4BD20054CFA6 /* Work List Item */,
 				52DAFC9027A9BEDC00EBF0BC /* Work Details */,
-				5203F85E275C4FE300701785 /* WorkListView.swift */,
+				521B799627AF80230054CFA6 /* Stats */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -130,6 +168,7 @@
 				52C2E32427654FF100FB4BA6 /* Series.swift */,
 				52ED00CF27A4DF570014CF5C /* User.swift */,
 				52E032BA26FCCA07004E2C1C /* Work.swift */,
+				521B799927AF8A9B0054CFA6 /* WorkList.swift */,
 				52ED00D527A518B90014CF5C /* WorkStat.swift */,
 			);
 			path = Models;
@@ -275,9 +314,11 @@
 				5203F85D275AF79A00701785 /* Award.swift in Sources */,
 				52ED00D627A518B90014CF5C /* WorkStat.swift in Sources */,
 				52ED00D027A4DF570014CF5C /* User.swift in Sources */,
+				521B799F27B23FE00054CFA6 /* HeaderViewModel.swift in Sources */,
 				52DAFC9227A9BF0700EBF0BC /* UpdateReadStatusView.swift in Sources */,
 				52E2FE3F26F797C800EA956C /* ScintillateApp.swift in Sources */,
 				525E4D06271285C100168E50 /* WorkDAO.swift in Sources */,
+				521B799527AF76120054CFA6 /* WorkListCoverView.swift in Sources */,
 				526A9CA427122A2F0098F7FE /* Store.swift in Sources */,
 				52C2E32527654FF100FB4BA6 /* Series.swift in Sources */,
 				5203F85F275C4FE300701785 /* WorkListView.swift in Sources */,
@@ -290,8 +331,11 @@
 				52ED00D427A4E14E0014CF5C /* UserDAO.swift in Sources */,
 				52E032BE26FCCABC004E2C1C /* BaseDAO.swift in Sources */,
 				52ED00D227A4E0AE0014CF5C /* UserViewModel.swift in Sources */,
+				521B799A27AF8A9B0054CFA6 /* WorkList.swift in Sources */,
 				526A9CA827122AF80098F7FE /* WorkListViewModel.swift in Sources */,
 				52E032C226FCCB1F004E2C1C /* SqliteError.swift in Sources */,
+				521B799827AF80400054CFA6 /* UserStatsView.swift in Sources */,
+				521B799D27AF91080054CFA6 /* HeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -6,57 +6,12 @@ extension Color {
     static let app3 = Color.black
     
     static let appGreen = Color(red: 70/255, green: 255/255, blue: 81/255)
-}
-
-struct UserStatsView: View {
-    var user: User
-    var works: [Work]
-    
-    var body: some View {
-        VStack {
-            let readMsg = "Read: " + String(user.getReadCount(readStatus: ReadStatus.read)) + " of " + String(works.count)
-            let readingMsg = "Reading: " + String(user.getReadCount(readStatus: ReadStatus.currentlyReading))
-            let wantToReadMsg = "Want to read: " + String(user.getReadCount(readStatus: ReadStatus.wantToRead))
-            
-            let ownMsg = "Own: " + String(user.getOwnCount(ownStatus: OwnStatus.owned)) + " of " + String(works.count)
-            let wantToOwnMsg = "Want to own: " + String(user.getOwnCount(ownStatus: OwnStatus.wantToOwn))
-
-            Text(readMsg)
-            Text(readingMsg)
-            Text(wantToReadMsg)
-            Text(ownMsg)
-            Text(wantToOwnMsg)
-        }
-    }
-}
-
-struct BookImageView: View {
-    var user: User
-    var work: Work
-    
-    var body: some View {
-        ZStack {
-            let uiImage: UIImage =  (UIImage(named: work.imageName) ?? UIImage(named: "default-cover"))!
-            
-            if user.getReadStatus(work: work) == ReadStatus.read {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-            }
-            else {
-                Image(uiImage: uiImage)
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .cornerRadius(12)
-            }
-            VStack {
-                HStack {
-                    Spacer()
-                }
-                Spacer()
-            }
-        }
-    }
+    static let appBlue = Color(red: 70/255, green: 255/255, blue: 81/255)
+    static let appRed = Color(red: 70/255, green: 255/255, blue: 81/255)
+    static let appYellow = Color(red: 70/255, green: 255/255, blue: 81/255)
+//    static let appBlue = Color(red: 8/255, green: 191/255, blue: 255/255)
+//    static let appRed = Color(red: 217/255, green: 1/255, blue: 52/255)
+//    static let appYellow = Color(red: 253/255, green: 253/255, blue: 15/255)
 }
 
 struct BookInfoView: View {
@@ -126,7 +81,6 @@ struct BookInfoView: View {
             Spacer(minLength: 0)
             
             WorkListItemReadStatusView(workStatVM: workStatVM)
-//            WorkListItemReadStatusView(workStatVM: <#T##WorkStatViewModel#>)
 //            HStack {
 //                let read = user.getReadStatus(work: work) == ReadStatus.read
 //                let wantToRead = user.getReadStatus(work: work) == ReadStatus.wantToRead
@@ -162,53 +116,80 @@ struct BookInfoView: View {
 
 struct WorkListView: View {
     @EnvironmentObject var store: Store
+//    @StateObject var workListVM: WorkListViewModel
+//    @StateObject var userVM: UserViewModel
+    
+    var works: [Work] {
+        store.workListViewModel.workList.works
+    }
     
     var body: some View {
-        let padding: CGFloat = 3
-        let works = store.db.work.getHugoWinnersOnly()
-            
+        let padding: CGFloat = 2
+        let headerViewModel = HeaderViewModel(userViewModel: store.userViewModel, workListViewModel: store.workListViewModel)
+
         TabView {
             NavigationView {
-                ScrollView {
-                    LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
-                              spacing: padding) {
-                            ForEach(works, id: \.self) { work in
-                                let read = store.userViewModel.user.getReadStatus(work: work) == ReadStatus.read
-                                let workStat = store.userViewModel.user.getWorkStat(work: work)
-                                let workStatViewModel = WorkStatViewModel(workStat)
-                                
-                                VStack {
-                                    NavigationLink(
-                                        destination: WorkDetailsView(work: work, workStatVM: workStatViewModel),
-                                        label: {
-                                            BookImageView(user: store.userViewModel.user, work: work)
-                                        })
-                                    BookInfoView(workStatVM: workStatViewModel, user: store.userViewModel.user, work: work)
-                                }
-                                .padding(.leading, 16)
-                                .padding(.trailing, 16)
-                                .padding(.top, 16)
-                                .padding(.bottom, 10)
-                                .background(
-                                    RoundedRectangle(cornerRadius: 20)
-                                        .strokeBorder(Color.app1, lineWidth: read ? 2 : 0, antialiased: true)
-                                        .background(
-                                            RoundedRectangle(cornerRadius: 20)
-                                                .fill(Color.app1)
-                                                .overlay(Color.green.opacity(read ? 0.0 : 0).cornerRadius(20))
-                                        )
+                VStack {
+//                    TempView(headerViewModel: headerViewModel)
+                    
+                    Button(action: {
+                        store.userViewModel.updateName("Joshua")
+                        store.userViewModel.updateWorkStat(WorkStat(id: -1,
+                                                                    work: Work(id: -1,
+                                                                               title: "hello",
+                                                                               imageName: "dune",
+                                                                               authors: [],
+                                                                               awards: [],
+                                                                               series: nil,
+                                                                               seriesOrdinalName: nil),
+                                                                    readStatus: ReadStatus.read,
+                                                                    ownStatus: OwnStatus.doNotOwn))
+                    }) {
+                        Text("Update work stats")
+                    }
+                    
+                    HeaderView(headerViewModel: headerViewModel)
+                    
+                    ScrollView {
+                        LazyVGrid(columns: [GridItem(.flexible()), GridItem(.flexible())],
+                                  spacing: padding) {
+                                ForEach(works, id: \.self) { work in
+                                    let read = store.userViewModel.user.getReadStatus(work: work) == ReadStatus.read
+                                    let workStat = store.userViewModel.user.getWorkStat(work: work)
+                                    let workStatViewModel = WorkStatViewModel(workStat)
+                                    
+                                    VStack {
+                                        NavigationLink(
+                                            destination: WorkDetailsView(work: work, workStatVM: workStatViewModel),
+                                            label: {
+                                                WorkListCoverView(user: store.userViewModel.user, work: work)
+                                            })
+                                        BookInfoView(workStatVM: workStatViewModel, user: store.userViewModel.user, work: work)
+                                    }
+                                    .padding(.leading, 16)
+                                    .padding(.trailing, 16)
+                                    .padding(.top, 16)
+                                    .padding(.bottom, 10)
+                                    .background(
+                                        RoundedRectangle(cornerRadius: 20)
+                                            .strokeBorder(Color.app1, lineWidth: read ? 2 : 0, antialiased: true)
+                                            .background(
+                                                RoundedRectangle(cornerRadius: 20)
+                                                    .fill(Color.app1)
+                                                    .overlay(Color.green.opacity(read ? 0.0 : 0).cornerRadius(20))
+                                            )
 
-                                )
-                                .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 0)
-                                .padding(5)
-                            }
+                                    )
+                                    .shadow(color: .black.opacity(0.16), radius: 8, x: 0, y: 0)
+                                    .padding(5)
+                                }
+                        }
+                        .padding(.horizontal, 10)
                         
                     }
-                    .padding(.horizontal, 10)
-                    
+                    .navigationBarTitle("")
+                    .navigationBarHidden(true)
                 }
-                .navigationBarTitle("")
-                .navigationBarHidden(true)
             }
             .background(Color.app2.ignoresSafeArea())
             .tabItem {
@@ -223,16 +204,15 @@ struct WorkListView: View {
             .tabItem {
                 Image(systemName: "chart.line.uptrend.xyaxis")
             }
-                
-            VStack {
-                Text(store.db.user.getCurrentUser().getName())
-                    .font(.system(size: 30, weight: .bold, design: .rounded))
-                Text(store.db.user.getCurrentUser().getEmail())
-                    .font(.system(size: 24, weight: .regular, design: .rounded))
-            }
-            .tabItem {
-                Image(systemName: "person.crop.circle")
-            }
+//            VStack {
+//                Text(store.db.user.getCurrentUser().getName())
+//                    .font(.system(size: 30, weight: .bold, design: .rounded))
+//                Text(store.db.user.getCurrentUser().getEmail())
+//                    .font(.system(size: 24, weight: .regular, design: .rounded))
+//            }
+//            .tabItem {
+//                Image(systemName: "person.crop.circle")
+//            }
         }
     }
 }
